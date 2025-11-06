@@ -26,7 +26,7 @@ const SaveRestorePanel = ({ reactFlowInstance, onLoadFlow }) => {
     reader.onload = (event) => {
       try {
         const flow = JSON.parse(event.target.result);
-        onLoadFlow(flow);
+        onLoadFlow(flow, file.name);
       } catch (err) {
         alert(translations.invalid_json_file);
       }

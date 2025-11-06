@@ -4,7 +4,7 @@ import translations from "../locales/en.json";
 import SideCss from "../CSS/Sidebar.module.css";
 import SaveRestorePanel from "./SaveRestorePanel";
 
-const Sidebar = ({ onAddNode , onGroupNodes ,  reactFlowInstance, onLoadFlow }) => {
+const Sidebar = ({ onAddNode, onGroupNodes, reactFlowInstance, onLoadFlow, onSaveToPublic, onUploadFromPublic }) => {
   return (
     <div className={SideCss.container}>
       <button
@@ -36,6 +36,12 @@ const Sidebar = ({ onAddNode , onGroupNodes ,  reactFlowInstance, onLoadFlow }) 
         reactFlowInstance={reactFlowInstance}
         onLoadFlow={onLoadFlow}
       />
+      <button onClick={onSaveToPublic} className={SideCss.buttons}>
+        Save as Public
+      </button>
+      <button onClick={onUploadFromPublic} className={SideCss.buttons}>
+        Upload from Public
+      </button>
     </div>
   );
 };

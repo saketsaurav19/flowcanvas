@@ -19,6 +19,7 @@ import { TextNode, ImageNode } from "./customNodes";
 import { NotesNode } from "./NotesNode";
 import GroupNode from "./GroupNode"; // Custom node with resizer
 import PropertySidebar from "./PropertySidebar";
+import FileListOverlay from "./FileListOverlay";
 
 const nodeTypes = {
   textNode: TextNode,
@@ -41,6 +42,9 @@ const FlowCanvas = () => {
   const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
   const [selectedNode, setSelectedNode] = useState(null);
+  const [showFileOverlay, setShowFileOverlay] = useState(false);
+  const [fileList, setFileList] = useState([]);
+  const [openedFileName, setOpenedFileName] = useState(null);
 
   const handleInit = useCallback((instance) => {
     reactFlowInstance.current = instance;
@@ -219,7 +223,7 @@ const FlowCanvas = () => {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [handleKeyDown]);
 
-  const handleLoadFlow = useCallback((flow) => {
+  const handleLoadFlow = useCallback((flow, fileName = null) => {
     if (!flow) return;
 
     const migratedNodes = flow.nodes.map(node => {
@@ -246,7 +250,74 @@ const FlowCanvas = () => {
     });
     nodeId.current = maxId + 1;
 
-  }, [setNodes, setEdges]);
+    setOpenedFileName(fileName);
+  }, [setNodes, setEdges, setOpenedFileName]);
+
+  const handleSaveToPublic = useCallback(async () => {
+    if (!reactFlowInstance.current) return;
+
+    const flow = reactFlowInstance.current.toObject();
+    let fileName = openedFileName;
+
+    if (!fileName) {
+      fileName = prompt('Enter a name for your flow:');
+      if (!fileName) return;
+    }
+
+    // Remove .json extension if it exists
+    if (fileName.endsWith('.json')) {
+      fileName = fileName.slice(0, -5);
+    }
+
+    try {
+      const response = await fetch('/api/files', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ name: fileName, data: flow }),
+      });
+
+      if (response.ok) {
+        alert('Flow saved successfully!');
+        setOpenedFileName(fileName);
+      } else {
+        const { error } = await response.json();
+        alert(`Error saving flow: ${error}`);
+      }
+    } catch (error) {
+      console.error('Error saving flow:', error);
+      alert('An unexpected error occurred while saving the flow.');
+    }
+  }, [reactFlowInstance, openedFileName, setOpenedFileName]);
+
+  const handleUploadFromPublic = useCallback(async () => {
+    try {
+      const response = await fetch('/api/files');
+      const files = await response.json();
+      setFileList(files);
+      setShowFileOverlay(true);
+    } catch (error) {
+      console.error('Error loading flow:', error);
+      alert('An unexpected error occurred while loading the flow.');
+    }
+  }, []);
+
+  const handleFileSelect = useCallback(async (fileName) => {
+    try {
+      const fileResponse = await fetch(`/uploads/${fileName}`);
+      const flow = await fileResponse.json();
+      handleLoadFlow(flow, fileName);
+      setShowFileOverlay(false);
+    } catch (error) {
+      console.error('Error loading flow:', error);
+      alert('An unexpected error occurred while loading the flow.');
+    }
+  }, [handleLoadFlow]);
+
+  const handleCloseOverlay = useCallback(() => {
+    setShowFileOverlay(false);
+  }, []);
 
 
   return (
@@ -272,6 +343,8 @@ const FlowCanvas = () => {
             onGroupNodes={handleGroupNodes}
             reactFlowInstance={reactFlowInstance.current}
             onLoadFlow={handleLoadFlow}
+            onSaveToPublic={handleSaveToPublic}
+            onUploadFromPublic={handleUploadFromPublic}
           />
         </div>
         <Background />
@@ -285,6 +358,13 @@ const FlowCanvas = () => {
           />
         </div>
       </ReactFlow>
+      {showFileOverlay && (
+        <FileListOverlay
+          files={fileList}
+          onSelect={handleFileSelect}
+          onClose={handleCloseOverlay}
+        />
+      )}
     </div>
   );
 };
