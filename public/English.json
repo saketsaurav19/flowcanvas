@@ -1,0 +1,1144 @@
+{
+  "nodes": [
+    {
+      "id": "1",
+      "type": "textNode",
+      "position": {
+        "x": -276.87356384437305,
+        "y": 197.21249927537153
+      },
+      "data": {
+        "label": "Parts of Speech",
+        "color": "rgb(206.30479727976834,230.55444584262005,249.73660827252993)",
+        "textColor": "#000000"
+      },
+      "measured": {
+        "width": 136,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "2",
+      "type": "textNode",
+      "position": {
+        "x": -728.6842106193711,
+        "y": 465.97975825538424
+      },
+      "data": {
+        "label": "Noun",
+        "color": "rgb(203.1402907666653,43.681298059356436,178.54720028848502)",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 60,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "3",
+      "type": "textNode",
+      "position": {
+        "x": 71.05709133557258,
+        "y": 469.3723944535196
+      },
+      "data": {
+        "label": "Pronoun",
+        "color": "rgb(2.3228647072244915,238.11282739799864,91.01516977425082)"
+      },
+      "measured": {
+        "width": 83,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "4",
+      "type": "textNode",
+      "position": {
+        "x": 780.4312873321192,
+        "y": 477.78571812247606
+      },
+      "data": {
+        "label": "Adjective",
+        "color": "rgb(63,92,148)",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 87,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "5",
+      "type": "textNode",
+      "position": {
+        "x": 1422.670905532333,
+        "y": 465.45126793034615
+      },
+      "data": {
+        "label": "Verb",
+        "color": "rgb(239.1921079079036,231.9634159200878,3.950028053901215)"
+      },
+      "measured": {
+        "width": 55,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "6",
+      "type": "textNode",
+      "position": {
+        "x": 2053.8041773386585,
+        "y": 468.20068038159775
+      },
+      "data": {
+        "label": "Adverb",
+        "color": "rgb(155,189,192)",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 73,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "7",
+      "type": "textNode",
+      "position": {
+        "x": 2137.751942946681,
+        "y": 468.39945548223056
+      },
+      "data": {
+        "label": "Preposition",
+        "color": "rgb(56,141,118)"
+      },
+      "measured": {
+        "width": 102,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "8",
+      "type": "textNode",
+      "position": {
+        "x": 2257.3772686009147,
+        "y": 467.8235784653526
+      },
+      "data": {
+        "label": "Conjunction",
+        "color": "rgb(193,162,45)"
+      },
+      "measured": {
+        "width": 98,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "9",
+      "type": "textNode",
+      "position": {
+        "x": 2367.5396875619626,
+        "y": 468.3155564174672
+      },
+      "data": {
+        "label": "Interjection",
+        "color": "rgb(207,223,251)",
+        "textColor": "#000000"
+      },
+      "measured": {
+        "width": 100,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "10",
+      "type": "textNode",
+      "position": {
+        "x": -1107.7693316015745,
+        "y": 685.5107841315938
+      },
+      "data": {
+        "label": "Proper Noun",
+        "color": "rgb(222.64975266062692,56.984203271808546,87.35256091526453)"
+      },
+      "measured": {
+        "width": 113,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "11",
+      "type": "textNode",
+      "position": {
+        "x": -948.3582619596348,
+        "y": 685.1063720329464
+      },
+      "data": {
+        "label": "Common Noun",
+        "color": "rgb(210.47870178536485,244.70686728745204,247.10301662524935)"
+      },
+      "measured": {
+        "width": 130,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "12",
+      "type": "textNode",
+      "position": {
+        "x": -788.7239082427383,
+        "y": 684.1535687101812
+      },
+      "data": {
+        "label": "Collective Noun",
+        "color": "rgb(162.68979959535605,3.5239575549560023,213.54888954863216)"
+      },
+      "measured": {
+        "width": 134,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "13",
+      "type": "textNode",
+      "position": {
+        "x": -628.7696881508987,
+        "y": 687.1098998527972
+      },
+      "data": {
+        "label": "Abstract Noun",
+        "color": "rgb(106.92732171386623,171.66813506251944,64.44984736509825)"
+      },
+      "measured": {
+        "width": 123,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "15",
+      "type": "textNode",
+      "position": {
+        "x": -430.1166440065382,
+        "y": 683.5689234083418
+      },
+      "data": {
+        "label": "Material Noun",
+        "color": "rgb(80.22194717974185,80.81162881900862,226.40187990697916)"
+      },
+      "measured": {
+        "width": 122,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "16",
+      "type": "textNode",
+      "position": {
+        "x": -930.5655672589892,
+        "y": 585.9785909483783
+      },
+      "data": {
+        "label": "Countable",
+        "color": "rgb(38.46097824339654,58.397958020156466,8.435063387959612)",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 95,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "17",
+      "type": "textNode",
+      "position": {
+        "x": -533.5689132484023,
+        "y": 586.7860839950615
+      },
+      "data": {
+        "label": "Uncountable",
+        "color": "rgb(12.015576507060796,198.83302146819963,229.35490794473122)"
+      },
+      "measured": {
+        "width": 112,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "18",
+      "type": "textNode",
+      "position": {
+        "x": -272.7092264315184,
+        "y": 576.5281412525819
+      },
+      "data": {
+        "label": "Personal",
+        "color": "rgb(219.7313828801139,73.05711297859224,42.71556739665602)"
+      },
+      "measured": {
+        "width": 85,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "19",
+      "type": "textNode",
+      "position": {
+        "x": -166.60944431477606,
+        "y": 576.5352338818934
+      },
+      "data": {
+        "label": "Reflexive",
+        "color": "rgb(202.03642165329146,225.7825561777435,223.22343182011528)"
+      },
+      "measured": {
+        "width": 88,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "20",
+      "type": "textNode",
+      "position": {
+        "x": -64.71332388577811,
+        "y": 577.3838767171246
+      },
+      "data": {
+        "label": "Demonstrative",
+        "color": "rgb(144.52730257228197,158.13990484388998,221.71633404407282)"
+      },
+      "measured": {
+        "width": 125,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "21",
+      "type": "textNode",
+      "position": {
+        "x": 75.16623530263544,
+        "y": 580.5542916398177
+      },
+      "data": {
+        "label": "Interrogative",
+        "color": "rgb(249.6493962368017,158.45384179263976,190.56344844454472)",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 111,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "22",
+      "type": "textNode",
+      "position": {
+        "x": 196.60669701177093,
+        "y": 580.6950946492672
+      },
+      "data": {
+        "label": "Relative",
+        "color": "rgb(119.74651228339,90.89558791063737,123.21077030040345)",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 80,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "23",
+      "type": "textNode",
+      "position": {
+        "x": 289.19244958472973,
+        "y": 580.6909733795463
+      },
+      "data": {
+        "label": "Indefinite",
+        "color": "rgb(232,51,63)",
+        "textColor": "#000000"
+      },
+      "measured": {
+        "width": 87,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "24",
+      "type": "textNode",
+      "position": {
+        "x": 386.8897064280147,
+        "y": 580.4334967488312
+      },
+      "data": {
+        "label": "Distributive",
+        "color": "rgb(231.80833779399617,89.6135100709978,136.944050313709)",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 101,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_1",
+      "type": "textNode",
+      "position": {
+        "x": 1236.2187009702345,
+        "y": 596.1167831530898
+      },
+      "data": {
+        "label": "Main Verb",
+        "color": "rgb(228,171,4)"
+      },
+      "measured": {
+        "width": 94,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_2",
+      "type": "textNode",
+      "position": {
+        "x": 534.5640148499522,
+        "y": 587.7941660488448
+      },
+      "data": {
+        "label": "Quality",
+        "color": "rgb(141,149,248)"
+      },
+      "measured": {
+        "width": 72,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_3",
+      "type": "textNode",
+      "position": {
+        "x": 624.9133464545752,
+        "y": 589.422212649377
+      },
+      "data": {
+        "label": "Quantity",
+        "color": "rgb(25,219,248)"
+      },
+      "measured": {
+        "width": 82,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_4",
+      "type": "textNode",
+      "position": {
+        "x": 719.0365865401807,
+        "y": 588.2568616649618
+      },
+      "data": {
+        "label": "Number",
+        "color": "rgb(13,218,84)"
+      },
+      "measured": {
+        "width": 79,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_5",
+      "type": "textNode",
+      "position": {
+        "x": 811.1740854465237,
+        "y": 589.0633090800899
+      },
+      "data": {
+        "label": "Demonstrative",
+        "color": "rgb(249,208,27)"
+      },
+      "measured": {
+        "width": 125,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_6",
+      "type": "textNode",
+      "position": {
+        "x": 945.3746054446061,
+        "y": 590.6196234495103
+      },
+      "data": {
+        "label": "Interrogative",
+        "color": "rgb(74,239,228)"
+      },
+      "measured": {
+        "width": 111,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_7",
+      "type": "textNode",
+      "position": {
+        "x": 1062.0570347436155,
+        "y": 591.7567047681902
+      },
+      "data": {
+        "label": "Possessive",
+        "color": "rgb(212,165,186)"
+      },
+      "measured": {
+        "width": 103,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_8",
+      "type": "textNode",
+      "position": {
+        "x": 1354.4851500401173,
+        "y": 593.0745628590261
+      },
+      "data": {
+        "label": "Helping Verb",
+        "color": "rgb(59,124,246)"
+      },
+      "measured": {
+        "width": 114,
+        "height": 40
+      },
+      "selected": true,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_9",
+      "type": "textNode",
+      "position": { "x": 1850, "y": 590 },
+      "data": { "label": "Manner", "color": "rgb(155,189,192)", "textColor": "#ffffff" },
+      "measured": { "width": 70, "height": 40 }
+    },
+    {
+      "id": "dndnode_10",
+      "type": "textNode",
+      "position": { "x": 1930, "y": 590 },
+      "data": { "label": "Place", "color": "rgb(155,189,192)", "textColor": "#ffffff" },
+      "measured": { "width": 60, "height": 40 }
+    },
+    {
+      "id": "dndnode_11",
+      "type": "textNode",
+      "position": { "x": 2000, "y": 590 },
+      "data": { "label": "Time", "color": "rgb(155,189,192)", "textColor": "#ffffff" },
+      "measured": { "width": 60, "height": 40 }
+    },
+    {
+      "id": "dndnode_12",
+      "type": "textNode",
+      "position": { "x": 2070, "y": 590 },
+      "data": { "label": "Frequency", "color": "rgb(155,189,192)", "textColor": "#ffffff" },
+      "measured": { "width": 90, "height": 40 }
+    },
+    {
+      "id": "dndnode_13",
+      "type": "textNode",
+      "position": { "x": 2170, "y": 590 },
+      "data": { "label": "Degree", "color": "rgb(155,189,192)", "textColor": "#ffffff" },
+      "measured": { "width": 70, "height": 40 }
+    },
+    {
+      "id": "dndnode_14",
+      "type": "textNode",
+      "position": { "x": 2250, "y": 590 },
+      "data": { "label": "Time", "color": "rgb(56,141,118)" },
+      "measured": { "width": 60, "height": 40 }
+    },
+    {
+      "id": "dndnode_15",
+      "type": "textNode",
+      "position": { "x": 2320, "y": 590 },
+      "data": { "label": "Place", "color": "rgb(56,141,118)" },
+      "measured": { "width": 60, "height": 40 }
+    },
+    {
+      "id": "dndnode_16",
+      "type": "textNode",
+      "position": { "x": 2390, "y": 590 },
+      "data": { "label": "Direction", "color": "rgb(56,141,118)" },
+      "measured": { "width": 90, "height": 40 }
+    },
+    {
+      "id": "dndnode_17",
+      "type": "textNode",
+      "position": { "x": 2490, "y": 590 },
+      "data": { "label": "Agent", "color": "rgb(56,141,118)" },
+      "measured": { "width": 60, "height": 40 }
+    },
+    {
+      "id": "dndnode_18",
+      "type": "textNode",
+      "position": { "x": 2560, "y": 590 },
+      "data": { "label": "Instrument", "color": "rgb(56,141,118)" },
+      "measured": { "width": 90, "height": 40 }
+    },
+    {
+      "id": "dndnode_19",
+      "type": "textNode",
+      "position": { "x": 2660, "y": 590 },
+      "data": { "label": "Coordinating", "color": "rgb(193,162,45)" },
+      "measured": { "width": 100, "height": 40 }
+    },
+    {
+      "id": "dndnode_20",
+      "type": "textNode",
+      "position": { "x": 2770, "y": 590 },
+      "data": { "label": "Subordinating", "color": "rgb(193,162,45)" },
+      "measured": { "width": 110, "height": 40 }
+    },
+    {
+      "id": "dndnode_21",
+      "type": "textNode",
+      "position": { "x": 2890, "y": 590 },
+      "data": { "label": "Correlative", "color": "rgb(193,162,45)" },
+      "measured": { "width": 90, "height": 40 }
+    },
+    {
+      "id": "dndnode_22",
+      "type": "textNode",
+      "position": { "x": 2990, "y": 590 },
+      "data": { "label": "Greetings", "color": "rgb(207,223,251)", "textColor": "#000000" },
+      "measured": { "width": 80, "height": 40 }
+    },
+    {
+      "id": "dndnode_23",
+      "type": "textNode",
+      "position": { "x": 3080, "y": 590 },
+      "data": { "label": "Joy", "color": "rgb(207,223,251)", "textColor": "#000000" },
+      "measured": { "width": 50, "height": 40 }
+    },
+    {
+      "id": "dndnode_24",
+      "type": "textNode",
+      "position": { "x": 3140, "y": 590 },
+      "data": { "label": "Sorrow", "color": "rgb(207,223,251)", "textColor": "#000000" },
+      "measured": { "width": 70, "height": 40 }
+    },
+    {
+      "id": "dndnode_25",
+      "type": "textNode",
+      "position": { "x": 3220, "y": 590 },
+      "data": { "label": "Surprise", "color": "rgb(207,223,251)", "textColor": "#000000" },
+      "measured": { "width": 80, "height": 40 }
+    },
+    {
+      "id": "dndnode_26",
+      "type": "textNode",
+      "position": { "x": 1180, "y": 720 },
+      "data": { "label": "Transitive", "color": "rgb(228,171,4)" },
+      "measured": { "width": 90, "height": 40 }
+    },
+    {
+      "id": "dndnode_27",
+      "type": "textNode",
+      "position": { "x": 1280, "y": 720 },
+      "data": { "label": "Intransitive", "color": "rgb(228,171,4)" },
+      "measured": { "width": 100, "height": 40 }
+    },
+    {
+      "id": "dndnode_28",
+      "type": "textNode",
+      "position": { "x": 1390, "y": 720 },
+      "data": { "label": "Primary", "color": "rgb(59,124,246)" },
+      "measured": { "width": 80, "height": 40 }
+    },
+    {
+      "id": "dndnode_29",
+      "type": "textNode",
+      "position": { "x": 1480, "y": 720 },
+      "data": { "label": "Modal", "color": "rgb(59,124,246)" },
+      "measured": { "width": 60, "height": 40 }
+    },
+    {
+      "id": "dndnode_30",
+      "type": "textNode",
+      "position": { "x": 1340, "y": 850 },
+      "data": { "label": "be", "color": "rgb(59,124,246)" },
+      "measured": { "width": 40, "height": 40 }
+    },
+    {
+      "id": "dndnode_31",
+      "type": "textNode",
+      "position": { "x": 1390, "y": 850 },
+      "data": { "label": "do", "color": "rgb(59,124,246)" },
+      "measured": { "width": 40, "height": 40 }
+    },
+    {
+      "id": "dndnode_32",
+      "type": "textNode",
+      "position": { "x": 1440, "y": 850 },
+      "data": { "label": "have", "color": "rgb(59,124,246)" },
+      "measured": { "width": 50, "height": 40 }
+    },
+    {
+      "id": "dndnode_33",
+      "type": "textNode",
+      "position": { "x": 1500, "y": 850 },
+      "data": { "label": "can", "color": "rgb(59,124,246)" },
+      "measured": { "width": 40, "height": 40 }
+    },
+    {
+      "id": "dndnode_34",
+      "type": "textNode",
+      "position": { "x": 1550, "y": 850 },
+      "data": { "label": "could", "color": "rgb(59,124,246)" },
+      "measured": { "width": 60, "height": 40 }
+    },
+    {
+      "id": "dndnode_35",
+      "type": "textNode",
+      "position": { "x": 1620, "y": 850 },
+      "data": { "label": "may", "color": "rgb(59,124,246)" },
+      "measured": { "width": 40, "height": 40 }
+    },
+    {
+      "id": "dndnode_36",
+      "type": "textNode",
+      "position": { "x": 1670, "y": 850 },
+      "data": { "label": "might", "color": "rgb(59,124,246)" },
+      "measured": { "width": 60, "height": 40 }
+    },
+    {
+      "id": "dndnode_37",
+      "type": "textNode",
+      "position": { "x": 1740, "y": 850 },
+      "data": { "label": "will", "color": "rgb(59,124,246)" },
+      "measured": { "width": 40, "height": 40 }
+    },
+    {
+      "id": "dndnode_38",
+      "type": "textNode",
+      "position": { "x": 1790, "y": 850 },
+      "data": { "label": "would", "color": "rgb(59,124,246)" },
+      "measured": { "width": 60, "height": 40 }
+    },
+    {
+      "id": "dndnode_39",
+      "type": "textNode",
+      "position": { "x": 1860, "y": 850 },
+      "data": { "label": "shall", "color": "rgb(59,124,246)" },
+      "measured": { "width": 50, "height": 40 }
+    },
+    {
+      "id": "dndnode_40",
+      "type": "textNode",
+      "position": { "x": 1920, "y": 850 },
+      "data": { "label": "should", "color": "rgb(59,124,246)" },
+      "measured": { "width": 70, "height": 40 }
+    },
+    {
+      "id": "dndnode_41",
+      "type": "textNode",
+      "position": { "x": 2000, "y": 850 },
+      "data": { "label": "must", "color": "rgb(59,124,246)" },
+      "measured": { "width": 50, "height": 40 }
+    },
+    {
+      "id": "dndnode_42",
+      "type": "textNode",
+      "position": { "x": 2550, "y": 720 },
+      "data": { "label": "For", "color": "rgb(193,162,45)" },
+      "measured": { "width": 40, "height": 40 }
+    },
+    {
+      "id": "dndnode_43",
+      "type": "textNode",
+      "position": { "x": 2600, "y": 720 },
+      "data": { "label": "And", "color": "rgb(193,162,45)" },
+      "measured": { "width": 40, "height": 40 }
+    },
+    {
+      "id": "dndnode_44",
+      "type": "textNode",
+      "position": { "x": 2650, "y": 720 },
+      "data": { "label": "Nor", "color": "rgb(193,162,45)" },
+      "measured": { "width": 40, "height": 40 }
+    },
+    {
+      "id": "dndnode_45",
+      "type": "textNode",
+      "position": { "x": 2700, "y": 720 },
+      "data": { "label": "But", "color": "rgb(193,162,45)" },
+      "measured": { "width": 40, "height": 40 }
+    },
+    {
+      "id": "dndnode_46",
+      "type": "textNode",
+      "position": { "x": 2750, "y": 720 },
+      "data": { "label": "Or", "color": "rgb(193,162,45)" },
+      "measured": { "width": 30, "height": 40 }
+    },
+    {
+      "id": "dndnode_47",
+      "type": "textNode",
+      "position": { "x": 2790, "y": 720 },
+      "data": { "label": "Yet", "color": "rgb(193,162,45)" },
+      "measured": { "width": 40, "height": 40 }
+    },
+    {
+      "id": "dndnode_48",
+      "type": "textNode",
+      "position": { "x": 2840, "y": 720 },
+      "data": { "label": "So", "color": "rgb(193,162,45)" },
+      "measured": { "width": 30, "height": 40 }
+    },
+    {
+      "id": "dndnode_49",
+      "type": "textNode",
+      "position": { "x": 2880, "y": 720 },
+      "data": { "label": "Although", "color": "rgb(193,162,45)" },
+      "measured": { "width": 80, "height": 40 }
+    },
+    {
+      "id": "dndnode_50",
+      "type": "textNode",
+      "position": { "x": 2970, "y": 720 },
+      "data": { "label": "Because", "color": "rgb(193,162,45)" },
+      "measured": { "width": 80, "height": 40 }
+    },
+    {
+      "id": "dndnode_51",
+      "type": "textNode",
+      "position": { "x": 3060, "y": 720 },
+      "data": { "label": "Since", "color": "rgb(193,162,45)" },
+      "measured": { "width": 60, "height": 40 }
+    },
+    {
+      "id": "dndnode_52",
+      "type": "textNode",
+      "position": { "x": 3130, "y": 720 },
+      "data": { "label": "Unless", "color": "rgb(193,162,45)" },
+      "measured": { "width": 70, "height": 40 }
+    },
+    {
+      "id": "dndnode_53",
+      "type": "textNode",
+      "position": { "x": 3210, "y": 720 },
+      "data": { "label": "While", "color": "rgb(193,162,45)" },
+      "measured": { "width": 60, "height": 40 }
+    },
+    {
+      "id": "dndnode_54",
+      "type": "textNode",
+      "position": { "x": 3280, "y": 720 },
+      "data": { "label": "Either/Or", "color": "rgb(193,162,45)" },
+      "measured": { "width": 80, "height": 40 }
+    },
+    {
+      "id": "dndnode_55",
+      "type": "textNode",
+      "position": { "x": 3370, "y": 720 },
+      "data": { "label": "Neither/Nor", "color": "rgb(193,162,45)" },
+      "measured": { "width": 100, "height": 40 }
+    },
+    {
+      "id": "dndnode_56",
+      "type": "textNode",
+      "position": { "x": 3480, "y": 720 },
+      "data": { "label": "Both/And", "color": "rgb(193,162,45)" },
+      "measured": { "width": 80, "height": 40 }
+    },
+    {
+      "id": "dndnode_57",
+      "type": "textNode",
+      "position": { "x": 3570, "y": 720 },
+      "data": { "label": "Not only/But also", "color": "rgb(193,162,45)" },
+      "measured": { "width": 140, "height": 40 }
+    }
+  ],
+  "edges": [
+    {
+      "source": "1",
+      "target": "2",
+      "id": "xy-edge__1-2",
+      "selected": false
+    },
+    {
+      "source": "1",
+      "target": "3",
+      "id": "xy-edge__1-3",
+      "selected": false
+    },
+    {
+      "source": "1",
+      "target": "4",
+      "id": "xy-edge__1-4",
+      "selected": false
+    },
+    {
+      "source": "1",
+      "target": "5",
+      "id": "xy-edge__1-5",
+      "selected": false
+    },
+    {
+      "source": "1",
+      "target": "6",
+      "id": "xy-edge__1-6",
+      "selected": false
+    },
+    {
+      "source": "1",
+      "target": "7",
+      "id": "xy-edge__1-7",
+      "selected": false
+    },
+    {
+      "source": "1",
+      "target": "9",
+      "id": "xy-edge__1-9",
+      "selected": false
+    },
+    {
+      "source": "1",
+      "target": "8",
+      "id": "xy-edge__1-8",
+      "selected": false
+    },
+    {
+      "source": "2",
+      "target": "16",
+      "id": "xy-edge__2-16",
+      "selected": false
+    },
+    {
+      "source": "2",
+      "target": "17",
+      "id": "xy-edge__2-17",
+      "selected": false
+    },
+    {
+      "source": "17",
+      "target": "15",
+      "id": "xy-edge__17-15",
+      "selected": false
+    },
+    {
+      "source": "17",
+      "target": "13",
+      "id": "xy-edge__17-13",
+      "selected": false
+    },
+    {
+      "source": "16",
+      "target": "12",
+      "id": "xy-edge__16-12",
+      "selected": false
+    },
+    {
+      "source": "16",
+      "target": "11",
+      "id": "xy-edge__16-11",
+      "selected": false
+    },
+    {
+      "source": "16",
+      "target": "10",
+      "id": "xy-edge__16-10",
+      "selected": false
+    },
+    {
+      "source": "3",
+      "target": "18",
+      "id": "xy-edge__3-18",
+      "selected": false
+    },
+    {
+      "source": "3",
+      "target": "19",
+      "id": "xy-edge__3-19",
+      "selected": false
+    },
+    {
+      "source": "3",
+      "target": "20",
+      "id": "xy-edge__3-20",
+      "selected": false
+    },
+    {
+      "source": "3",
+      "target": "21",
+      "id": "xy-edge__3-21",
+      "selected": false
+    },
+    {
+      "source": "3",
+      "target": "22",
+      "id": "xy-edge__3-22",
+      "selected": false
+    },
+    {
+      "source": "3",
+      "target": "23",
+      "id": "xy-edge__3-23",
+      "selected": false
+    },
+    {
+      "source": "3",
+      "target": "24",
+      "id": "xy-edge__3-24",
+      "selected": false
+    },
+    {
+      "source": "5",
+      "target": "dndnode_1",
+      "id": "xy-edge__5-dndnode_1",
+      "selected": false
+    },
+    {
+      "source": "4",
+      "target": "dndnode_2",
+      "id": "xy-edge__4-dndnode_2"
+    },
+    {
+      "source": "4",
+      "target": "dndnode_3",
+      "id": "xy-edge__4-dndnode_3"
+    },
+    {
+      "source": "4",
+      "target": "dndnode_4",
+      "id": "xy-edge__4-dndnode_4"
+    },
+    {
+      "source": "4",
+      "target": "dndnode_5",
+      "id": "xy-edge__4-dndnode_5"
+    },
+    {
+      "source": "4",
+      "target": "dndnode_6",
+      "id": "xy-edge__4-dndnode_6"
+    },
+    {
+      "source": "4",
+      "target": "dndnode_7",
+      "id": "xy-edge__4-dndnode_7"
+    },
+    {
+      "source": "5",
+      "target": "dndnode_8",
+      "id": "xy-edge__5-dndnode_8"
+    },
+    { "source": "6", "target": "dndnode_9", "id": "xy-edge__6-dndnode_9" },
+    { "source": "6", "target": "dndnode_10", "id": "xy-edge__6-dndnode_10" },
+    { "source": "6", "target": "dndnode_11", "id": "xy-edge__6-dndnode_11" },
+    { "source": "6", "target": "dndnode_12", "id": "xy-edge__6-dndnode_12" },
+    { "source": "6", "target": "dndnode_13", "id": "xy-edge__6-dndnode_13" },
+    { "source": "7", "target": "dndnode_14", "id": "xy-edge__7-dndnode_14" },
+    { "source": "7", "target": "dndnode_15", "id": "xy-edge__7-dndnode_15" },
+    { "source": "7", "target": "dndnode_16", "id": "xy-edge__7-dndnode_16" },
+    { "source": "7", "target": "dndnode_17", "id": "xy-edge__7-dndnode_17" },
+    { "source": "7", "target": "dndnode_18", "id": "xy-edge__7-dndnode_18" },
+    { "source": "8", "target": "dndnode_19", "id": "xy-edge__8-dndnode_19" },
+    { "source": "8", "target": "dndnode_20", "id": "xy-edge__8-dndnode_20" },
+    { "source": "8", "target": "dndnode_21", "id": "xy-edge__8-dndnode_21" },
+    { "source": "9", "target": "dndnode_22", "id": "xy-edge__9-dndnode_22" },
+    { "source": "9", "target": "dndnode_23", "id": "xy-edge__9-dndnode_23" },
+    { "source": "9", "target": "dndnode_24", "id": "xy-edge__9-dndnode_24" },
+    { "source": "9", "target": "dndnode_25", "id": "xy-edge__9-dndnode_25" },
+    { "source": "dndnode_1", "target": "dndnode_26", "id": "xy-edge__dndnode_1-dndnode_26" },
+    { "source": "dndnode_1", "target": "dndnode_27", "id": "xy-edge__dndnode_1-dndnode_27" },
+    { "source": "dndnode_8", "target": "dndnode_28", "id": "xy-edge__dndnode_8-dndnode_28" },
+    { "source": "dndnode_8", "target": "dndnode_29", "id": "xy-edge__dndnode_8-dndnode_29" },
+    { "source": "dndnode_28", "target": "dndnode_30", "id": "xy-edge__dndnode_28-dndnode_30" },
+    { "source": "dndnode_28", "target": "dndnode_31", "id": "xy-edge__dndnode_28-dndnode_31" },
+    { "source": "dndnode_28", "target": "dndnode_32", "id": "xy-edge__dndnode_28-dndnode_32" },
+    { "source": "dndnode_29", "target": "dndnode_33", "id": "xy-edge__dndnode_29-dndnode_33" },
+    { "source": "dndnode_29", "target": "dndnode_34", "id": "xy-edge__dndnode_29-dndnode_34" },
+    { "source": "dndnode_29", "target": "dndnode_35", "id": "xy-edge__dndnode_29-dndnode_35" },
+    { "source": "dndnode_29", "target": "dndnode_36", "id": "xy-edge__dndnode_29-dndnode_36" },
+    { "source": "dndnode_29", "target": "dndnode_37", "id": "xy-edge__dndnode_29-dndnode_37" },
+    { "source": "dndnode_29", "target": "dndnode_38", "id": "xy-edge__dndnode_29-dndnode_38" },
+    { "source": "dndnode_29", "target": "dndnode_39", "id": "xy-edge__dndnode_29-dndnode_39" },
+    { "source": "dndnode_29", "target": "dndnode_40", "id": "xy-edge__dndnode_29-dndnode_40" },
+    { "source": "dndnode_29", "target": "dndnode_41", "id": "xy-edge__dndnode_29-dndnode_41" },
+    { "source": "dndnode_19", "target": "dndnode_42", "id": "xy-edge__dndnode_19-dndnode_42" },
+    { "source": "dndnode_19", "target": "dndnode_43", "id": "xy-edge__dndnode_19-dndnode_43" },
+    { "source": "dndnode_19", "target": "dndnode_44", "id": "xy-edge__dndnode_19-dndnode_44" },
+    { "source": "dndnode_19", "target": "dndnode_45", "id": "xy-edge__dndnode_19-dndnode_45" },
+    { "source": "dndnode_19", "target": "dndnode_46", "id": "xy-edge__dndnode_19-dndnode_46" },
+    { "source": "dndnode_19", "target": "dndnode_47", "id": "xy-edge__dndnode_19-dndnode_47" },
+    { "source": "dndnode_19", "target": "dndnode_48", "id": "xy-edge__dndnode_19-dndnode_48" },
+    { "source": "dndnode_20", "target": "dndnode_49", "id": "xy-edge__dndnode_20-dndnode_49" },
+    { "source": "dndnode_20", "target": "dndnode_50", "id": "xy-edge__dndnode_20-dndnode_50" },
+    { "source": "dndnode_20", "target": "dndnode_51", "id": "xy-edge__dndnode_20-dndnode_51" },
+    { "source": "dndnode_20", "target": "dndnode_52", "id": "xy-edge__dndnode_20-dndnode_52" },
+    { "source": "dndnode_20", "target": "dndnode_53", "id": "xy-edge__dndnode_20-dndnode_53" },
+    { "source": "dndnode_21", "target": "dndnode_54", "id": "xy-edge__dndnode_21-dndnode_54" },
+    { "source": "dndnode_21", "target": "dndnode_55", "id": "xy-edge__dndnode_21-dndnode_55" },
+    { "source": "dndnode_21", "target": "dndnode_56", "id": "xy-edge__dndnode_21-dndnode_56" },
+    { "source": "dndnode_21", "target": "dndnode_57", "id": "xy-edge__dndnode_21-dndnode_57" }
+  ],
+  "viewport": {
+    "x": 679.9057005903367,
+    "y": 93.6077181867102,
+    "zoom": 0.5
+  }
+}

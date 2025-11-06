@@ -1,0 +1,4833 @@
+{
+  "nodes": [
+    {
+      "id": "1",
+      "type": "textNode",
+      "position": {
+        "x": 5953.17240382644,
+        "y": -1780.7159145510736
+      },
+      "data": {
+        "label": "Parts of Speech",
+        "color": "rgb(206.30479727976834,230.55444584262005,249.73660827252993)",
+        "textColor": "#000000",
+        "use_case": "This is the root node for all parts of speech."
+      },
+      "measured": {
+        "width": 136,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "2",
+      "type": "textNode",
+      "position": {
+        "x": -5013.140688614936,
+        "y": 451.2143931130664
+      },
+      "data": {
+        "label": "Noun",
+        "color": "rgb(203.1402907666653,43.681298059356436,178.54720028848502)",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 60,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "3",
+      "type": "textNode",
+      "position": {
+        "x": -2190.9429086644277,
+        "y": 515.3723944535195
+      },
+      "data": {
+        "label": "Pronoun",
+        "color": "rgb(2.3228647072244915,238.11282739799864,91.01516977425082)"
+      },
+      "measured": {
+        "width": 83,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "4",
+      "type": "textNode",
+      "position": {
+        "x": -731.5687126678808,
+        "y": 509.78571812247606
+      },
+      "data": {
+        "label": "Adjective",
+        "color": "rgb(63,92,148)",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 87,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "5",
+      "type": "textNode",
+      "position": {
+        "x": 2714.4172831242786,
+        "y": 551.0135865857496
+      },
+      "data": {
+        "label": "Verb",
+        "color": "rgb(239.1921079079036,231.9634159200878,3.950028053901215)"
+      },
+      "measured": {
+        "width": 55,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "6",
+      "type": "textNode",
+      "position": {
+        "x": 9944.50227280024,
+        "y": 554.2006803815977
+      },
+      "data": {
+        "label": "Adverb",
+        "color": "rgb(155,189,192)",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 73,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "7",
+      "type": "textNode",
+      "position": {
+        "x": 11362.157248483221,
+        "y": 561.9040435096981
+      },
+      "data": {
+        "label": "Preposition",
+        "color": "rgb(56,141,118)"
+      },
+      "measured": {
+        "width": 102,
+        "height": 40
+      },
+      "selected": true,
+      "dragging": false
+    },
+    {
+      "id": "8",
+      "type": "textNode",
+      "position": {
+        "x": 14331.027279931226,
+        "y": 568.8771213839725
+      },
+      "data": {
+        "label": "Conjunction",
+        "color": "rgb(193,162,45)"
+      },
+      "measured": {
+        "width": 107,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "9",
+      "type": "textNode",
+      "position": {
+        "x": 19316.87296615821,
+        "y": 876.7355473294998
+      },
+      "data": {
+        "label": "Interjection",
+        "color": "rgb(207,223,251)",
+        "textColor": "#000000"
+      },
+      "measured": {
+        "width": 100,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "10",
+      "type": "textNode",
+      "position": {
+        "x": -5398.75493882186,
+        "y": 899.2649418545084
+      },
+      "data": {
+        "label": "Proper Noun",
+        "color": "rgb(222.64975266062692,56.984203271808546,87.35256091526453)"
+      },
+      "measured": {
+        "width": 113,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "11",
+      "type": "textNode",
+      "position": {
+        "x": -5239.343869179921,
+        "y": 898.860529755861
+      },
+      "data": {
+        "label": "Common Noun",
+        "color": "rgb(210.47870178536485,244.70686728745204,247.10301662524935)"
+      },
+      "measured": {
+        "width": 130,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "12",
+      "type": "textNode",
+      "position": {
+        "x": -5079.709515463025,
+        "y": 897.9077264330957
+      },
+      "data": {
+        "label": "Collective Noun",
+        "color": "rgb(162.68979959535605,3.5239575549560023,213.54888954863216)"
+      },
+      "measured": {
+        "width": 134,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "13",
+      "type": "textNode",
+      "position": {
+        "x": -4919.755295371185,
+        "y": 900.8640575757117
+      },
+      "data": {
+        "label": "Abstract Noun",
+        "color": "rgb(106.92732171386623,171.66813506251944,64.44984736509825)"
+      },
+      "measured": {
+        "width": 123,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "15",
+      "type": "textNode",
+      "position": {
+        "x": -4721.102251226824,
+        "y": 897.3230811312563
+      },
+      "data": {
+        "label": "Material Noun",
+        "color": "rgb(80.22194717974185,80.81162881900862,226.40187990697916)"
+      },
+      "measured": {
+        "width": 122,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "16",
+      "type": "textNode",
+      "position": {
+        "x": -5215.0220452545545,
+        "y": 571.2132258060604
+      },
+      "data": {
+        "label": "Countable",
+        "color": "rgb(38.46097824339654,58.397958020156466,8.435063387959612)",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 95,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "17",
+      "type": "textNode",
+      "position": {
+        "x": -4818.0253912439675,
+        "y": 572.0207188527437
+      },
+      "data": {
+        "label": "Uncountable",
+        "color": "rgb(12.015576507060796,198.83302146819963,229.35490794473122)"
+      },
+      "measured": {
+        "width": 112,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "18",
+      "type": "textNode",
+      "position": {
+        "x": -2534.7092264315183,
+        "y": 622.5281412525819
+      },
+      "data": {
+        "label": "Personal",
+        "color": "rgb(219.7313828801139,73.05711297859224,42.71556739665602)"
+      },
+      "measured": {
+        "width": 85,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "19",
+      "type": "textNode",
+      "position": {
+        "x": -2428.609444314776,
+        "y": 622.5352338818934
+      },
+      "data": {
+        "label": "Reflexive",
+        "color": "rgb(202.03642165329146,225.7825561777435,223.22343182011528)"
+      },
+      "measured": {
+        "width": 88,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "20",
+      "type": "textNode",
+      "position": {
+        "x": -2326.713323885778,
+        "y": 623.3838767171246
+      },
+      "data": {
+        "label": "Demonstrative",
+        "color": "rgb(144.52730257228197,158.13990484388998,221.71633404407282)"
+      },
+      "measured": {
+        "width": 125,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "21",
+      "type": "textNode",
+      "position": {
+        "x": -2186.8337646973646,
+        "y": 626.5542916398177
+      },
+      "data": {
+        "label": "Interrogative",
+        "color": "rgb(249.6493962368017,158.45384179263976,190.56344844454472)",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 111,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "22",
+      "type": "textNode",
+      "position": {
+        "x": -2065.393302988229,
+        "y": 626.6950946492672
+      },
+      "data": {
+        "label": "Relative",
+        "color": "rgb(119.74651228339,90.89558791063737,123.21077030040345)",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 80,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "23",
+      "type": "textNode",
+      "position": {
+        "x": -1972.8075504152703,
+        "y": 626.6909733795463
+      },
+      "data": {
+        "label": "Indefinite",
+        "color": "rgb(232,51,63)",
+        "textColor": "#000000"
+      },
+      "measured": {
+        "width": 87,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "24",
+      "type": "textNode",
+      "position": {
+        "x": -1875.1102935719853,
+        "y": 626.4334967488312
+      },
+      "data": {
+        "label": "Distributive",
+        "color": "rgb(231.80833779399617,89.6135100709978,136.944050313709)",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 101,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_1",
+      "type": "textNode",
+      "position": {
+        "x": 1281.5475767320593,
+        "y": 672.9364632404637
+      },
+      "data": {
+        "label": "Main Verb",
+        "color": "rgb(228,171,4)"
+      },
+      "measured": {
+        "width": 94,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_2",
+      "type": "textNode",
+      "position": {
+        "x": -977.4359851500478,
+        "y": 619.7941660488448
+      },
+      "data": {
+        "label": "Quality",
+        "color": "rgb(141,149,248)"
+      },
+      "measured": {
+        "width": 72,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_3",
+      "type": "textNode",
+      "position": {
+        "x": -887.0866535454248,
+        "y": 621.422212649377
+      },
+      "data": {
+        "label": "Quantity",
+        "color": "rgb(25,219,248)"
+      },
+      "measured": {
+        "width": 82,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_4",
+      "type": "textNode",
+      "position": {
+        "x": -792.9634134598193,
+        "y": 620.2568616649618
+      },
+      "data": {
+        "label": "Number",
+        "color": "rgb(13,218,84)"
+      },
+      "measured": {
+        "width": 79,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_5",
+      "type": "textNode",
+      "position": {
+        "x": -700.8259145534763,
+        "y": 621.0633090800899
+      },
+      "data": {
+        "label": "Demonstrative",
+        "color": "rgb(249,208,27)"
+      },
+      "measured": {
+        "width": 125,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_6",
+      "type": "textNode",
+      "position": {
+        "x": -566.6253945553939,
+        "y": 622.6196234495103
+      },
+      "data": {
+        "label": "Interrogative",
+        "color": "rgb(74,239,228)"
+      },
+      "measured": {
+        "width": 111,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_7",
+      "type": "textNode",
+      "position": {
+        "x": -449.94296525638447,
+        "y": 623.7567047681902
+      },
+      "data": {
+        "label": "Possessive",
+        "color": "rgb(212,165,186)"
+      },
+      "measured": {
+        "width": 103,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_8",
+      "type": "textNode",
+      "position": {
+        "x": 5247.606004935897,
+        "y": 674.269641966755
+      },
+      "data": {
+        "label": "Helping Verb",
+        "color": "rgb(59,124,246)"
+      },
+      "measured": {
+        "width": 114,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_9",
+      "type": "textNode",
+      "position": {
+        "x": 9740.698095461581,
+        "y": 676
+      },
+      "data": {
+        "label": "Manner",
+        "color": "rgb(155,189,192)",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 76,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_10",
+      "type": "textNode",
+      "position": {
+        "x": 9820.698095461581,
+        "y": 676
+      },
+      "data": {
+        "label": "Place",
+        "color": "rgb(155,189,192)",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 62,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_11",
+      "type": "textNode",
+      "position": {
+        "x": 9890.698095461581,
+        "y": 676
+      },
+      "data": {
+        "label": "Time",
+        "color": "rgb(155,189,192)",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 57,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_12",
+      "type": "textNode",
+      "position": {
+        "x": 9960.698095461581,
+        "y": 676
+      },
+      "data": {
+        "label": "Frequency",
+        "color": "rgb(155,189,192)",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 98,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_13",
+      "type": "textNode",
+      "position": {
+        "x": 10060.698095461581,
+        "y": 676
+      },
+      "data": {
+        "label": "Degree",
+        "color": "rgb(155,189,192)",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 74,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_14",
+      "type": "textNode",
+      "position": {
+        "x": 10624.281428794915,
+        "y": 791.0833333333333
+      },
+      "data": {
+        "label": "Time",
+        "color": "rgb(56,141,118)"
+      },
+      "measured": {
+        "width": 57,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_15",
+      "type": "textNode",
+      "position": {
+        "x": 10998.448095461585,
+        "y": 791.0833333333331
+      },
+      "data": {
+        "label": "Place",
+        "color": "rgb(56,141,118)"
+      },
+      "measured": {
+        "width": 62,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_16",
+      "type": "textNode",
+      "position": {
+        "x": 11368.448095461581,
+        "y": 776.4999999999999
+      },
+      "data": {
+        "label": "Direction",
+        "color": "rgb(56,141,118)"
+      },
+      "measured": {
+        "width": 85,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_17",
+      "type": "textNode",
+      "position": {
+        "x": 11693.448095461583,
+        "y": 776.5
+      },
+      "data": {
+        "label": "Agent",
+        "color": "rgb(56,141,118)"
+      },
+      "measured": {
+        "width": 64,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_18",
+      "type": "textNode",
+      "position": {
+        "x": 12025.948095461583,
+        "y": 772.3333333333333
+      },
+      "data": {
+        "label": "Instrument",
+        "color": "rgb(56,141,118)"
+      },
+      "measured": {
+        "width": 98,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_19",
+      "type": "textNode",
+      "position": {
+        "x": 13993.650011330312,
+        "y": 735.05354291862
+      },
+      "data": {
+        "label": "Coordinating",
+        "color": "rgb(193,162,45)"
+      },
+      "measured": {
+        "width": 113,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_20",
+      "type": "textNode",
+      "position": {
+        "x": 14268.079400985567,
+        "y": 768.6440269851414
+      },
+      "data": {
+        "label": "Subordinating",
+        "color": "rgb(193,162,45)"
+      },
+      "measured": {
+        "width": 121,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_21",
+      "type": "textNode",
+      "position": {
+        "x": 14877.554778245487,
+        "y": 761.3514677304328
+      },
+      "data": {
+        "label": "Correlative",
+        "color": "rgb(193,162,45)"
+      },
+      "measured": {
+        "width": 99,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_22",
+      "type": "textNode",
+      "position": {
+        "x": 19289.224461213627,
+        "y": 1280.9346415536959
+      },
+      "data": {
+        "label": "Greetings",
+        "color": "rgb(207,223,251)",
+        "textColor": "#000000"
+      },
+      "measured": {
+        "width": 91,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_23",
+      "type": "textNode",
+      "position": {
+        "x": 19391.224461213627,
+        "y": 1282.9346415536959
+      },
+      "data": {
+        "label": "Joy",
+        "color": "rgb(207,223,251)",
+        "textColor": "#000000"
+      },
+      "measured": {
+        "width": 47,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_24",
+      "type": "textNode",
+      "position": {
+        "x": 19455.224461213627,
+        "y": 1282.9346415536959
+      },
+      "data": {
+        "label": "Sorrow",
+        "color": "rgb(207,223,251)",
+        "textColor": "#000000"
+      },
+      "measured": {
+        "width": 73,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_25",
+      "type": "textNode",
+      "position": {
+        "x": 19541.224461213627,
+        "y": 1280.9346415536959
+      },
+      "data": {
+        "label": "Surprise",
+        "color": "rgb(207,223,251)",
+        "textColor": "#000000"
+      },
+      "measured": {
+        "width": 82,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_26",
+      "type": "textNode",
+      "position": {
+        "x": 867.4123549646774,
+        "y": 796.8196800873739
+      },
+      "data": {
+        "label": "Transitive",
+        "color": "rgb(228,171,4)"
+      },
+      "measured": {
+        "width": 91,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_27",
+      "type": "textNode",
+      "position": {
+        "x": 1163.6277827254999,
+        "y": 798.2238041561682
+      },
+      "data": {
+        "label": "Intransitive",
+        "color": "rgb(228,171,4)"
+      },
+      "measured": {
+        "width": 99,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_28",
+      "type": "textNode",
+      "position": {
+        "x": 4605.633452332246,
+        "y": 907.9050349804065
+      },
+      "data": {
+        "label": "Primary",
+        "color": "rgb(59,124,246)"
+      },
+      "measured": {
+        "width": 77,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_29",
+      "type": "textNode",
+      "position": {
+        "x": 6063.859695059013,
+        "y": 1019.9170474646374
+      },
+      "data": {
+        "label": "Modal",
+        "color": "rgb(59,124,246)"
+      },
+      "measured": {
+        "width": 66,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_30",
+      "type": "textNode",
+      "position": {
+        "x": 4507.633452332246,
+        "y": 1025.9050349804065
+      },
+      "data": {
+        "label": "be",
+        "color": "rgb(59,124,246)"
+      },
+      "measured": {
+        "width": 40,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_31",
+      "type": "textNode",
+      "position": {
+        "x": 4627.633452332246,
+        "y": 1031.9050349804065
+      },
+      "data": {
+        "label": "do",
+        "color": "rgb(59,124,246)"
+      },
+      "measured": {
+        "width": 40,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_32",
+      "type": "textNode",
+      "position": {
+        "x": 4731.633452332246,
+        "y": 1033.9050349804065
+      },
+      "data": {
+        "label": "have",
+        "color": "rgb(59,124,246)"
+      },
+      "measured": {
+        "width": 57,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_33",
+      "type": "textNode",
+      "position": {
+        "x": 5784.543193139283,
+        "y": 1169.2013852363025
+      },
+      "data": {
+        "label": "can",
+        "color": "rgb(59,124,246)"
+      },
+      "measured": {
+        "width": 48,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_34",
+      "type": "textNode",
+      "position": {
+        "x": 5888.297518718004,
+        "y": 1169.2013852363025
+      },
+      "data": {
+        "label": "could",
+        "color": "rgb(59,124,246)"
+      },
+      "measured": {
+        "width": 60,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_35",
+      "type": "textNode",
+      "position": {
+        "x": 6036.192395326276,
+        "y": 1161.4602841097103
+      },
+      "data": {
+        "label": "may",
+        "color": "rgb(59,124,246)"
+      },
+      "measured": {
+        "width": 52,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_36",
+      "type": "textNode",
+      "position": {
+        "x": 6086.192395326276,
+        "y": 1161.4602841097103
+      },
+      "data": {
+        "label": "might",
+        "color": "rgb(59,124,246)"
+      },
+      "measured": {
+        "width": 61,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_37",
+      "type": "textNode",
+      "position": {
+        "x": 6156.192395326276,
+        "y": 1161.4602841097103
+      },
+      "data": {
+        "label": "will",
+        "color": "rgb(59,124,246)"
+      },
+      "measured": {
+        "width": 44,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_38",
+      "type": "textNode",
+      "position": {
+        "x": 6206.192395326276,
+        "y": 1161.4602841097103
+      },
+      "data": {
+        "label": "would",
+        "color": "rgb(59,124,246)"
+      },
+      "measured": {
+        "width": 64,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_39",
+      "type": "textNode",
+      "position": {
+        "x": 6278.087041034414,
+        "y": 1159.5656384015722
+      },
+      "data": {
+        "label": "shall",
+        "color": "rgb(59,124,246)"
+      },
+      "measured": {
+        "width": 55,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_40",
+      "type": "textNode",
+      "position": {
+        "x": 6338.087041034414,
+        "y": 1159.5656384015722
+      },
+      "data": {
+        "label": "should",
+        "color": "rgb(59,124,246)"
+      },
+      "measured": {
+        "width": 69,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_41",
+      "type": "textNode",
+      "position": {
+        "x": 6418.087041034414,
+        "y": 1159.5656384015722
+      },
+      "data": {
+        "label": "must",
+        "color": "rgb(59,124,246)"
+      },
+      "measured": {
+        "width": 57,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_42",
+      "type": "textNode",
+      "position": {
+        "x": 13890.240824943226,
+        "y": 1281.0745834134684
+      },
+      "data": {
+        "label": "For",
+        "color": "rgb(193,162,45)"
+      },
+      "measured": {
+        "width": 46,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_43",
+      "type": "textNode",
+      "position": {
+        "x": 13940.240824943226,
+        "y": 1281.0745834134684
+      },
+      "data": {
+        "label": "And",
+        "color": "rgb(193,162,45)"
+      },
+      "measured": {
+        "width": 50,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_44",
+      "type": "textNode",
+      "position": {
+        "x": 14001.990824943226,
+        "y": 1281.0745834134684
+      },
+      "data": {
+        "label": "Nor",
+        "color": "rgb(193,162,45)"
+      },
+      "measured": {
+        "width": 48,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_45",
+      "type": "textNode",
+      "position": {
+        "x": 14051.990824943226,
+        "y": 1281.0745834134684
+      },
+      "data": {
+        "label": "But",
+        "color": "rgb(193,162,45)"
+      },
+      "measured": {
+        "width": 46,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_46",
+      "type": "textNode",
+      "position": {
+        "x": 14101.990824943226,
+        "y": 1281.0745834134684
+      },
+      "data": {
+        "label": "Or",
+        "color": "rgb(193,162,45)"
+      },
+      "measured": {
+        "width": 40,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_47",
+      "type": "textNode",
+      "position": {
+        "x": 14141.990824943226,
+        "y": 1281.0745834134684
+      },
+      "data": {
+        "label": "Yet",
+        "color": "rgb(193,162,45)"
+      },
+      "measured": {
+        "width": 45,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_48",
+      "type": "textNode",
+      "position": {
+        "x": 14191.990824943226,
+        "y": 1281.0745834134684
+      },
+      "data": {
+        "label": "So",
+        "color": "rgb(193,162,45)"
+      },
+      "measured": {
+        "width": 42,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_49",
+      "type": "textNode",
+      "position": {
+        "x": 14231.990824943226,
+        "y": 1281.0745834134684
+      },
+      "data": {
+        "label": "Although",
+        "color": "rgb(193,162,45)"
+      },
+      "measured": {
+        "width": 85,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_50",
+      "type": "textNode",
+      "position": {
+        "x": 14321.990824943226,
+        "y": 1281.0745834134684
+      },
+      "data": {
+        "label": "Because",
+        "color": "rgb(193,162,45)"
+      },
+      "measured": {
+        "width": 84,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_51",
+      "type": "textNode",
+      "position": {
+        "x": 14411.990824943226,
+        "y": 1281.0745834134684
+      },
+      "data": {
+        "label": "Since",
+        "color": "rgb(193,162,45)"
+      },
+      "measured": {
+        "width": 62,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_52",
+      "type": "textNode",
+      "position": {
+        "x": 14481.990824943226,
+        "y": 1281.0745834134684
+      },
+      "data": {
+        "label": "Unless",
+        "color": "rgb(193,162,45)"
+      },
+      "measured": {
+        "width": 71,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_53",
+      "type": "textNode",
+      "position": {
+        "x": 14561.990824943226,
+        "y": 1281.0745834134684
+      },
+      "data": {
+        "label": "While",
+        "color": "rgb(193,162,45)"
+      },
+      "measured": {
+        "width": 62,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_54",
+      "type": "textNode",
+      "position": {
+        "x": 14631.990824943226,
+        "y": 1281.0745834134684
+      },
+      "data": {
+        "label": "Either/Or",
+        "color": "rgb(193,162,45)"
+      },
+      "measured": {
+        "width": 86,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_55",
+      "type": "textNode",
+      "position": {
+        "x": 14721.990824943226,
+        "y": 1281.0745834134684
+      },
+      "data": {
+        "label": "Neither/Nor",
+        "color": "rgb(193,162,45)"
+      },
+      "measured": {
+        "width": 104,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_56",
+      "type": "textNode",
+      "position": {
+        "x": 14831.990824943226,
+        "y": 1281.0745834134684
+      },
+      "data": {
+        "label": "Both/And",
+        "color": "rgb(193,162,45)"
+      },
+      "measured": {
+        "width": 88,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_57",
+      "type": "textNode",
+      "position": {
+        "x": 14921.990824943226,
+        "y": 1281.0745834134684
+      },
+      "data": {
+        "label": "Not only/But also",
+        "color": "rgb(193,162,45)"
+      },
+      "measured": {
+        "width": 143,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_61",
+      "type": "notesNode",
+      "position": {
+        "x": 7165.4901188565345,
+        "y": 1393.8825607283143
+      },
+      "data": {
+        "label": "## Use of **Would**\n\n### Main Uses\n- Polite request: *Would you help me?*\n- Past habits: *As a child, I would play outside.*\n- Future seen from past: *He said he would call.*\n- Imaginary condition: *If I had money, I would buy a car.*\n- Past willingness: *He would help anyone.*\n\n---\n\n### Bank Tips\n- If + past → would + V1 (If I knew, I would help.)\n- Never say 'If I would know'\n- Would rather + V1 (I would rather stay home.)\n- Polite offers: Would you like tea?\n\n---\n\n### Shortcut\n**Would = polite + past habit + imaginary**",
+        "color": "rgb(64,215,141)",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 300,
+        "height": 491
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_62",
+      "type": "notesNode",
+      "position": {
+        "x": 5552.791519803735,
+        "y": 1348.0491960729464
+      },
+      "data": {
+        "label": "## Use of **Can**\n\n### Main Uses\n- Ability: *I can swim.*\n- Permission (informal): *Can I borrow your pen?*\n- Possibility: *It can rain today.*\n- Offer: *I can help you.*\n\n---\n\n### Bank Tips\n- Formal permission = use **may**, not can.\n- Negative: **cannot / can't**.\n- Question: **Can + subject + verb?**\n- Past ability = **could**.\n\n---\n\n### Shortcut\n**Can = ability + permission + possibility**",
+        "color": "rgb(64,215,141)",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 300,
+        "height": 401
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_63",
+      "type": "notesNode",
+      "position": {
+        "x": 5869.096404618267,
+        "y": 1355.7411011265922
+      },
+      "data": {
+        "label": "## Use of **Could**\n\n### Main Uses\n- Past ability: *I could run fast.*\n- Polite request: *Could you help me?*\n- Slight possibility: *It could rain.*\n- Suggestions: *You could try again.*\n\n---\n\n### Bank Tips\n- Weaker than **can**.\n- Used in conditional: *If I tried, I could win.*\n- Not used for certainty.\n\n---\n\n### Shortcut\n**Could = past ability + polite request + weak possibility**",
+        "color": "rgb(64,215,141)",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 300,
+        "height": 383
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_64",
+      "type": "notesNode",
+      "position": {
+        "x": 6182.785761279454,
+        "y": 1451.122238497946
+      },
+      "data": {
+        "label": "## Use of **May**\n\n### Main Uses\n- Permission (formal): *May I come in?*\n- Possibility: *It may rain.*\n- Wishes: *May you live long!*\n\n---\n\n### Bank Tips\n- More formal than can.\n- Possibility stronger than might.\n\n---\n\n### Shortcut\n**May = permission + possibility**",
+        "color": "rgb(64,215,141)",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 300,
+        "height": 300
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_65",
+      "type": "notesNode",
+      "position": {
+        "x": 6502.684806426978,
+        "y": 1424.7440732188763
+      },
+      "data": {
+        "label": "## Use of **Might**\n\n### Main Uses\n- Weak possibility: *It might rain.*\n- Past form of may.\n- Polite suggestion: *You might try again.*\n\n---\n\n### Bank Tips\n- Smaller chance than may.\n- Not used for permission.\n\n---\n\n### Shortcut\n**Might = weak possibility**",
+        "color": "rgb(64,215,141)",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 300,
+        "height": 300
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_66",
+      "type": "notesNode",
+      "position": {
+        "x": 6825.181375827979,
+        "y": 1410.521361394732
+      },
+      "data": {
+        "label": "## Use of **Will**\n\n### Main Uses\n- Future action: *He will come.*\n- Promise: *I will help you.*\n- Determination: *I will do it.*\n\n---\n\n### Bank Tips\n- Negative = **will not / won't**.\n- Question: **Will + subject + verb?**\n- Not used in past.\n\n---\n\n### Shortcut\n**Will = future + promise + decision**",
+        "color": "rgb(64,215,141)",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 300,
+        "height": 329
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_67",
+      "type": "notesNode",
+      "position": {
+        "x": 7517.56069502011,
+        "y": 1397.2038425437954
+      },
+      "data": {
+        "label": "## Use of **Shall**\n\n### Main Uses\n- Future (old formal): *I shall return.*\n- Offers: *Shall I open the window?*\n- Suggestions: *Shall we go?*\n\n---\n\n### Bank Tips\n- Used mainly with **I / We**.\n- Modern English uses **will** more.\n\n---\n\n### Shortcut\n**Shall = offer + suggestion (I / we)**",
+        "color": "rgb(64,215,141)",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 300,
+        "height": 300
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_68",
+      "type": "notesNode",
+      "position": {
+        "x": 7880.2874873952915,
+        "y": 1384.1303257495817
+      },
+      "data": {
+        "label": "## Use of **Should**\n\n### Main Uses\n- Advice: *You should study.*\n- Suggestion: *You should try again.*\n- Mild obligation: *People should obey rules.*\n\n---\n\n### Bank Tips\n- Weaker than must.\n- Negative = **should not / shouldn't**.\n\n---\n\n### Shortcut\n**Should = advice + suggestion**",
+        "color": "rgb(64,215,141)",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 300,
+        "height": 329
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_69",
+      "type": "notesNode",
+      "position": {
+        "x": 8229.118845843503,
+        "y": 1349.9429939906236
+      },
+      "data": {
+        "label": "## Use of **Must**\n\n### Main Uses\n- Strong obligation: *You must wear a helmet.*\n- Necessity: *We must work hard.*\n- Logical certainty: *He must be tired.*\n\n---\n\n### Bank Tips\n- Stronger than should.\n- Negative = **must not / mustn't**.\n\n---\n\n### Shortcut\n**Must = strong rule + necessity**",
+        "color": "rgb(64,215,141)",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 300,
+        "height": 311
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_70",
+      "type": "notesNode",
+      "position": {
+        "x": 4095.743870932125,
+        "y": 1194.2096942987864
+      },
+      "data": {
+        "label": "## Use of **Be**\n\n### Main Uses\n- Continuous tense: *He is playing.*\n- Passive voice: *The work is done.*\n- State: *She is happy.*\n\n---\n\n### Bank Tips\n- Forms: am, is, are, was, were, be, been, being.\n\n---\n\n### Shortcut\n**Be = state + continuous + passive**",
+        "color": "rgb(64,215,141)",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 300,
+        "height": 300
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_71",
+      "type": "notesNode",
+      "position": {
+        "x": 4412.289954706809,
+        "y": 1201.4224830922951
+      },
+      "data": {
+        "label": "## Use of **Do**\n\n### Main Uses\n- Making questions: *Do you play?*\n- Negative: *I do not know.*\n- Emphasis: *I do want it.*\n\n---\n\n### Bank Tips\n- Forms: do, does, did.\n- Never used as main verb in continuous.\n\n---\n\n### Shortcut\n**Do = question + negative + emphasis**",
+        "color": "rgb(64,215,141)",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 300,
+        "height": 311
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_72",
+      "type": "notesNode",
+      "position": {
+        "x": 4772.522773076132,
+        "y": 1194.2967505602119
+      },
+      "data": {
+        "label": "## Use of **Have**\n\n### Main Uses\n- Perfect tense: *He has gone.*\n- Ownership: *I have a car.*\n- Obligation: *I have to work.*\n\n---\n\n### Bank Tips\n- Forms: have, has, had.\n- Negative: *He has not gone.*\n\n---\n\n### Shortcut\n**Have = perfect tense + possession**",
+        "color": "rgb(64,215,141)",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 300,
+        "height": 300
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_73",
+      "type": "notesNode",
+      "position": {
+        "x": -1548,
+        "y": 996
+      },
+      "data": {
+        "label": "## Quality Adjective\n\n### Meaning\n- Shows what kind of person or thing.\n- Example: *good, tall, smart, red*\n\n---\n\n### Usage\n- Describes quality: *a smart boy*\n- Few → less → least (for quality)\n\n---\n\n### Bank Tip\n- Used before noun: *a beautiful girl*\n- Used after be: *She is smart*\n\n---\n\n### Shortcut\n**Quality = what kind**",
+        "color": "rgb(209,145,255)",
+        "textColor": "#000000"
+      },
+      "measured": {
+        "width": 300,
+        "height": 330
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_74",
+      "type": "notesNode",
+      "position": {
+        "x": -1206,
+        "y": 966
+      },
+      "data": {
+        "label": "## Quantity Adjective\n\n### Meaning\n- Shows how much (uncountable)\n- Example: *some, much, little*\n\n---\n\n### Usage\n- *I have little time.*\n- *She drank some water.*\n\n---\n\n### Bank Tip\n- For countable use NUMBER, not quantity\n- little → less → least\n\n---\n\n### Shortcut\n**Quantity = how much (uncountable)**",
+        "color": "rgb(209,145,255)",
+        "textColor": "#000000"
+      },
+      "measured": {
+        "width": 300,
+        "height": 348
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_75",
+      "type": "notesNode",
+      "position": {
+        "x": -868,
+        "y": 978
+      },
+      "data": {
+        "label": "## Number Adjective\n\n### Meaning\n- Shows how many (countable)\n- Example: *one, two, first, second*\n\n---\n\n### Usage\n- *I have two books.*\n- *He won first prize.*\n\n---\n\n### Bank Tip\n- Use NUMBER for countable\n- many → more → most\n\n---\n\n### Shortcut\n**Number = how many**",
+        "color": "rgb(209,145,255)",
+        "textColor": "#000000"
+      },
+      "measured": {
+        "width": 300,
+        "height": 312
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_76",
+      "type": "notesNode",
+      "position": {
+        "x": -550,
+        "y": 954
+      },
+      "data": {
+        "label": "## Demonstrative Adjective\n\n### Meaning\n- Points out nouns.\n- Example: *this, that, these, those*\n\n---\n\n### Usage\n- *This car*, *Those books*\n- Near vs far\n\n---\n\n### Bank Tip\n- Must agree in number\n- this/that → singular\n- these/those → plural\n\n---\n\n### Shortcut\n**Demonstrative = pointing words**",
+        "color": "rgb(209,145,255)",
+        "textColor": "#000000"
+      },
+      "measured": {
+        "width": 300,
+        "height": 376
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_77",
+      "type": "notesNode",
+      "position": {
+        "x": -207.26425150234456,
+        "y": 948.0017315453779
+      },
+      "data": {
+        "label": "## Interrogative Adjective\n\n### Meaning\n- Used to ask questions.\n- Example: *which, what, whose*\n\n---\n\n### Usage\n- *Which book?*\n- *Whose car?*\n\n---\n\n### Bank Tip\n- Must come before noun\n- which/what + noun\n\n---\n\n### Shortcut\n**Interrogative = question with noun**",
+        "color": "rgb(209,145,255)",
+        "textColor": "#000000"
+      },
+      "measured": {
+        "width": 300,
+        "height": 358
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_78",
+      "type": "notesNode",
+      "position": {
+        "x": 140.42141716744766,
+        "y": 928.528503004688
+      },
+      "data": {
+        "label": "## Possessive Adjective\n\n### Meaning\n- Shows ownership.\n- Example: *my, your, his, her, their*\n\n---\n\n### Usage\n- *my book, her pen*\n- Not same as possessive pronoun\n\n---\n\n### Bank Tip\n- my/mine → my (adjective), mine (pronoun)\n- your/yours → your (adj), yours (pro)\n\n---\n\n### Shortcut\n**Possessive = ownership**",
+        "color": "rgb(209,145,255)",
+        "textColor": "#000000"
+      },
+      "measured": {
+        "width": 300,
+        "height": 394
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_79",
+      "type": "notesNode",
+      "position": {
+        "x": 8568.948095461581,
+        "y": 918
+      },
+      "data": {
+        "label": "## Adverb of **Manner**\n\n### Meaning\n- Tells how an action happens.\n- Slowly, quickly, well, neatly\n\n---\n\n### Usage\n- He runs fast.\n- She speaks clearly.\n\n---\n\n### Bank Tip\n- Usually ends in **-ly**.\n- Place after verb.\n\n---\n\n### Shortcut\n**Manner = how**",
+        "color": "rgb(175,120,255)",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 300,
+        "height": 317
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_80",
+      "type": "notesNode",
+      "position": {
+        "x": 8912.698095461581,
+        "y": 902
+      },
+      "data": {
+        "label": "## Adverb of **Place**\n\n### Meaning\n- Tells where.\n- Here, there, outside, up, down\n\n---\n\n### Usage\n- Come here.\n- Dogs live outside.\n\n---\n\n### Bank Tip\n- Never add 'to' after here/there.\n- ❌ Come to here\n- ✅ Come here\n\n---\n\n### Shortcut\n**Place = where**",
+        "color": "rgb(175,120,255)",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 300,
+        "height": 341
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_81",
+      "type": "notesNode",
+      "position": {
+        "x": 9289.948095461581,
+        "y": 930
+      },
+      "data": {
+        "label": "## Adverb of **Time**\n\n### Meaning\n- Tells when.\n- Now, then, yesterday, today, soon\n\n---\n\n### Usage\n- I will call tomorrow.\n- He came yesterday.\n\n---\n\n### Bank Tip\n- Usually at end of sentence.\n\n---\n\n### Shortcut\n**Time = when**",
+        "color": "rgb(175,120,255)",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 300,
+        "height": 317
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_82",
+      "type": "notesNode",
+      "position": {
+        "x": 9635.948095461581,
+        "y": 946
+      },
+      "data": {
+        "label": "## Adverb of **Frequency**\n\n### Meaning\n- How often.\n- Always, never, sometimes, often\n\n---\n\n### Usage\n- He always wakes early.\n- They never fight.\n\n---\n\n### Bank Tip\n- Usually before main verb.\n- She always works hard.\n\n---\n\n### Shortcut\n**Frequency = how often**",
+        "color": "rgb(175,120,255)",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 300,
+        "height": 345
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_83",
+      "type": "notesNode",
+      "position": {
+        "x": 9997.948095461581,
+        "y": 962
+      },
+      "data": {
+        "label": "## Adverb of **Degree**\n\n### Meaning\n- Tells how much.\n- Very, too, enough, extremely\n\n---\n\n### Usage\n- He is very tall.\n- Too hot to play.\n\n---\n\n### Bank Tip\n- Comes before adjective/adverb.\n- Very good, very fast\n\n---\n\n### Shortcut\n**Degree = how much**",
+        "color": "rgb(175,120,255)",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 300,
+        "height": 317
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_84",
+      "type": "notesNode",
+      "position": {
+        "x": 10518.948095461581,
+        "y": 1156
+      },
+      "data": {
+        "label": "## Preposition of **Time**\n\n### Meaning\n- Shows when.\n- At, on, in, before, after\n\n---\n\n### Usage\n- At night, at 5 PM\n- On Monday, on 15th Aug\n- In June, in 2023\n\n---\n\n### Bank Tip\n- At = exact time\n- On = days/dates\n- In = months/years\n\n---\n\n### Shortcut\n**Time = when**",
+        "color": "rgb(255,165,90)",
+        "textColor": "#000000"
+      },
+      "measured": {
+        "width": 300,
+        "height": 353
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_85",
+      "type": "notesNode",
+      "position": {
+        "x": 10882.448095461581,
+        "y": 1128
+      },
+      "data": {
+        "label": "## Preposition of **Place**\n\n### Meaning\n- Shows location.\n- In, on, at, under, between\n\n---\n\n### Usage\n- In the room\n- On the wall\n- At the gate\n\n---\n\n### Bank Tip\n- At = point\n- On = surface\n- In = inside\n\n---\n\n### Shortcut\n**Place = where**",
+        "color": "rgb(255,165,90)",
+        "textColor": "#000000"
+      },
+      "measured": {
+        "width": 300,
+        "height": 381
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_86",
+      "type": "notesNode",
+      "position": {
+        "x": 11267.948095461581,
+        "y": 1118
+      },
+      "data": {
+        "label": "## Preposition of **Direction**\n\n### Meaning\n- Shows movement.\n- To, into, from, towards\n\n---\n\n### Usage\n- Go to school\n- Walk towards home\n\n---\n\n### Bank Tip\n- Into = movement inside\n- In = already inside\n\n---\n\n### Shortcut\n**Direction = movement**",
+        "color": "rgb(255,165,90)",
+        "textColor": "#000000"
+      },
+      "measured": {
+        "width": 300,
+        "height": 345
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_87",
+      "type": "notesNode",
+      "position": {
+        "x": 11588.948095461581,
+        "y": 1164
+      },
+      "data": {
+        "label": "## Preposition of **Agent**\n\n### Meaning\n- Shows who does the action.\n- By\n\n---\n\n### Usage\n- The work was done by him.\n\n---\n\n### Bank Tip\n- Used in passive sentences.\n\n---\n\n### Shortcut\n**Agent = doer**",
+        "color": "rgb(255,165,90)",
+        "textColor": "#000000"
+      },
+      "measured": {
+        "width": 300,
+        "height": 309
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_88",
+      "type": "notesNode",
+      "position": {
+        "x": 11927.198095461581,
+        "y": 1152
+      },
+      "data": {
+        "label": "## Preposition of **Instrument**\n\n### Meaning\n- Shows tool or means.\n- With, by\n\n---\n\n### Usage\n- Cut with a knife.\n- Written by pen.\n\n---\n\n### Bank Tip\n- With = tool\n- By = agent\n\n---\n\n### Shortcut\n**Instrument = tool/means**",
+        "color": "rgb(255,165,90)",
+        "textColor": "#000000"
+      },
+      "measured": {
+        "width": 300,
+        "height": 345
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_89",
+      "type": "notesNode",
+      "position": {
+        "x": 13588.995983078308,
+        "y": 796.2276859459884
+      },
+      "data": {
+        "label": "## Coordinating Conjunction\n\n### Meaning\n- Joins equal words/clauses.\n- For, And, Nor, But, Or, Yet, So\n\n---\n\n### Usage\n- Ram and Sham\n- I tried but failed\n\n---\n\n### Bank Tip\n- FANBOYS rule\n- No comma before **and** for short sentences\n\n---\n\n### Shortcut\n**Coordinating = equal ideas**",
+        "color": "rgb(255,210,60)",
+        "textColor": "#000000"
+      },
+      "measured": {
+        "width": 300,
+        "height": 358
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_90",
+      "type": "notesNode",
+      "position": {
+        "x": 14487.85881046344,
+        "y": 720.186863082264
+      },
+      "data": {
+        "label": "## Subordinating Conjunction\n\n### Meaning\n- Joins dependent and main clause.\n- Because, Although, Since, If, When\n\n---\n\n### Usage\n- He left because it rained.\n- Although he tried, he failed.\n\n---\n\n### Bank Tip\n- Shows cause, time, condition\n- If + past → would\n\n---\n\n### Shortcut\n**Subordinating = main + dependent clause**",
+        "color": "rgb(255,210,60)",
+        "textColor": "#000000"
+      },
+      "measured": {
+        "width": 300,
+        "height": 394
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_91",
+      "type": "notesNode",
+      "position": {
+        "x": 15043.636458229357,
+        "y": 808.7617124031198
+      },
+      "data": {
+        "label": "## Correlative Conjunction\n\n### Meaning\n- Comes in pairs.\n- Either/Or, Neither/Nor, Both/And, Not only/But also\n\n---\n\n### Usage\n- Either you come or I go\n- Not only smart but also kind\n\n---\n\n### Bank Tip\n- Must balance structure on both sides\n- ❌ Either he will go or stayed\n\n---\n\n### Shortcut\n**Correlative = paired conjunctions**",
+        "color": "rgb(255,210,60)",
+        "textColor": "#000000"
+      },
+      "measured": {
+        "width": 300,
+        "height": 397
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_92",
+      "type": "notesNode",
+      "position": {
+        "x": 12639.156429008983,
+        "y": 1554.3970211113021
+      },
+      "data": {
+        "label": "## For\n\n### Meaning\n- Shows reason.\n\n### Example\n- He worked hard, for he wanted to win.\n\n---\n### Bank Tips\n- Formal tone.\n- Similar to 'because'.\n\n---\n### Shortcut\n**For = reason**",
+        "color": "rgb(255,210,60)",
+        "textColor": "#000000"
+      },
+      "measured": {
+        "width": 300,
+        "height": 300
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_93",
+      "type": "notesNode",
+      "position": {
+        "x": 12981.04757583418,
+        "y": 1550.8585829007088
+      },
+      "data": {
+        "label": "## And\n\n### Meaning\n- Adds ideas.\n\n### Example\n- Ram and Shyam are friends.\n\n---\n### Bank Tips\n- Joins same type of words.\n- No comma for short sentences.\n\n---\n### Shortcut\n**And = addition**",
+        "color": "rgb(255,210,60)",
+        "textColor": "#000000"
+      },
+      "measured": {
+        "width": 300,
+        "height": 300
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_94",
+      "type": "notesNode",
+      "position": {
+        "x": 13308.03755681497,
+        "y": 1531.0592165556973
+      },
+      "data": {
+        "label": "## Nor\n\n### Meaning\n- Negative addition.\n\n### Example\n- He did not speak, nor did he smile.\n\n---\n### Bank Tips\n- Used with NOT.\n- Follows inversion: nor + helping verb + subject.\n\n---\n### Shortcut\n**Nor = negative + addition**",
+        "color": "rgb(255,210,60)",
+        "textColor": "#000000"
+      },
+      "measured": {
+        "width": 300,
+        "height": 310
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_95",
+      "type": "notesNode",
+      "position": {
+        "x": 13665.499591793665,
+        "y": 1526.4526724513098
+      },
+      "data": {
+        "label": "## But\n\n### Meaning\n- Shows contrast.\n\n### Example\n- He is poor but honest.\n\n---\n### Bank Tips\n- Do not use 'but' twice.\n- Avoid double negatives.\n\n---\n### Shortcut\n**But = contrast**",
+        "color": "rgb(255,210,60)",
+        "textColor": "#000000"
+      },
+      "measured": {
+        "width": 300,
+        "height": 300
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_96",
+      "type": "notesNode",
+      "position": {
+        "x": 13990.30217803016,
+        "y": 1521.7848802930519
+      },
+      "data": {
+        "label": "## Or\n\n### Meaning\n- Shows choice.\n\n### Example\n- Tea or coffee?\n\n---\n### Bank Tips\n- Used in questions.\n- Used in negative condition: Work hard or fail.\n\n---\n### Shortcut\n**Or = choice**",
+        "color": "rgb(255,210,60)",
+        "textColor": "#000000"
+      },
+      "measured": {
+        "width": 300,
+        "height": 300
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_97",
+      "type": "notesNode",
+      "position": {
+        "x": 14327.238155099065,
+        "y": 1514.168905251311
+      },
+      "data": {
+        "label": "## Yet\n\n### Meaning\n- Unexpected contrast.\n\n### Example\n- He is old, yet strong.\n\n---\n### Bank Tips\n- Similar to 'but' but stronger.\n- Good for essays.\n\n---\n### Shortcut\n**Yet = surprising contrast**",
+        "color": "rgb(255,210,60)",
+        "textColor": "#000000"
+      },
+      "measured": {
+        "width": 300,
+        "height": 300
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_98",
+      "type": "notesNode",
+      "position": {
+        "x": 14649.860127898604,
+        "y": 1531.0142761637
+      },
+      "data": {
+        "label": "## So\n\n### Meaning\n- Shows result.\n\n### Example\n- It rained, so he stayed home.\n\n---\n### Bank Tips\n- Cause must come before so.\n\n---\n### Shortcut\n**So = result**",
+        "color": "rgb(255,210,60)",
+        "textColor": "#000000"
+      },
+      "measured": {
+        "width": 300,
+        "height": 300
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_99",
+      "type": "notesNode",
+      "position": {
+        "x": 15307.973095637484,
+        "y": 1538.7539234768954
+      },
+      "data": {
+        "label": "## Because\n\n### Meaning\n- Reason or cause.\n\n### Example\n- He left because it rained.\n\n---\n### Bank Tip\n- Subordinate clause cannot stand alone.\n\n---\n### Shortcut\n**Because = reason**",
+        "color": "rgb(255,210,60)",
+        "textColor": "#000000"
+      },
+      "measured": {
+        "width": 300,
+        "height": 300
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_100",
+      "type": "notesNode",
+      "position": {
+        "x": 14971.985275643792,
+        "y": 1541.370353363113
+      },
+      "data": {
+        "label": "## Although\n\n### Meaning\n- Concession (unexpected result)\n\n### Example\n- Although he was ill, he worked.\n\n---\n### Bank Tip\n- Use comma after clause.\n\n---\n### Shortcut\n**Although = contrast + surprise**",
+        "color": "rgb(255,210,60)",
+        "textColor": "#000000"
+      },
+      "measured": {
+        "width": 300,
+        "height": 300
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_101",
+      "type": "notesNode",
+      "position": {
+        "x": 15626.769529984496,
+        "y": 1552.734049755118
+      },
+      "data": {
+        "label": "## Since\n\n### Meaning\n- Time or cause.\n\n### Example\n- He stayed home since it rained.\n\n---\n### Bank Tip\n- Avoid using past tense twice incorrectly.\n\n---\n### Shortcut\n**Since = time/cause**",
+        "color": "rgb(255,210,60)",
+        "textColor": "#000000"
+      },
+      "measured": {
+        "width": 300,
+        "height": 300
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_102",
+      "type": "notesNode",
+      "position": {
+        "x": 15955.779945073986,
+        "y": 1552.1468079487352
+      },
+      "data": {
+        "label": "## Unless\n\n### Meaning\n- Negative condition.\n\n### Example\n- Unless you study, you will fail.\n\n---\n### Bank Tip\n- Means 'if not'.\n\n---\n### Shortcut\n**Unless = if not**",
+        "color": "rgb(255,210,60)",
+        "textColor": "#000000"
+      },
+      "measured": {
+        "width": 300,
+        "height": 300
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_103",
+      "type": "notesNode",
+      "position": {
+        "x": 16302.603608048092,
+        "y": 1531.7266573534444
+      },
+      "data": {
+        "label": "## While\n\n### Meaning\n- Same time actions.\n\n### Example\n- He sang while she danced.\n\n---\n### Bank Tip\n- Avoid 'during while' (wrong)\n\n---\n### Shortcut\n**While = at same time**",
+        "color": "rgb(255,210,60)",
+        "textColor": "#000000"
+      },
+      "measured": {
+        "width": 300,
+        "height": 300
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_104",
+      "type": "notesNode",
+      "position": {
+        "x": 16996.135208362277,
+        "y": 1513.7210344599494
+      },
+      "data": {
+        "label": "## Either / Or\n\n### Meaning\n- Choice between two.\n\n### Example\n- Either you study or fail.\n\n---\n### Bank Tip\n- Grammatical balance on both sides.\n\n---\n### Shortcut\n**Either/Or = choice**",
+        "color": "rgb(255,210,60)",
+        "textColor": "#000000"
+      },
+      "measured": {
+        "width": 300,
+        "height": 300
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_105",
+      "type": "notesNode",
+      "position": {
+        "x": 16646.15546822672,
+        "y": 1521.663499088348
+      },
+      "data": {
+        "label": "## Neither / Nor\n\n### Meaning\n- Negative of either/or.\n\n### Example\n- Neither he eats nor drinks.\n\n---\n### Bank Tip\n- No double negative.\n\n---\n### Shortcut\n**Neither/Nor = negative choice**",
+        "color": "rgb(255,210,60)",
+        "textColor": "#000000"
+      },
+      "measured": {
+        "width": 300,
+        "height": 300
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_106",
+      "type": "notesNode",
+      "position": {
+        "x": 17320.09580312307,
+        "y": 1520.3404421016166
+      },
+      "data": {
+        "label": "## Both / And\n\n### Meaning\n- Adds two positives.\n\n### Example\n- Both Raj and Rahul passed.\n\n---\n### Bank Tip\n- Must pair correctly.\n\n---\n### Shortcut\n**Both/And = double positive**",
+        "color": "rgb(255,210,60)",
+        "textColor": "#000000"
+      },
+      "measured": {
+        "width": 300,
+        "height": 300
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_107",
+      "type": "notesNode",
+      "position": {
+        "x": 17656.971224962443,
+        "y": 1507.629368186715
+      },
+      "data": {
+        "label": "## Not only / But also\n\n### Meaning\n- Highlights two strong ideas.\n\n### Example\n- She is not only smart but also kind.\n\n---\n### Bank Tip\n- Balance sentence: not only X but also Y\n\n---\n### Shortcut\n**Not only/But also = emphasis**",
+        "color": "rgb(255,210,60)",
+        "textColor": "#000000"
+      },
+      "measured": {
+        "width": 300,
+        "height": 300
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_108",
+      "type": "notesNode",
+      "position": {
+        "x": -3873.3018055482607,
+        "y": 942.4214171674478
+      },
+      "data": {
+        "label": "## Personal Pronoun\n\n### Definition\nUsed instead of nouns to refer to people or things directly.\n\n### Examples\n- I, we, you, he, she, it, they\n\n---\n### Use Cases\n- Subject: **He** runs fast.\n- Object: I saw **her**.\n- Possessive: **His** car is new.\n\n---\n### Bank Tips\n- Subject form: I/We/He/She/They\n- Object form: Me/Us/Him/Her/Them\n- Avoid double subjects: ❌ He he went\n\n---\n### Shortcut\n**Personal = person replacing noun**",
+        "color": "rgb(72,168,255)",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 300,
+        "height": 445
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_109",
+      "type": "notesNode",
+      "position": {
+        "x": -3554.3640061937713,
+        "y": 931.0535429186198
+      },
+      "data": {
+        "label": "## Reflexive Pronoun\n\n### Definition\nRefers back to the subject itself.\n\n### Examples\n- Myself, ourselves, yourself, themselves\n\n---\n### Use Cases\n- He hurt **himself**.\n- She prepared the food **herself**.\n\n---\n### Bank Tips\n- Never use reflexive without same subject.\n- ❌ Myself did this → ✅ I did this myself.\n\n---\n### Shortcut\n**Reflexive = subject & object same**",
+        "color": "rgb(72,168,255)",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 300,
+        "height": 409
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_110",
+      "type": "notesNode",
+      "position": {
+        "x": -3239.215498255558,
+        "y": 953.7892914162755
+      },
+      "data": {
+        "label": "## Demonstrative Pronoun\n\n### Definition\nPoints to specific things.\n\n### Examples\n- This, that, these, those\n\n---\n### Use Cases\n- **This** is my book.\n- **Those** were great days.\n\n---\n### Bank Tips\n- 'This/That' for singular, 'These/Those' for plural.\n\n---\n### Shortcut\n**Demonstrative = pointing pronoun**",
+        "color": "rgb(72,168,255)",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 300,
+        "height": 380
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_111",
+      "type": "notesNode",
+      "position": {
+        "x": -2921.118801690586,
+        "y": 961.3678742488275
+      },
+      "data": {
+        "label": "## Interrogative Pronoun\n\n### Definition\nUsed for asking questions.\n\n### Examples\n- Who, whom, whose, which, what\n\n---\n### Use Cases\n- **Who** came?\n- **Which** is yours?\n\n---\n### Bank Tips\n- 'Who' = subject, 'Whom' = object\n- 'Whose' = possession\n\n---\n### Shortcut\n**Interrogative = question word**",
+        "color": "rgb(72,168,255)",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 300,
+        "height": 362
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_112",
+      "type": "notesNode",
+      "position": {
+        "x": -2604.916750833752,
+        "y": 948.1053542918617
+      },
+      "data": {
+        "label": "## Relative Pronoun\n\n### Definition\nJoins two clauses and refers to noun before it.\n\n### Examples\n- Who, which, that, whose, whom\n\n---\n### Use Cases\n- The man **who** came is my uncle.\n\n---\n### Bank Tips\n- Do not omit 'that' wrongly.\n- Use 'which' for things, 'who' for people.\n\n---\n### Shortcut\n**Relative = joins noun with clause**",
+        "color": "rgb(72,168,255)",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 300,
+        "height": 370
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_113",
+      "type": "notesNode",
+      "position": {
+        "x": -2273.5575343118144,
+        "y": 951.8946457081379
+      },
+      "data": {
+        "label": "## Indefinite Pronoun\n\n### Definition\nRefers to persons or things not specific.\n\n### Examples\n- Someone, anything, everybody, few, many\n\n---\n### Use Cases\n- **Everyone** loves music.\n- **Few** were present.\n\n---\n### Bank Tips\n- Singular → each, everyone, anyone\n- Plural → few, many, several\n\n---\n### Shortcut\n**Indefinite = not specific**",
+        "color": "rgb(72,168,255)",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 300,
+        "height": 388
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_114",
+      "type": "notesNode",
+      "position": {
+        "x": -1936.514380665463,
+        "y": 961.3678742488278
+      },
+      "data": {
+        "label": "## Distributive Pronoun\n\n### Definition\nRefers to each one of a group separately.\n\n### Examples\n- Each, either, neither\n\n---\n### Use Cases\n- **Each** of us is ready.\n- **Neither** is correct.\n\n---\n### Bank Tips\n- Always singular.\n- Use singular verb.\n\n---\n### Shortcut\n**Distributive = one by one**",
+        "color": "rgb(72,168,255)",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 300,
+        "height": 380
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_115",
+      "type": "notesNode",
+      "position": {
+        "x": -5688.891022366769,
+        "y": 1140.9476043187433
+      },
+      "data": {
+        "label": "## Common Noun\n\n### Meaning\n- General name of people, places, things.\n\n---\n### Examples\n- girl, city, river, laptop\n\n---\n### Usage\n- Not capitalized unless at start.\n- Can be countable/uncountable.\n\n---\n### Bank Tips\n- Common vs Proper: *city* vs *Patna*.\n- Plural rules: **child → children**, **leaf → leaves**.\n\n---\n### Shortcut\n**Common = general name**",
+        "color": "rgb(18,131,134)",
+        "textColor": "#000000"
+      },
+      "measured": {
+        "width": 300,
+        "height": 390
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_116",
+      "type": "notesNode",
+      "position": {
+        "x": -5358.0732526671845,
+        "y": 1132.3323666562653
+      },
+      "data": {
+        "label": "## Collective Noun\n\n### Meaning\n- Names a group as one unit.\n\n---\n### Examples\n- team, jury, crowd, family\n\n---\n### Usage\n- Usually singular in exams: *The team **is** ready.*\n\n---\n### Bank Tips\n- Plural idea? Use plural verb only when focusing on individuals: *The team **are** arguing.*\n\n---\n### Shortcut\n**Collective = group as one**",
+        "color": "rgb(18,131,134)",
+        "textColor": "#000000"
+      },
+      "measured": {
+        "width": 300,
+        "height": 354
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_117",
+      "type": "notesNode",
+      "position": {
+        "x": -5032.94786413636,
+        "y": 1120.8453831062952
+      },
+      "data": {
+        "label": "## Abstract Noun\n\n### Meaning\n- Names ideas, qualities, feelings (no physical form).\n\n---\n### Examples\n- honesty, beauty, freedom, fear\n\n---\n### Usage\n- Usually uncountable; no plural.\n\n---\n### Bank Tips\n- No article with general idea: *Honesty is the best policy.*\n- From adjective/verb: **kind → kindness**, **decide → decision**.\n\n---\n### Shortcut\n**Abstract = idea/quality**",
+        "color": "rgb(18,131,134)",
+        "textColor": "#000000"
+      },
+      "measured": {
+        "width": 300,
+        "height": 372
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_118",
+      "type": "notesNode",
+      "position": {
+        "x": -4701.539934480463,
+        "y": 1115.10189133131
+      },
+      "data": {
+        "label": "## Material Noun\n\n### Meaning\n- Names substances/materials.\n\n---\n### Examples\n- gold, water, milk, wood\n\n---\n### Usage\n- Generally uncountable; use measure words: *a glass of water*.\n\n---\n### Bank Tips\n- No plural for raw material: *golds ❌ → gold ✅*.\n- No article when speaking generally: *Gold is precious.*\n\n---\n### Shortcut\n**Material = substance**",
+        "color": "rgb(18,131,134)",
+        "textColor": "#000000"
+      },
+      "measured": {
+        "width": 300,
+        "height": 375
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_119",
+      "type": "notesNode",
+      "position": {
+        "x": -5644.724246211209,
+        "y": 503.33072907856626
+      },
+      "data": {
+        "label": "## Countable Noun\n\n### Meaning\n- Things we can count (one, two, many).\n\n---\n### Examples\n- book(s), apple(s), idea(s)\n\n---\n### Usage\n- With a/an, numbers, many/few.\n\n---\n### Bank Tips\n- Article: **a/an** for singular only.\n- Plural after numbers: *two books*.\n\n---\n### Shortcut\n**Countable = many/few**",
+        "color": "rgb(18,131,134)",
+        "textColor": "#000000"
+      },
+      "measured": {
+        "width": 300,
+        "height": 336
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_120",
+      "type": "notesNode",
+      "position": {
+        "x": -4561.530990102252,
+        "y": 488.1795785280696
+      },
+      "data": {
+        "label": "## Uncountable Noun\n\n### Meaning\n- Mass/abstract items not counted individually.\n\n---\n### Examples\n- sugar, rice, advice, information\n\n---\n### Usage\n- Use much/little, some, a lot of.\n\n---\n### Bank Tips\n- No **s** plural: *informations ❌ → information ✅*.\n- Use measure units: *a piece of advice*.\n\n---\n### Shortcut\n**Uncountable = much/little**",
+        "color": "rgb(18,131,134)",
+        "textColor": "#000000"
+      },
+      "measured": {
+        "width": 300,
+        "height": 378
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_121",
+      "type": "notesNode",
+      "position": {
+        "x": 18685.78919168315,
+        "y": 1539.4562183768714
+      },
+      "data": {
+        "label": "## Interjection (Greetings)\n\n### Meaning\n- Friendly opening.\n\n---\n### Examples\n- Hello! Hi! Good morning!\n\n---\n### Usage\n- Start of conversation; comma or !\n\n---\n### Bank Tips\n- Keep punctuation: **Hello,** sir.\n\n---\n### Shortcut\n**Greeting = hello/hi**",
+        "color": "rgb(255,160,200)",
+        "textColor": "#000000"
+      },
+      "measured": {
+        "width": 300,
+        "height": 328
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_122",
+      "type": "notesNode",
+      "position": {
+        "x": 19027.25029940619,
+        "y": 1556.5080297501133
+      },
+      "data": {
+        "label": "## Interjection (Joy)\n\n### Meaning\n- Shows happiness/success.\n\n---\n### Examples\n- Hurray! Yay! Bravo!\n\n---\n### Usage\n- Short, emotional outburst.\n\n---\n### Bank Tips\n- Use **!** for strong feeling.\n\n---\n### Shortcut\n**Joy = hurray/yay**",
+        "color": "rgb(255,160,200)",
+        "textColor": "#000000"
+      },
+      "measured": {
+        "width": 300,
+        "height": 300
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_123",
+      "type": "notesNode",
+      "position": {
+        "x": 19361.13282429668,
+        "y": 1550.8240926256997
+      },
+      "data": {
+        "label": "## Interjection (Sorrow)\n\n### Meaning\n- Shows sadness/pain.\n\n---\n### Examples\n- Alas! Oh no!\n\n---\n### Usage\n- Express grief, regret.\n\n---\n### Bank Tips\n- Formal writing uses full sentences instead.\n\n---\n### Shortcut\n**Sorrow = alas/oh no**",
+        "color": "rgb(255,160,200)",
+        "textColor": "#000000"
+      },
+      "measured": {
+        "width": 300,
+        "height": 318
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_124",
+      "type": "notesNode",
+      "position": {
+        "x": 19704.48857772786,
+        "y": 1533.7722812524578
+      },
+      "data": {
+        "label": "## Interjection (Surprise)\n\n### Meaning\n- Shows shock/astonishment.\n\n---\n### Examples\n- Wow! What!\n\n---\n### Usage\n- Sudden reaction; often at start.\n\n---\n### Bank Tips\n- Avoid overuse in formal writing.\n\n---\n### Shortcut\n**Surprise = wow/what**",
+        "color": "rgb(255,160,200)",
+        "textColor": "#000000"
+      },
+      "measured": {
+        "width": 300,
+        "height": 328
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_125",
+      "type": "notesNode",
+      "position": {
+        "x": 18902.90826334993,
+        "y": 851.6998263227796
+      },
+      "data": {
+        "label": "## Interjection Notes\n\n### Definition\nShort words that express strong feelings or sudden reactions.\n\n---\n### Examples\n- **Oh!**, **Wow!**, **Alas!**, **Hurray!**\n\n---\n### Usage\n- Followed by **!** in strong emotion; sometimes comma.\n- Usually stands alone, not connected grammatically.\n\n---\n### Bank Tips\n- Keep punctuation with spacing: **Oh,** I see.\n- Avoid in formal essays; prefer full sentences.\n\n---\n### Shortcut\n**Interjection = emotion word**",
+        "color": "rgb(255,160,200)",
+        "textColor": "#000000"
+      },
+      "measured": {
+        "width": 300,
+        "height": 426
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_126",
+      "type": "notesNode",
+      "position": {
+        "x": -6031.9200428870145,
+        "y": 1148.5479878141218
+      },
+      "data": {
+        "label": "## Proper Noun\n\n### Meaning\n- Specific name of a person, place, thing, or organization.\n\n---\n### Examples\n- Ram, Priya, Patna, India, Amazon, HDFC Bank\n\n---\n### Usage\n- Always capitalized (even in middle of sentence).\n- Can be singular or plural: **The Himalayas**, **The Netherlands**.\n\n---\n### Bank Tips\n- No article before single person's name: ✅ Ram is here | ❌ The Ram is here\n- Use **the** before unique places: **the Ganga**, **the Taj Mahal**.\n- Month, day & festival names are proper nouns: **Holi**, **Monday**, **January**.\n\n---\n### Shortcut\n**Proper = specific name**",
+        "color": "#128386"
+      },
+      "measured": {
+        "width": 300,
+        "height": 519
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_127",
+      "type": "notesNode",
+      "position": {
+        "x": 737.5788757618257,
+        "y": 935.0696800873741
+      },
+      "data": {
+        "label": "## Transitive Verb\n\n### Meaning\n- Needs an **object** to complete meaning.\n\n---\n### Examples\n- He **wrote** a **letter**.\n- They **play** **cricket**.\n\n---\n### Usage\n- Answers **what/whom** after verb.\n- Can form **passive voice**.\n\n---\n### Bank Tips\n- Test: ask *what/whom* → if answer exists, transitive.\n- Passive: **Object → Subject** (A letter was written.)\n- Avoid missing object: ❌ He wrote → ✅ He wrote a letter.\n\n---\n### Shortcut\n**Transitive = verb + object**",
+        "color": "rgb(64,215,141)",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 300,
+        "height": 450
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_128",
+      "type": "notesNode",
+      "position": {
+        "x": 1071.359509451211,
+        "y": 966.4621951108143
+      },
+      "data": {
+        "label": "## Intransitive Verb\n\n### Meaning\n- **No object** needed; complete by itself.\n\n---\n### Examples\n- He **slept**.\n- The sun **rises**.\n\n---\n### Usage\n- Cannot make passive.\n- May take **adverbs/phrases**: He slept **soundly**.\n\n---\n### Bank Tips\n- Do **not** add fake objects.\n- Verbs of motion/state often intransitive: come, go, arrive, sleep.\n- Linking verbs (be, seem, become) take **complements**, not objects.\n\n---\n### Shortcut\n**Intransitive = no object**",
+        "color": "rgb(64,215,141)",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 300,
+        "height": 480
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_129",
+      "type": "notesNode",
+      "position": {
+        "x": 2168.6230095319042,
+        "y": 1081.689665029152
+      },
+      "data": {
+        "label": "## Regular Verb\n\n### Meaning\n- Past tense by adding **-ed**.\n\n---\n### Examples\n- play → played\n- work → worked\n\n---\n### Usage\n- Used when no spelling change.\n\n---\n### Bank Tips\n- Check spelling: stop → stopped, cry → cried\n\n---\n### Shortcut\n**Regular = verb + ed**",
+        "color": "#40d78d",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 300,
+        "height": 336
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_130",
+      "type": "notesNode",
+      "position": {
+        "x": 2525.9887850896334,
+        "y": 1060.6463681801613
+      },
+      "data": {
+        "label": "## Irregular Verb\n\n### Meaning\n- Past tense changes form.\n\n---\n### Examples\n- go → went → gone\n- eat → ate → eaten\n\n---\n### Usage\n- No fixed rule; must memorize.\n\n---\n### Bank Tips\n- Common exam errors: **write → wrote → written**, **swim → swam → swum**\n\n---\n### Shortcut\n**Irregular = no ed rule**",
+        "color": "#40d78d",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 300,
+        "height": 354
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_131",
+      "type": "notesNode",
+      "position": {
+        "x": 1420.8956442724814,
+        "y": 1064.8526536495156
+      },
+      "data": {
+        "label": "## Finite Verb\n\n### Meaning\n- Changes with tense & subject.\n\n---\n### Examples\n- He **goes**, They **go**.\n- I **am**, He **is**.\n\n---\n### Usage\n- Only finite verb acts as **main verb** of sentence.\n\n---\n### Bank Tips\n- Error spotting: subject–verb agreement.\n\n---\n### Shortcut\n**Finite = verb affected by subject/time**",
+        "color": "#40d78d",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 300,
+        "height": 372
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_132",
+      "type": "notesNode",
+      "position": {
+        "x": 1800.765674164777,
+        "y": 1049.1028332303179
+      },
+      "data": {
+        "label": "## Non-Finite Verb\n\n### Meaning\n- Verb form not affected by subject or tense.\n\n---\n### Types\n- Infinitive, Gerund, Participle\n\n---\n### Examples\n- To eat is good.\n- Eating too much is bad.\n\n---\n### Bank Tips\n- Does not show tense.\n- Works as noun/adjective/adverb.\n\n---\n### Shortcut\n**Non-finite = verb but not main verb**",
+        "color": "#40d78d",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 300,
+        "height": 372
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_133",
+      "type": "notesNode",
+      "position": {
+        "x": 1413.262519956966,
+        "y": 1961.3749493794626
+      },
+      "data": {
+        "label": "## Infinitive\n\n### Meaning\n- Base form of verb: **to + V1**.\n\n---\n### Examples\n- I want **to eat**.\n- He loves **to play**.\n\n---\n### Usage\n- Can act as noun: **To read** is good.\n- After modals: **I can go** (no 'to').\n\n---\n### Bank Tips\n- Do not split incorrectly: ❌ to quickly run → ✅ to run quickly.\n\n---\n### Shortcut\n**Infinitive = to + verb**",
+        "color": "rgb(255,153,102)",
+        "textColor": "#000000"
+      },
+      "measured": {
+        "width": 300,
+        "height": 378
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_134",
+      "type": "notesNode",
+      "position": {
+        "x": 1735.20472299348,
+        "y": 1923.2476504608494
+      },
+      "data": {
+        "label": "## Gerund\n\n### Meaning\n- Verb + **ing** used as a noun.\n\n---\n### Examples\n- **Reading** is fun.\n- I love **swimming**.\n\n---\n### Usage\n- Subject, object, object of preposition.\n- Avoid: ❌ I am interesting → ✅ I am interested / I like **interesting** things.\n\n---\n### Bank Tips\n- After prepositions: **He is good at singing.**\n\n---\n### Shortcut\n**Gerund = verb (ing) acting as noun**",
+        "color": "rgb(255,153,102)",
+        "textColor": "#000000"
+      },
+      "measured": {
+        "width": 300,
+        "height": 429
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_135",
+      "type": "notesNode",
+      "position": {
+        "x": 2072.797570399229,
+        "y": 1921.6073350922068
+      },
+      "data": {
+        "label": "## Participle\n\n### Meaning\n- Verb used as adjective.\n\n---\n### Types\n- Present: **verb + ing** (running water)\n- Past: **verb + ed/n** (broken glass)\n\n---\n### Usage\n- Describes noun.\n- Used in participle clauses: **Being tired, he slept.**\n\n---\n### Bank Tips\n- Avoid dangling participle: ❌ Walking on the road, a car hit me.\n\n---\n### Shortcut\n**Participle = verb as adjective**",
+        "color": "rgb(255,153,102)",
+        "textColor": "#000000"
+      },
+      "measured": {
+        "width": 300,
+        "height": 411
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_136",
+      "type": "notesNode",
+      "position": {
+        "x": 3576.707388618668,
+        "y": 1067.6946294668383
+      },
+      "data": {
+        "label": "## Linking Verb\n\n### Meaning\n- Shows state, joins subject + complement.\n\n---\n### Common Verbs\n- be, seem, appear, become, feel\n\n---\n### Examples\n- He **is** happy.\n- She **became** angry.\n\n---\n### Bank Tips\n- Takes adjective, not adverb: ❌ He is **quickly** → ✅ He is **quick**.\n\n---\n### Shortcut\n**Linking = verb of state**",
+        "color": "#40d78d",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 300,
+        "height": 360
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_137",
+      "type": "notesNode",
+      "position": {
+        "x": 2871.781971930576,
+        "y": 1075.123454790503
+      },
+      "data": {
+        "label": "## Causative Verb\n\n### Meaning\n- Shows someone **causes** another person to do work.\n\n---\n### Common Words\n- make, let, have, get\n\n---\n### Examples\n- She **made** him cry.\n- I **got** the work done.\n- He **let** me go.\n\n---\n### Bank Tips\n- After **make/let** use V1: He made me **do** it.\n\n---\n### Shortcut\n**Causative = cause to do**",
+        "color": "#40d78d",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 300,
+        "height": 372
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_138",
+      "type": "notesNode",
+      "position": {
+        "x": 3244.050628252034,
+        "y": 1073.4166353891865
+      },
+      "data": {
+        "label": "## Phrasal Verb\n\n### Meaning\n- Verb + preposition/adverb → new meaning.\n\n---\n### Examples\n- pick up (collect)\n- look after (take care)\n- turn down (reject)\n\n---\n### Usage\n- Meaning not literal.\n\n---\n### Bank Tips\n- Error spotting from wrong phrasal verbs.\n\n---\n### Shortcut\n**Phrasal = verb + preposition**",
+        "color": "#40d78d",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 300,
+        "height": 372
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_139",
+      "type": "textNode",
+      "position": {
+        "x": 1646.7985542053543,
+        "y": 809.7602450106559
+      },
+      "data": {
+        "label": "Non-Finite Verb",
+        "color": "#e4ab04"
+      },
+      "measured": {
+        "width": 133,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_140",
+      "type": "textNode",
+      "position": {
+        "x": 1399.9233144065595,
+        "y": 806.4305309937026
+      },
+      "data": {
+        "label": "Finite Verb",
+        "color": "#e4ab04"
+      },
+      "measured": {
+        "width": 98,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_141",
+      "type": "textNode",
+      "position": {
+        "x": 2327.809247918717,
+        "y": 779.9218231011868
+      },
+      "data": {
+        "label": "Causative Verb",
+        "color": "#e4ab04"
+      },
+      "measured": {
+        "width": 131,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_142",
+      "type": "textNode",
+      "position": {
+        "x": 2093.9448632482818,
+        "y": 789.1776747179197
+      },
+      "data": {
+        "label": "Irregular Verb",
+        "color": "#e4ab04"
+      },
+      "measured": {
+        "width": 119,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_143",
+      "type": "textNode",
+      "position": {
+        "x": 1846.5147311325215,
+        "y": 800.156273486115
+      },
+      "data": {
+        "label": "Regular Verb",
+        "color": "#e4ab04"
+      },
+      "measured": {
+        "width": 115,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_144",
+      "type": "textNode",
+      "position": {
+        "x": 2520.839659409642,
+        "y": 779.2319476286292
+      },
+      "data": {
+        "label": "Phrasal Verb",
+        "color": "#e4ab04"
+      },
+      "measured": {
+        "width": 114,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_145",
+      "type": "textNode",
+      "position": {
+        "x": 2681.4658357970206,
+        "y": 780.8411245355799
+      },
+      "data": {
+        "label": "Linking Verb",
+        "color": "#e4ab04"
+      },
+      "measured": {
+        "width": 110,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_146",
+      "type": "textNode",
+      "position": {
+        "x": 1553.1628178202304,
+        "y": 1599.2320147579646
+      },
+      "data": {
+        "label": "Infinitive",
+        "color": "#c1fefd"
+      },
+      "measured": {
+        "width": 81,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_147",
+      "type": "textNode",
+      "position": {
+        "x": 1766.8309009875834,
+        "y": 1597.2122490151733
+      },
+      "data": {
+        "label": "Gerund",
+        "color": "#c1fefd"
+      },
+      "measured": {
+        "width": 75,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_148",
+      "type": "textNode",
+      "position": {
+        "x": 1957.634274099531,
+        "y": 1609.3671724063909
+      },
+      "data": {
+        "label": "Participle",
+        "color": "rgb(193,254,253)"
+      },
+      "measured": {
+        "width": 88,
+        "height": 40
+      },
+      "selected": false,
+      "dragging": false
+    },
+    {
+      "id": "dndnode_152",
+      "type": "textNode",
+      "position": {
+        "x": 9015.63163392835,
+        "y": 3252.050959313773
+      },
+      "data": {
+        "label": "Node dndnode_152"
+      },
+      "measured": {
+        "width": 163,
+        "height": 40
+      }
+    },
+    {
+      "id": "dndnode_153",
+      "type": "notesNode",
+      "position": {
+        "x": 17130.567766594537,
+        "y": 2263.27358840258
+      },
+      "data": {
+        "label": "New Note",
+        "color": "rgb(21,245,200)"
+      },
+      "measured": {
+        "width": 300,
+        "height": 300
+      },
+      "selected": false
+    }
+  ],
+  "edges": [
+    {
+      "source": "1",
+      "target": "2",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__1-2",
+      "selected": false
+    },
+    {
+      "source": "1",
+      "target": "3",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__1-3",
+      "selected": false
+    },
+    {
+      "source": "1",
+      "target": "4",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__1-4",
+      "selected": false
+    },
+    {
+      "source": "1",
+      "target": "5",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__1-5",
+      "selected": false
+    },
+    {
+      "source": "1",
+      "target": "6",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__1-6",
+      "selected": false
+    },
+    {
+      "source": "1",
+      "target": "7",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__1-7",
+      "selected": false
+    },
+    {
+      "source": "1",
+      "target": "9",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__1-9",
+      "selected": false
+    },
+    {
+      "source": "1",
+      "target": "8",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__1-8",
+      "selected": false
+    },
+    {
+      "source": "2",
+      "target": "16",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__2-16",
+      "selected": false
+    },
+    {
+      "source": "2",
+      "target": "17",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__2-17",
+      "selected": false
+    },
+    {
+      "source": "17",
+      "target": "15",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__17-15",
+      "selected": false
+    },
+    {
+      "source": "17",
+      "target": "13",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__17-13",
+      "selected": false
+    },
+    {
+      "source": "16",
+      "target": "12",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__16-12",
+      "selected": false
+    },
+    {
+      "source": "16",
+      "target": "11",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__16-11",
+      "selected": false
+    },
+    {
+      "source": "16",
+      "target": "10",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__16-10",
+      "selected": false
+    },
+    {
+      "source": "3",
+      "target": "18",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__3-18",
+      "selected": false
+    },
+    {
+      "source": "3",
+      "target": "19",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__3-19",
+      "selected": false
+    },
+    {
+      "source": "3",
+      "target": "20",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__3-20",
+      "selected": false
+    },
+    {
+      "source": "3",
+      "target": "21",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__3-21",
+      "selected": false
+    },
+    {
+      "source": "3",
+      "target": "22",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__3-22",
+      "selected": false
+    },
+    {
+      "source": "3",
+      "target": "23",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__3-23",
+      "selected": false
+    },
+    {
+      "source": "3",
+      "target": "24",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__3-24",
+      "selected": false
+    },
+    {
+      "source": "5",
+      "target": "dndnode_1",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__5-dndnode_1",
+      "selected": false
+    },
+    {
+      "source": "4",
+      "target": "dndnode_2",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__4-dndnode_2",
+      "selected": false
+    },
+    {
+      "source": "4",
+      "target": "dndnode_3",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__4-dndnode_3",
+      "selected": false
+    },
+    {
+      "source": "4",
+      "target": "dndnode_4",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__4-dndnode_4",
+      "selected": false
+    },
+    {
+      "source": "4",
+      "target": "dndnode_5",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__4-dndnode_5",
+      "selected": false
+    },
+    {
+      "source": "4",
+      "target": "dndnode_6",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__4-dndnode_6",
+      "selected": false
+    },
+    {
+      "source": "5",
+      "target": "dndnode_8",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__5-dndnode_8",
+      "selected": false
+    },
+    {
+      "source": "6",
+      "target": "dndnode_9",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__6-dndnode_9",
+      "selected": false
+    },
+    {
+      "source": "6",
+      "target": "dndnode_10",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__6-dndnode_10",
+      "selected": false
+    },
+    {
+      "source": "6",
+      "target": "dndnode_11",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__6-dndnode_11",
+      "selected": false
+    },
+    {
+      "source": "6",
+      "target": "dndnode_12",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__6-dndnode_12",
+      "selected": false
+    },
+    {
+      "source": "6",
+      "target": "dndnode_13",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__6-dndnode_13",
+      "selected": false
+    },
+    {
+      "source": "7",
+      "target": "dndnode_14",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__7-dndnode_14",
+      "selected": false
+    },
+    {
+      "source": "7",
+      "target": "dndnode_15",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__7-dndnode_15",
+      "selected": false
+    },
+    {
+      "source": "7",
+      "target": "dndnode_16",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__7-dndnode_16",
+      "selected": false
+    },
+    {
+      "source": "7",
+      "target": "dndnode_17",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__7-dndnode_17",
+      "selected": false
+    },
+    {
+      "source": "7",
+      "target": "dndnode_18",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__7-dndnode_18",
+      "selected": false
+    },
+    {
+      "source": "8",
+      "target": "dndnode_19",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__8-dndnode_19",
+      "selected": false
+    },
+    {
+      "source": "8",
+      "target": "dndnode_20",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__8-dndnode_20",
+      "selected": false
+    },
+    {
+      "source": "8",
+      "target": "dndnode_21",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__8-dndnode_21",
+      "selected": false
+    },
+    {
+      "source": "9",
+      "target": "dndnode_22",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__9-dndnode_22",
+      "selected": false
+    },
+    {
+      "source": "9",
+      "target": "dndnode_23",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__9-dndnode_23",
+      "selected": false
+    },
+    {
+      "source": "9",
+      "target": "dndnode_24",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__9-dndnode_24",
+      "selected": false
+    },
+    {
+      "source": "9",
+      "target": "dndnode_25",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__9-dndnode_25",
+      "selected": false
+    },
+    {
+      "source": "dndnode_1",
+      "target": "dndnode_26",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_1-dndnode_26",
+      "selected": false
+    },
+    {
+      "source": "dndnode_1",
+      "target": "dndnode_27",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_1-dndnode_27",
+      "selected": false
+    },
+    {
+      "source": "dndnode_8",
+      "target": "dndnode_28",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_8-dndnode_28",
+      "selected": false
+    },
+    {
+      "source": "dndnode_8",
+      "target": "dndnode_29",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_8-dndnode_29",
+      "selected": false
+    },
+    {
+      "source": "dndnode_28",
+      "target": "dndnode_30",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_28-dndnode_30",
+      "selected": false
+    },
+    {
+      "source": "dndnode_28",
+      "target": "dndnode_31",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_28-dndnode_31",
+      "selected": false
+    },
+    {
+      "source": "dndnode_28",
+      "target": "dndnode_32",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_28-dndnode_32",
+      "selected": false
+    },
+    {
+      "source": "dndnode_29",
+      "target": "dndnode_33",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_29-dndnode_33",
+      "selected": false
+    },
+    {
+      "source": "dndnode_29",
+      "target": "dndnode_34",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_29-dndnode_34",
+      "selected": false
+    },
+    {
+      "source": "dndnode_29",
+      "target": "dndnode_35",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_29-dndnode_35",
+      "selected": false
+    },
+    {
+      "source": "dndnode_29",
+      "target": "dndnode_36",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_29-dndnode_36",
+      "selected": false
+    },
+    {
+      "source": "dndnode_29",
+      "target": "dndnode_37",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_29-dndnode_37",
+      "selected": false
+    },
+    {
+      "source": "dndnode_29",
+      "target": "dndnode_38",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_29-dndnode_38",
+      "selected": false
+    },
+    {
+      "source": "dndnode_29",
+      "target": "dndnode_39",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_29-dndnode_39",
+      "selected": false
+    },
+    {
+      "source": "dndnode_29",
+      "target": "dndnode_40",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_29-dndnode_40",
+      "selected": false
+    },
+    {
+      "source": "dndnode_29",
+      "target": "dndnode_41",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_29-dndnode_41",
+      "selected": false
+    },
+    {
+      "source": "dndnode_19",
+      "target": "dndnode_42",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_19-dndnode_42",
+      "selected": false
+    },
+    {
+      "source": "dndnode_19",
+      "target": "dndnode_43",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_19-dndnode_43",
+      "selected": false
+    },
+    {
+      "source": "dndnode_19",
+      "target": "dndnode_44",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_19-dndnode_44",
+      "selected": false
+    },
+    {
+      "source": "dndnode_19",
+      "target": "dndnode_45",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_19-dndnode_45",
+      "selected": false
+    },
+    {
+      "source": "dndnode_19",
+      "target": "dndnode_46",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_19-dndnode_46",
+      "selected": false
+    },
+    {
+      "source": "dndnode_19",
+      "target": "dndnode_47",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_19-dndnode_47",
+      "selected": false
+    },
+    {
+      "source": "dndnode_19",
+      "target": "dndnode_48",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_19-dndnode_48",
+      "selected": false
+    },
+    {
+      "source": "dndnode_20",
+      "target": "dndnode_49",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_20-dndnode_49",
+      "selected": false
+    },
+    {
+      "source": "dndnode_20",
+      "target": "dndnode_50",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_20-dndnode_50",
+      "selected": false
+    },
+    {
+      "source": "dndnode_20",
+      "target": "dndnode_51",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_20-dndnode_51",
+      "selected": false
+    },
+    {
+      "source": "dndnode_20",
+      "target": "dndnode_52",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_20-dndnode_52",
+      "selected": false
+    },
+    {
+      "source": "dndnode_20",
+      "target": "dndnode_53",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_20-dndnode_53",
+      "selected": false
+    },
+    {
+      "source": "dndnode_21",
+      "target": "dndnode_54",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_21-dndnode_54",
+      "selected": false
+    },
+    {
+      "source": "dndnode_21",
+      "target": "dndnode_55",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_21-dndnode_55",
+      "selected": false
+    },
+    {
+      "source": "dndnode_21",
+      "target": "dndnode_56",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_21-dndnode_56",
+      "selected": false
+    },
+    {
+      "source": "dndnode_21",
+      "target": "dndnode_57",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_21-dndnode_57",
+      "selected": false
+    },
+    {
+      "source": "dndnode_38",
+      "target": "dndnode_61",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_38-dndnode_61",
+      "selected": false
+    },
+    {
+      "source": "dndnode_33",
+      "target": "dndnode_62",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_33-dndnode_62",
+      "selected": false
+    },
+    {
+      "source": "dndnode_34",
+      "target": "dndnode_63",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_34-dndnode_63",
+      "selected": false
+    },
+    {
+      "source": "dndnode_35",
+      "target": "dndnode_64",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_35-dndnode_64",
+      "selected": false
+    },
+    {
+      "source": "dndnode_36",
+      "target": "dndnode_65",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_36-dndnode_65",
+      "selected": false
+    },
+    {
+      "source": "dndnode_37",
+      "target": "dndnode_66",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_37-dndnode_66",
+      "selected": false
+    },
+    {
+      "source": "dndnode_39",
+      "target": "dndnode_67",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_39-dndnode_67",
+      "selected": false
+    },
+    {
+      "source": "dndnode_40",
+      "target": "dndnode_68",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_40-dndnode_68",
+      "selected": false
+    },
+    {
+      "source": "dndnode_41",
+      "target": "dndnode_69",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_41-dndnode_69",
+      "selected": false
+    },
+    {
+      "source": "dndnode_30",
+      "target": "dndnode_70",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_30-dndnode_70",
+      "selected": false
+    },
+    {
+      "source": "dndnode_31",
+      "target": "dndnode_71",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_31-dndnode_71",
+      "selected": false
+    },
+    {
+      "source": "dndnode_32",
+      "target": "dndnode_72",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_32-dndnode_72",
+      "selected": false
+    },
+    {
+      "source": "dndnode_2",
+      "target": "dndnode_73",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_2-dndnode_73",
+      "selected": false
+    },
+    {
+      "source": "dndnode_3",
+      "target": "dndnode_74",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_3-dndnode_74",
+      "selected": false
+    },
+    {
+      "source": "dndnode_4",
+      "target": "dndnode_75",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_4-dndnode_75",
+      "selected": false
+    },
+    {
+      "source": "dndnode_5",
+      "target": "dndnode_76",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_5-dndnode_76",
+      "selected": false
+    },
+    {
+      "source": "dndnode_6",
+      "target": "dndnode_77",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_6-dndnode_77",
+      "selected": false
+    },
+    {
+      "source": "dndnode_7",
+      "target": "dndnode_78",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_7-dndnode_78",
+      "selected": false
+    },
+    {
+      "source": "dndnode_9",
+      "target": "dndnode_79",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_9-dndnode_79",
+      "selected": false
+    },
+    {
+      "source": "dndnode_10",
+      "target": "dndnode_80",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_10-dndnode_80",
+      "selected": false
+    },
+    {
+      "source": "dndnode_11",
+      "target": "dndnode_81",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_11-dndnode_81",
+      "selected": false
+    },
+    {
+      "source": "dndnode_12",
+      "target": "dndnode_82",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_12-dndnode_82",
+      "selected": false
+    },
+    {
+      "source": "dndnode_13",
+      "target": "dndnode_83",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_13-dndnode_83",
+      "selected": false
+    },
+    {
+      "source": "dndnode_14",
+      "target": "dndnode_84",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_14-dndnode_84",
+      "selected": false
+    },
+    {
+      "source": "dndnode_15",
+      "target": "dndnode_85",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_15-dndnode_85",
+      "selected": false
+    },
+    {
+      "source": "dndnode_16",
+      "target": "dndnode_86",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_16-dndnode_86",
+      "selected": false
+    },
+    {
+      "source": "dndnode_17",
+      "target": "dndnode_87",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_17-dndnode_87",
+      "selected": false
+    },
+    {
+      "source": "dndnode_18",
+      "target": "dndnode_88",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_18-dndnode_88",
+      "selected": false
+    },
+    {
+      "source": "dndnode_19",
+      "target": "dndnode_89",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_19-dndnode_89",
+      "selected": false
+    },
+    {
+      "source": "dndnode_20",
+      "target": "dndnode_90",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_20-dndnode_90",
+      "selected": false
+    },
+    {
+      "source": "dndnode_21",
+      "target": "dndnode_91",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_21-dndnode_91",
+      "selected": false
+    },
+    {
+      "source": "dndnode_42",
+      "target": "dndnode_92",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_42-dndnode_92",
+      "selected": false
+    },
+    {
+      "source": "dndnode_43",
+      "target": "dndnode_93",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_43-dndnode_93",
+      "selected": false
+    },
+    {
+      "source": "dndnode_44",
+      "target": "dndnode_94",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_44-dndnode_94",
+      "selected": false
+    },
+    {
+      "source": "dndnode_45",
+      "target": "dndnode_95",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_45-dndnode_95",
+      "selected": false
+    },
+    {
+      "source": "dndnode_46",
+      "target": "dndnode_96",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_46-dndnode_96",
+      "selected": false
+    },
+    {
+      "source": "dndnode_47",
+      "target": "dndnode_97",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_47-dndnode_97",
+      "selected": false
+    },
+    {
+      "source": "dndnode_48",
+      "target": "dndnode_98",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_48-dndnode_98",
+      "selected": false
+    },
+    {
+      "source": "dndnode_50",
+      "target": "dndnode_99",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_50-dndnode_99",
+      "selected": false
+    },
+    {
+      "source": "dndnode_49",
+      "target": "dndnode_100",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_49-dndnode_100",
+      "selected": false
+    },
+    {
+      "source": "dndnode_51",
+      "target": "dndnode_101",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_51-dndnode_101",
+      "selected": false
+    },
+    {
+      "source": "dndnode_52",
+      "target": "dndnode_102",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_52-dndnode_102",
+      "selected": false
+    },
+    {
+      "source": "dndnode_53",
+      "target": "dndnode_103",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_53-dndnode_103",
+      "selected": false
+    },
+    {
+      "source": "dndnode_54",
+      "target": "dndnode_104",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_54-dndnode_104",
+      "selected": false
+    },
+    {
+      "source": "dndnode_55",
+      "target": "dndnode_105",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_55-dndnode_105",
+      "selected": false
+    },
+    {
+      "source": "dndnode_56",
+      "target": "dndnode_106",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_56-dndnode_106",
+      "selected": false
+    },
+    {
+      "source": "dndnode_57",
+      "target": "dndnode_107",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_57-dndnode_107",
+      "selected": false
+    },
+    {
+      "source": "18",
+      "target": "dndnode_108",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__18-dndnode_108",
+      "selected": false
+    },
+    {
+      "source": "19",
+      "target": "dndnode_109",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__19-dndnode_109",
+      "selected": false
+    },
+    {
+      "source": "20",
+      "target": "dndnode_110",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__20-dndnode_110",
+      "selected": false
+    },
+    {
+      "source": "21",
+      "target": "dndnode_111",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__21-dndnode_111",
+      "selected": false
+    },
+    {
+      "source": "22",
+      "target": "dndnode_112",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__22-dndnode_112",
+      "selected": false
+    },
+    {
+      "source": "23",
+      "target": "dndnode_113",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__23-dndnode_113",
+      "selected": false
+    },
+    {
+      "source": "24",
+      "target": "dndnode_114",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__24-dndnode_114",
+      "selected": false
+    },
+    {
+      "source": "11",
+      "target": "dndnode_115",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__11-dndnode_115",
+      "selected": false
+    },
+    {
+      "source": "12",
+      "target": "dndnode_116",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__12-dndnode_116",
+      "selected": false
+    },
+    {
+      "source": "13",
+      "target": "dndnode_117",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__13-dndnode_117",
+      "selected": false
+    },
+    {
+      "source": "15",
+      "target": "dndnode_118",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__15-dndnode_118",
+      "selected": false
+    },
+    {
+      "source": "16",
+      "target": "dndnode_119",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__16-dndnode_119"
+    },
+    {
+      "source": "17",
+      "target": "dndnode_120",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__17-dndnode_120"
+    },
+    {
+      "source": "9",
+      "target": "dndnode_125",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__9-dndnode_125",
+      "selected": false
+    },
+    {
+      "source": "dndnode_22",
+      "target": "dndnode_121",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_22-dndnode_121",
+      "selected": false
+    },
+    {
+      "source": "dndnode_23",
+      "target": "dndnode_122",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_23-dndnode_122",
+      "selected": false
+    },
+    {
+      "source": "dndnode_24",
+      "target": "dndnode_123",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_24-dndnode_123",
+      "selected": false
+    },
+    {
+      "source": "dndnode_25",
+      "target": "dndnode_124",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_25-dndnode_124",
+      "selected": false
+    },
+    {
+      "source": "10",
+      "target": "dndnode_126",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__10-dndnode_126"
+    },
+    {
+      "source": "dndnode_26",
+      "target": "dndnode_127",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_26-dndnode_127",
+      "selected": false
+    },
+    {
+      "source": "dndnode_27",
+      "target": "dndnode_128",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_27-dndnode_128",
+      "selected": false
+    },
+    {
+      "source": "dndnode_1",
+      "target": "dndnode_139",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_1-dndnode_139",
+      "selected": false
+    },
+    {
+      "source": "dndnode_139",
+      "target": "dndnode_132",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_139-dndnode_132",
+      "selected": false
+    },
+    {
+      "source": "dndnode_140",
+      "target": "dndnode_131",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_140-dndnode_131",
+      "selected": false
+    },
+    {
+      "source": "dndnode_1",
+      "target": "dndnode_140",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_1-dndnode_140",
+      "selected": false
+    },
+    {
+      "source": "dndnode_1",
+      "target": "dndnode_143",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_1-dndnode_143",
+      "selected": false
+    },
+    {
+      "source": "dndnode_1",
+      "target": "dndnode_142",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_1-dndnode_142",
+      "selected": false
+    },
+    {
+      "source": "dndnode_1",
+      "target": "dndnode_141",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_1-dndnode_141",
+      "selected": false
+    },
+    {
+      "source": "dndnode_1",
+      "target": "dndnode_144",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_1-dndnode_144",
+      "selected": false
+    },
+    {
+      "source": "dndnode_1",
+      "target": "dndnode_145",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_1-dndnode_145",
+      "selected": false
+    },
+    {
+      "source": "dndnode_143",
+      "target": "dndnode_129",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_143-dndnode_129",
+      "selected": false
+    },
+    {
+      "source": "dndnode_142",
+      "target": "dndnode_130",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_142-dndnode_130",
+      "selected": false
+    },
+    {
+      "source": "dndnode_141",
+      "target": "dndnode_137",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_141-dndnode_137",
+      "selected": false
+    },
+    {
+      "source": "dndnode_144",
+      "target": "dndnode_138",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_144-dndnode_138",
+      "selected": false
+    },
+    {
+      "source": "dndnode_145",
+      "target": "dndnode_136",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_145-dndnode_136",
+      "selected": false
+    },
+    {
+      "source": "dndnode_139",
+      "target": "dndnode_146",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_139-dndnode_146"
+    },
+    {
+      "source": "dndnode_139",
+      "target": "dndnode_147",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_139-dndnode_147"
+    },
+    {
+      "source": "dndnode_139",
+      "target": "dndnode_148",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_139-dndnode_148"
+    },
+    {
+      "source": "dndnode_146",
+      "target": "dndnode_133",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_146-dndnode_133"
+    },
+    {
+      "source": "dndnode_147",
+      "target": "dndnode_134",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_147-dndnode_134"
+    },
+    {
+      "source": "dndnode_148",
+      "target": "dndnode_135",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_148-dndnode_135"
+    },
+    {
+      "source": "4",
+      "target": "dndnode_7",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__4-dndnode_7"
+    },
+    {
+      "source": "dndnode_104",
+      "target": "dndnode_153",
+      "style": {
+        "stroke": "#000000",
+        "strokeWidth": 4
+      },
+      "id": "xy-edge__dndnode_104-dndnode_153"
+    }
+  ],
+  "viewport": {
+    "x": -519.6758069850491,
+    "y": 328.5531493927564,
+    "zoom": 0.13784380259964435
+  }
+}
