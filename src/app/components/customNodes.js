@@ -19,6 +19,7 @@ export const TextNode = memo(({ data, isConnectable }) => {
         borderRadius: "5px",
         background: data.color || "#fff",
         color: data.textColor || "#000",
+        font-size: "4rem"
       }}
     >
       {data.label}
