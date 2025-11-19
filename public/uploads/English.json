@@ -14,27 +14,8 @@
         "use_case": "This is the root node for all parts of speech."
       },
       "measured": {
-        "width": 136,
-        "height": 40
-      },
-      "selected": false,
-      "dragging": false
-    },
-    {
-      "id": "2",
-      "type": "textNode",
-      "position": {
-        "x": -5013.140688614936,
-        "y": 451.2143931130664
-      },
-      "data": {
-        "label": "Noun",
-        "color": "rgb(203.1402907666653,43.681298059356436,178.54720028848502)",
-        "textColor": "#ffffff"
-      },
-      "measured": {
-        "width": 60,
-        "height": 40
+        "width": 477,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -51,8 +32,8 @@
         "color": "rgb(2.3228647072244915,238.11282739799864,91.01516977425082)"
       },
       "measured": {
-        "width": 83,
-        "height": 40
+        "width": 264,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -70,8 +51,8 @@
         "textColor": "#ffffff"
       },
       "measured": {
-        "width": 87,
-        "height": 40
+        "width": 282,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -88,8 +69,8 @@
         "color": "rgb(239.1921079079036,231.9634159200878,3.950028053901215)"
       },
       "measured": {
-        "width": 55,
-        "height": 40
+        "width": 154,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -107,8 +88,8 @@
         "textColor": "#ffffff"
       },
       "measured": {
-        "width": 73,
-        "height": 40
+        "width": 225,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -125,8 +106,8 @@
         "color": "rgb(56,141,118)"
       },
       "measured": {
-        "width": 102,
-        "height": 40
+        "width": 342,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -143,8 +124,8 @@
         "color": "rgb(193,162,45)"
       },
       "measured": {
-        "width": 107,
-        "height": 40
+        "width": 360,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -162,135 +143,8 @@
         "textColor": "#000000"
       },
       "measured": {
-        "width": 100,
-        "height": 40
-      },
-      "selected": false,
-      "dragging": false
-    },
-    {
-      "id": "10",
-      "type": "textNode",
-      "position": {
-        "x": -5398.75493882186,
-        "y": 899.2649418545084
-      },
-      "data": {
-        "label": "Proper Noun",
-        "color": "rgb(222.64975266062692,56.984203271808546,87.35256091526453)"
-      },
-      "measured": {
-        "width": 113,
-        "height": 40
-      },
-      "selected": false,
-      "dragging": false
-    },
-    {
-      "id": "11",
-      "type": "textNode",
-      "position": {
-        "x": -5239.343869179921,
-        "y": 898.860529755861
-      },
-      "data": {
-        "label": "Common Noun",
-        "color": "rgb(210.47870178536485,244.70686728745204,247.10301662524935)"
-      },
-      "measured": {
-        "width": 130,
-        "height": 40
-      },
-      "selected": false,
-      "dragging": false
-    },
-    {
-      "id": "12",
-      "type": "textNode",
-      "position": {
-        "x": -5079.709515463025,
-        "y": 897.9077264330957
-      },
-      "data": {
-        "label": "Collective Noun",
-        "color": "rgb(162.68979959535605,3.5239575549560023,213.54888954863216)"
-      },
-      "measured": {
-        "width": 134,
-        "height": 40
-      },
-      "selected": false,
-      "dragging": false
-    },
-    {
-      "id": "13",
-      "type": "textNode",
-      "position": {
-        "x": -4919.755295371185,
-        "y": 900.8640575757117
-      },
-      "data": {
-        "label": "Abstract Noun",
-        "color": "rgb(106.92732171386623,171.66813506251944,64.44984736509825)"
-      },
-      "measured": {
-        "width": 123,
-        "height": 40
-      },
-      "selected": false,
-      "dragging": false
-    },
-    {
-      "id": "15",
-      "type": "textNode",
-      "position": {
-        "x": -4721.102251226824,
-        "y": 897.3230811312563
-      },
-      "data": {
-        "label": "Material Noun",
-        "color": "rgb(80.22194717974185,80.81162881900862,226.40187990697916)"
-      },
-      "measured": {
-        "width": 122,
-        "height": 40
-      },
-      "selected": false,
-      "dragging": false
-    },
-    {
-      "id": "16",
-      "type": "textNode",
-      "position": {
-        "x": -5215.0220452545545,
-        "y": 571.2132258060604
-      },
-      "data": {
-        "label": "Countable",
-        "color": "rgb(38.46097824339654,58.397958020156466,8.435063387959612)",
-        "textColor": "#ffffff"
-      },
-      "measured": {
-        "width": 95,
-        "height": 40
-      },
-      "selected": false,
-      "dragging": false
-    },
-    {
-      "id": "17",
-      "type": "textNode",
-      "position": {
-        "x": -4818.0253912439675,
-        "y": 572.0207188527437
-      },
-      "data": {
-        "label": "Uncountable",
-        "color": "rgb(12.015576507060796,198.83302146819963,229.35490794473122)"
-      },
-      "measured": {
-        "width": 112,
-        "height": 40
+        "width": 335,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -307,8 +161,8 @@
         "color": "rgb(219.7313828801139,73.05711297859224,42.71556739665602)"
       },
       "measured": {
-        "width": 85,
-        "height": 40
+        "width": 275,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -325,8 +179,8 @@
         "color": "rgb(202.03642165329146,225.7825561777435,223.22343182011528)"
       },
       "measured": {
-        "width": 88,
-        "height": 40
+        "width": 285,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -343,8 +197,8 @@
         "color": "rgb(144.52730257228197,158.13990484388998,221.71633404407282)"
       },
       "measured": {
-        "width": 125,
-        "height": 40
+        "width": 435,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -362,8 +216,8 @@
         "textColor": "#ffffff"
       },
       "measured": {
-        "width": 111,
-        "height": 40
+        "width": 378,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -381,8 +235,8 @@
         "textColor": "#ffffff"
       },
       "measured": {
-        "width": 80,
-        "height": 40
+        "width": 253,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -400,8 +254,8 @@
         "textColor": "#000000"
       },
       "measured": {
-        "width": 87,
-        "height": 40
+        "width": 282,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -419,8 +273,8 @@
         "textColor": "#ffffff"
       },
       "measured": {
-        "width": 101,
-        "height": 40
+        "width": 339,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -437,8 +291,8 @@
         "color": "rgb(228,171,4)"
       },
       "measured": {
-        "width": 94,
-        "height": 40
+        "width": 310,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -455,8 +309,8 @@
         "color": "rgb(141,149,248)"
       },
       "measured": {
-        "width": 72,
-        "height": 40
+        "width": 221,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -473,8 +327,8 @@
         "color": "rgb(25,219,248)"
       },
       "measured": {
-        "width": 82,
-        "height": 40
+        "width": 260,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -491,8 +345,8 @@
         "color": "rgb(13,218,84)"
       },
       "measured": {
-        "width": 79,
-        "height": 40
+        "width": 250,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -509,8 +363,8 @@
         "color": "rgb(249,208,27)"
       },
       "measured": {
-        "width": 125,
-        "height": 40
+        "width": 435,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -527,8 +381,8 @@
         "color": "rgb(74,239,228)"
       },
       "measured": {
-        "width": 111,
-        "height": 40
+        "width": 378,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -545,8 +399,8 @@
         "color": "rgb(212,165,186)"
       },
       "measured": {
-        "width": 103,
-        "height": 40
+        "width": 346,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -563,8 +417,8 @@
         "color": "rgb(59,124,246)"
       },
       "measured": {
-        "width": 114,
-        "height": 40
+        "width": 388,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -582,8 +436,8 @@
         "textColor": "#ffffff"
       },
       "measured": {
-        "width": 76,
-        "height": 40
+        "width": 239,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -601,8 +455,8 @@
         "textColor": "#ffffff"
       },
       "measured": {
-        "width": 62,
-        "height": 40
+        "width": 182,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -620,8 +474,8 @@
         "textColor": "#ffffff"
       },
       "measured": {
-        "width": 57,
-        "height": 40
+        "width": 162,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -639,8 +493,8 @@
         "textColor": "#ffffff"
       },
       "measured": {
-        "width": 98,
-        "height": 40
+        "width": 324,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -658,8 +512,8 @@
         "textColor": "#ffffff"
       },
       "measured": {
-        "width": 74,
-        "height": 40
+        "width": 232,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -676,8 +530,8 @@
         "color": "rgb(56,141,118)"
       },
       "measured": {
-        "width": 57,
-        "height": 40
+        "width": 162,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -694,8 +548,8 @@
         "color": "rgb(56,141,118)"
       },
       "measured": {
-        "width": 62,
-        "height": 40
+        "width": 182,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -712,8 +566,8 @@
         "color": "rgb(56,141,118)"
       },
       "measured": {
-        "width": 85,
-        "height": 40
+        "width": 275,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -730,8 +584,8 @@
         "color": "rgb(56,141,118)"
       },
       "measured": {
-        "width": 64,
-        "height": 40
+        "width": 189,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -748,8 +602,8 @@
         "color": "rgb(56,141,118)"
       },
       "measured": {
-        "width": 98,
-        "height": 40
+        "width": 324,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -766,8 +620,8 @@
         "color": "rgb(193,162,45)"
       },
       "measured": {
-        "width": 113,
-        "height": 40
+        "width": 385,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -784,8 +638,8 @@
         "color": "rgb(193,162,45)"
       },
       "measured": {
-        "width": 121,
-        "height": 40
+        "width": 417,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -802,8 +656,8 @@
         "color": "rgb(193,162,45)"
       },
       "measured": {
-        "width": 99,
-        "height": 40
+        "width": 331,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -821,8 +675,8 @@
         "textColor": "#000000"
       },
       "measured": {
-        "width": 91,
-        "height": 40
+        "width": 299,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -840,8 +694,8 @@
         "textColor": "#000000"
       },
       "measured": {
-        "width": 47,
-        "height": 40
+        "width": 122,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -859,8 +713,8 @@
         "textColor": "#000000"
       },
       "measured": {
-        "width": 73,
-        "height": 40
+        "width": 225,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -878,8 +732,8 @@
         "textColor": "#000000"
       },
       "measured": {
-        "width": 82,
-        "height": 40
+        "width": 260,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -896,8 +750,8 @@
         "color": "rgb(228,171,4)"
       },
       "measured": {
-        "width": 91,
-        "height": 40
+        "width": 297,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -914,8 +768,8 @@
         "color": "rgb(228,171,4)"
       },
       "measured": {
-        "width": 99,
-        "height": 40
+        "width": 331,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -932,8 +786,8 @@
         "color": "rgb(59,124,246)"
       },
       "measured": {
-        "width": 77,
-        "height": 40
+        "width": 242,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -950,8 +804,8 @@
         "color": "rgb(59,124,246)"
       },
       "measured": {
-        "width": 66,
-        "height": 40
+        "width": 196,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -968,8 +822,8 @@
         "color": "rgb(59,124,246)"
       },
       "measured": {
-        "width": 40,
-        "height": 40
+        "width": 93,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -986,8 +840,8 @@
         "color": "rgb(59,124,246)"
       },
       "measured": {
-        "width": 40,
-        "height": 40
+        "width": 93,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -1004,8 +858,8 @@
         "color": "rgb(59,124,246)"
       },
       "measured": {
-        "width": 57,
-        "height": 40
+        "width": 161,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -1022,8 +876,8 @@
         "color": "rgb(59,124,246)"
       },
       "measured": {
-        "width": 48,
-        "height": 40
+        "width": 125,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -1040,8 +894,8 @@
         "color": "rgb(59,124,246)"
       },
       "measured": {
-        "width": 60,
-        "height": 40
+        "width": 175,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -1058,8 +912,8 @@
         "color": "rgb(59,124,246)"
       },
       "measured": {
-        "width": 52,
-        "height": 40
+        "width": 143,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -1076,8 +930,8 @@
         "color": "rgb(59,124,246)"
       },
       "measured": {
-        "width": 61,
-        "height": 40
+        "width": 179,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -1094,8 +948,8 @@
         "color": "rgb(59,124,246)"
       },
       "measured": {
-        "width": 44,
-        "height": 40
+        "width": 111,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -1112,8 +966,8 @@
         "color": "rgb(59,124,246)"
       },
       "measured": {
-        "width": 64,
-        "height": 40
+        "width": 189,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -1130,8 +984,8 @@
         "color": "rgb(59,124,246)"
       },
       "measured": {
-        "width": 55,
-        "height": 40
+        "width": 154,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -1148,8 +1002,8 @@
         "color": "rgb(59,124,246)"
       },
       "measured": {
-        "width": 69,
-        "height": 40
+        "width": 211,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -1166,8 +1020,8 @@
         "color": "rgb(59,124,246)"
       },
       "measured": {
-        "width": 57,
-        "height": 40
+        "width": 161,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -1184,8 +1038,8 @@
         "color": "rgb(193,162,45)"
       },
       "measured": {
-        "width": 46,
-        "height": 40
+        "width": 118,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -1202,8 +1056,8 @@
         "color": "rgb(193,162,45)"
       },
       "measured": {
-        "width": 50,
-        "height": 40
+        "width": 136,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -1220,8 +1074,8 @@
         "color": "rgb(193,162,45)"
       },
       "measured": {
-        "width": 48,
-        "height": 40
+        "width": 125,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -1238,8 +1092,8 @@
         "color": "rgb(193,162,45)"
       },
       "measured": {
-        "width": 46,
-        "height": 40
+        "width": 118,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -1256,8 +1110,8 @@
         "color": "rgb(193,162,45)"
       },
       "measured": {
-        "width": 40,
-        "height": 40
+        "width": 93,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -1274,8 +1128,8 @@
         "color": "rgb(193,162,45)"
       },
       "measured": {
-        "width": 45,
-        "height": 40
+        "width": 112,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -1292,8 +1146,8 @@
         "color": "rgb(193,162,45)"
       },
       "measured": {
-        "width": 42,
-        "height": 40
+        "width": 100,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -1310,8 +1164,8 @@
         "color": "rgb(193,162,45)"
       },
       "measured": {
-        "width": 85,
-        "height": 40
+        "width": 275,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -1328,8 +1182,8 @@
         "color": "rgb(193,162,45)"
       },
       "measured": {
-        "width": 84,
-        "height": 40
+        "width": 271,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -1346,8 +1200,8 @@
         "color": "rgb(193,162,45)"
       },
       "measured": {
-        "width": 62,
-        "height": 40
+        "width": 182,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -1364,8 +1218,8 @@
         "color": "rgb(193,162,45)"
       },
       "measured": {
-        "width": 71,
-        "height": 40
+        "width": 218,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -1382,8 +1236,8 @@
         "color": "rgb(193,162,45)"
       },
       "measured": {
-        "width": 62,
-        "height": 40
+        "width": 182,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -1400,8 +1254,8 @@
         "color": "rgb(193,162,45)"
       },
       "measured": {
-        "width": 86,
-        "height": 40
+        "width": 278,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -1418,8 +1272,8 @@
         "color": "rgb(193,162,45)"
       },
       "measured": {
-        "width": 104,
-        "height": 40
+        "width": 349,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -1436,8 +1290,8 @@
         "color": "rgb(193,162,45)"
       },
       "measured": {
-        "width": 88,
-        "height": 40
+        "width": 285,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -1454,8 +1308,8 @@
         "color": "rgb(193,162,45)"
       },
       "measured": {
-        "width": 143,
-        "height": 40
+        "width": 506,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -1474,7 +1328,7 @@
       },
       "measured": {
         "width": 300,
-        "height": 491
+        "height": 486
       },
       "selected": false,
       "dragging": false
@@ -1493,7 +1347,7 @@
       },
       "measured": {
         "width": 300,
-        "height": 401
+        "height": 396
       },
       "selected": false,
       "dragging": false
@@ -1512,7 +1366,7 @@
       },
       "measured": {
         "width": 300,
-        "height": 383
+        "height": 378
       },
       "selected": false,
       "dragging": false
@@ -1569,7 +1423,7 @@
       },
       "measured": {
         "width": 300,
-        "height": 329
+        "height": 324
       },
       "selected": false,
       "dragging": false
@@ -1607,7 +1461,7 @@
       },
       "measured": {
         "width": 300,
-        "height": 329
+        "height": 324
       },
       "selected": false,
       "dragging": false
@@ -1626,7 +1480,7 @@
       },
       "measured": {
         "width": 300,
-        "height": 311
+        "height": 306
       },
       "selected": false,
       "dragging": false
@@ -1664,7 +1518,7 @@
       },
       "measured": {
         "width": 300,
-        "height": 311
+        "height": 306
       },
       "selected": false,
       "dragging": false
@@ -1816,7 +1670,7 @@
       },
       "measured": {
         "width": 300,
-        "height": 317
+        "height": 312
       },
       "selected": false,
       "dragging": false
@@ -1835,7 +1689,7 @@
       },
       "measured": {
         "width": 300,
-        "height": 341
+        "height": 332
       },
       "selected": false,
       "dragging": false
@@ -1854,7 +1708,7 @@
       },
       "measured": {
         "width": 300,
-        "height": 317
+        "height": 312
       },
       "selected": false,
       "dragging": false
@@ -1873,7 +1727,7 @@
       },
       "measured": {
         "width": 300,
-        "height": 345
+        "height": 340
       },
       "selected": false,
       "dragging": false
@@ -1892,7 +1746,7 @@
       },
       "measured": {
         "width": 300,
-        "height": 317
+        "height": 312
       },
       "selected": false,
       "dragging": false
@@ -1911,7 +1765,7 @@
       },
       "measured": {
         "width": 300,
-        "height": 353
+        "height": 348
       },
       "selected": false,
       "dragging": false
@@ -1930,7 +1784,7 @@
       },
       "measured": {
         "width": 300,
-        "height": 381
+        "height": 348
       },
       "selected": false,
       "dragging": false
@@ -1949,7 +1803,7 @@
       },
       "measured": {
         "width": 300,
-        "height": 345
+        "height": 340
       },
       "selected": false,
       "dragging": false
@@ -1968,7 +1822,7 @@
       },
       "measured": {
         "width": 300,
-        "height": 309
+        "height": 300
       },
       "selected": false,
       "dragging": false
@@ -1987,7 +1841,7 @@
       },
       "measured": {
         "width": 300,
-        "height": 345
+        "height": 340
       },
       "selected": false,
       "dragging": false
@@ -2044,7 +1898,7 @@
       },
       "measured": {
         "width": 300,
-        "height": 397
+        "height": 395
       },
       "selected": false,
       "dragging": false
@@ -2367,7 +2221,7 @@
       },
       "measured": {
         "width": 300,
-        "height": 445
+        "height": 443
       },
       "selected": false,
       "dragging": false
@@ -2386,7 +2240,7 @@
       },
       "measured": {
         "width": 300,
-        "height": 409
+        "height": 407
       },
       "selected": false,
       "dragging": false
@@ -2487,120 +2341,6 @@
       "dragging": false
     },
     {
-      "id": "dndnode_115",
-      "type": "notesNode",
-      "position": {
-        "x": -5688.891022366769,
-        "y": 1140.9476043187433
-      },
-      "data": {
-        "label": "## Common Noun\n\n### Meaning\n- General name of people, places, things.\n\n---\n### Examples\n- girl, city, river, laptop\n\n---\n### Usage\n- Not capitalized unless at start.\n- Can be countable/uncountable.\n\n---\n### Bank Tips\n- Common vs Proper: *city* vs *Patna*.\n- Plural rules: **child → children**, **leaf → leaves**.\n\n---\n### Shortcut\n**Common = general name**",
-        "color": "rgb(18,131,134)",
-        "textColor": "#000000"
-      },
-      "measured": {
-        "width": 300,
-        "height": 390
-      },
-      "selected": false,
-      "dragging": false
-    },
-    {
-      "id": "dndnode_116",
-      "type": "notesNode",
-      "position": {
-        "x": -5358.0732526671845,
-        "y": 1132.3323666562653
-      },
-      "data": {
-        "label": "## Collective Noun\n\n### Meaning\n- Names a group as one unit.\n\n---\n### Examples\n- team, jury, crowd, family\n\n---\n### Usage\n- Usually singular in exams: *The team **is** ready.*\n\n---\n### Bank Tips\n- Plural idea? Use plural verb only when focusing on individuals: *The team **are** arguing.*\n\n---\n### Shortcut\n**Collective = group as one**",
-        "color": "rgb(18,131,134)",
-        "textColor": "#000000"
-      },
-      "measured": {
-        "width": 300,
-        "height": 354
-      },
-      "selected": false,
-      "dragging": false
-    },
-    {
-      "id": "dndnode_117",
-      "type": "notesNode",
-      "position": {
-        "x": -5032.94786413636,
-        "y": 1120.8453831062952
-      },
-      "data": {
-        "label": "## Abstract Noun\n\n### Meaning\n- Names ideas, qualities, feelings (no physical form).\n\n---\n### Examples\n- honesty, beauty, freedom, fear\n\n---\n### Usage\n- Usually uncountable; no plural.\n\n---\n### Bank Tips\n- No article with general idea: *Honesty is the best policy.*\n- From adjective/verb: **kind → kindness**, **decide → decision**.\n\n---\n### Shortcut\n**Abstract = idea/quality**",
-        "color": "rgb(18,131,134)",
-        "textColor": "#000000"
-      },
-      "measured": {
-        "width": 300,
-        "height": 372
-      },
-      "selected": false,
-      "dragging": false
-    },
-    {
-      "id": "dndnode_118",
-      "type": "notesNode",
-      "position": {
-        "x": -4701.539934480463,
-        "y": 1115.10189133131
-      },
-      "data": {
-        "label": "## Material Noun\n\n### Meaning\n- Names substances/materials.\n\n---\n### Examples\n- gold, water, milk, wood\n\n---\n### Usage\n- Generally uncountable; use measure words: *a glass of water*.\n\n---\n### Bank Tips\n- No plural for raw material: *golds ❌ → gold ✅*.\n- No article when speaking generally: *Gold is precious.*\n\n---\n### Shortcut\n**Material = substance**",
-        "color": "rgb(18,131,134)",
-        "textColor": "#000000"
-      },
-      "measured": {
-        "width": 300,
-        "height": 375
-      },
-      "selected": false,
-      "dragging": false
-    },
-    {
-      "id": "dndnode_119",
-      "type": "notesNode",
-      "position": {
-        "x": -5644.724246211209,
-        "y": 503.33072907856626
-      },
-      "data": {
-        "label": "## Countable Noun\n\n### Meaning\n- Things we can count (one, two, many).\n\n---\n### Examples\n- book(s), apple(s), idea(s)\n\n---\n### Usage\n- With a/an, numbers, many/few.\n\n---\n### Bank Tips\n- Article: **a/an** for singular only.\n- Plural after numbers: *two books*.\n\n---\n### Shortcut\n**Countable = many/few**",
-        "color": "rgb(18,131,134)",
-        "textColor": "#000000"
-      },
-      "measured": {
-        "width": 300,
-        "height": 336
-      },
-      "selected": false,
-      "dragging": false
-    },
-    {
-      "id": "dndnode_120",
-      "type": "notesNode",
-      "position": {
-        "x": -4561.530990102252,
-        "y": 488.1795785280696
-      },
-      "data": {
-        "label": "## Uncountable Noun\n\n### Meaning\n- Mass/abstract items not counted individually.\n\n---\n### Examples\n- sugar, rice, advice, information\n\n---\n### Usage\n- Use much/little, some, a lot of.\n\n---\n### Bank Tips\n- No **s** plural: *informations ❌ → information ✅*.\n- Use measure units: *a piece of advice*.\n\n---\n### Shortcut\n**Uncountable = much/little**",
-        "color": "rgb(18,131,134)",
-        "textColor": "#000000"
-      },
-      "measured": {
-        "width": 300,
-        "height": 378
-      },
-      "selected": false,
-      "dragging": false
-    },
-    {
       "id": "dndnode_121",
       "type": "notesNode",
       "position": {
@@ -2696,24 +2436,6 @@
       "dragging": false
     },
     {
-      "id": "dndnode_126",
-      "type": "notesNode",
-      "position": {
-        "x": -6031.9200428870145,
-        "y": 1148.5479878141218
-      },
-      "data": {
-        "label": "## Proper Noun\n\n### Meaning\n- Specific name of a person, place, thing, or organization.\n\n---\n### Examples\n- Ram, Priya, Patna, India, Amazon, HDFC Bank\n\n---\n### Usage\n- Always capitalized (even in middle of sentence).\n- Can be singular or plural: **The Himalayas**, **The Netherlands**.\n\n---\n### Bank Tips\n- No article before single person's name: ✅ Ram is here | ❌ The Ram is here\n- Use **the** before unique places: **the Ganga**, **the Taj Mahal**.\n- Month, day & festival names are proper nouns: **Holi**, **Monday**, **January**.\n\n---\n### Shortcut\n**Proper = specific name**",
-        "color": "#128386"
-      },
-      "measured": {
-        "width": 300,
-        "height": 519
-      },
-      "selected": false,
-      "dragging": false
-    },
-    {
       "id": "dndnode_127",
       "type": "notesNode",
       "position": {
@@ -2727,7 +2449,7 @@
       },
       "measured": {
         "width": 300,
-        "height": 450
+        "height": 446
       },
       "selected": false,
       "dragging": false
@@ -2841,7 +2563,7 @@
       },
       "measured": {
         "width": 300,
-        "height": 378
+        "height": 374
       },
       "selected": false,
       "dragging": false
@@ -2860,7 +2582,7 @@
       },
       "measured": {
         "width": 300,
-        "height": 429
+        "height": 427
       },
       "selected": false,
       "dragging": false
@@ -2879,7 +2601,7 @@
       },
       "measured": {
         "width": 300,
-        "height": 411
+        "height": 409
       },
       "selected": false,
       "dragging": false
@@ -2898,7 +2620,7 @@
       },
       "measured": {
         "width": 300,
-        "height": 360
+        "height": 356
       },
       "selected": false,
       "dragging": false
@@ -2953,8 +2675,8 @@
         "color": "#e4ab04"
       },
       "measured": {
-        "width": 133,
-        "height": 40
+        "width": 467,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -2971,8 +2693,8 @@
         "color": "#e4ab04"
       },
       "measured": {
-        "width": 98,
-        "height": 40
+        "width": 328,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -2989,8 +2711,8 @@
         "color": "#e4ab04"
       },
       "measured": {
-        "width": 131,
-        "height": 40
+        "width": 456,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -3007,8 +2729,8 @@
         "color": "#e4ab04"
       },
       "measured": {
-        "width": 119,
-        "height": 40
+        "width": 410,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -3025,8 +2747,8 @@
         "color": "#e4ab04"
       },
       "measured": {
-        "width": 115,
-        "height": 40
+        "width": 396,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -3043,8 +2765,8 @@
         "color": "#e4ab04"
       },
       "measured": {
-        "width": 114,
-        "height": 40
+        "width": 388,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -3061,8 +2783,8 @@
         "color": "#e4ab04"
       },
       "measured": {
-        "width": 110,
-        "height": 40
+        "width": 374,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -3079,8 +2801,8 @@
         "color": "#c1fefd"
       },
       "measured": {
-        "width": 81,
-        "height": 40
+        "width": 257,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -3097,8 +2819,8 @@
         "color": "#c1fefd"
       },
       "measured": {
-        "width": 75,
-        "height": 40
+        "width": 235,
+        "height": 96
       },
       "selected": false,
       "dragging": false
@@ -3115,11 +2837,346 @@
         "color": "rgb(193,254,253)"
       },
       "measured": {
-        "width": 88,
-        "height": 40
+        "width": 285,
+        "height": 96
       },
       "selected": false,
       "dragging": false
+    },
+    {
+      "id": "subflow-1763534203017",
+      "type": "subflow",
+      "position": {
+        "x": -7294.795479192495,
+        "y": 142.60125865444388
+      },
+      "data": {
+        "label": "",
+        "width": 1680.3890527847625,
+        "height": 857.3335947010554,
+        "color": "rgb(19,254,120)",
+        "textColor": "#ffffff"
+      },
+      "draggable": true,
+      "selectable": true,
+      "width": 2906,
+      "height": 1902,
+      "measured": {
+        "width": 2906,
+        "height": 1902
+      },
+      "selected": false,
+      "resizing": false,
+      "dragging": false
+    },
+    {
+      "id": "2",
+      "type": "textNode",
+      "position": {
+        "x": 1832.7793542720783,
+        "y": 335
+      },
+      "data": {
+        "label": "Noun",
+        "color": "rgb(203.1402907666653,43.681298059356436,178.54720028848502)",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 175,
+        "height": 96
+      },
+      "selected": false,
+      "dragging": false,
+      "parentId": "subflow-1763534203017",
+      "extent": "parent"
+    },
+    {
+      "id": "10",
+      "type": "textNode",
+      "position": {
+        "x": 74.60013691303539,
+        "y": 844.6400023957037
+      },
+      "data": {
+        "label": "Proper Noun",
+        "color": "rgb(222.64975266062692,56.984203271808546,87.35256091526453)"
+      },
+      "measured": {
+        "width": 385,
+        "height": 96
+      },
+      "selected": false,
+      "dragging": false,
+      "parentId": "subflow-1763534203017",
+      "extent": "parent"
+    },
+    {
+      "id": "11",
+      "type": "textNode",
+      "position": {
+        "x": 546.357721515873,
+        "y": 835.437096917876
+      },
+      "data": {
+        "label": "Common Noun",
+        "color": "rgb(210.47870178536485,244.70686728745204,247.10301662524935)"
+      },
+      "measured": {
+        "width": 452,
+        "height": 96
+      },
+      "selected": false,
+      "dragging": false,
+      "parentId": "subflow-1763534203017",
+      "extent": "parent"
+    },
+    {
+      "id": "12",
+      "type": "textNode",
+      "position": {
+        "x": 1031.5363302624382,
+        "y": 843.282786974291
+      },
+      "data": {
+        "label": "Collective Noun",
+        "color": "rgb(162.68979959535605,3.5239575549560023,213.54888954863216)"
+      },
+      "measured": {
+        "width": 470,
+        "height": 96
+      },
+      "selected": false,
+      "dragging": false,
+      "parentId": "subflow-1763534203017",
+      "extent": "parent"
+    },
+    {
+      "id": "13",
+      "type": "textNode",
+      "position": {
+        "x": 1543.4302855214892,
+        "y": 833.0413780481367
+      },
+      "data": {
+        "label": "Abstract Noun",
+        "color": "rgb(106.92732171386623,171.66813506251944,64.44984736509825)"
+      },
+      "measured": {
+        "width": 428,
+        "height": 96
+      },
+      "selected": false,
+      "dragging": false,
+      "parentId": "subflow-1763534203017",
+      "extent": "parent"
+    },
+    {
+      "id": "15",
+      "type": "textNode",
+      "position": {
+        "x": 2100.2391721413137,
+        "y": 842.6981416724516
+      },
+      "data": {
+        "label": "Material Noun",
+        "color": "rgb(80.22194717974185,80.81162881900862,226.40187990697916)"
+      },
+      "measured": {
+        "width": 420,
+        "height": 96
+      },
+      "selected": false,
+      "dragging": false,
+      "parentId": "subflow-1763534203017",
+      "extent": "parent"
+    },
+    {
+      "id": "16",
+      "type": "textNode",
+      "position": {
+        "x": 1415.3349098425433,
+        "y": 472.59581945135454
+      },
+      "data": {
+        "label": "Countable",
+        "color": "rgb(38.46097824339654,58.397958020156466,8.435063387959612)",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 314,
+        "height": 96
+      },
+      "selected": false,
+      "dragging": false,
+      "parentId": "subflow-1763534203017",
+      "extent": "parent"
+    },
+    {
+      "id": "17",
+      "type": "textNode",
+      "position": {
+        "x": 1992.7006781263262,
+        "y": 442.6085856709069
+      },
+      "data": {
+        "label": "Uncountable",
+        "color": "rgb(12.015576507060796,198.83302146819963,229.35490794473122)"
+      },
+      "measured": {
+        "width": 381,
+        "height": 96
+      },
+      "selected": false,
+      "dragging": false,
+      "parentId": "subflow-1763534203017",
+      "extent": "parent"
+    },
+    {
+      "id": "dndnode_115",
+      "type": "notesNode",
+      "position": {
+        "x": 613.0198221242981,
+        "y": 1107.1670264057263
+      },
+      "data": {
+        "label": "## Common Noun\n\n### Meaning\n- General name of people, places, things.\n\n---\n### Examples\n- girl, city, river, laptop\n\n---\n### Usage\n- Not capitalized unless at start.\n- Can be countable/uncountable.\n\n---\n### Bank Tips\n- Common vs Proper: *city* vs *Patna*.\n- Plural rules: **child → children**, **leaf → leaves**.\n\n---\n### Shortcut\n**Common = general name**",
+        "color": "rgb(18,131,134)",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 300,
+        "height": 390
+      },
+      "selected": false,
+      "dragging": false,
+      "parentId": "subflow-1763534203017",
+      "extent": "parent"
+    },
+    {
+      "id": "dndnode_116",
+      "type": "notesNode",
+      "position": {
+        "x": 1119.8163297358706,
+        "y": 1101.2276627437857
+      },
+      "data": {
+        "label": "## Collective Noun\n\n### Meaning\n- Names a group as one unit.\n\n---\n### Examples\n- team, jury, crowd, family\n\n---\n### Usage\n- Usually singular in exams: *The team **is** ready.*\n\n---\n### Bank Tips\n- Plural idea? Use plural verb only when focusing on individuals: *The team **are** arguing.*\n\n---\n### Shortcut\n**Collective = group as one**",
+        "color": "rgb(18,131,134)",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 300,
+        "height": 354
+      },
+      "selected": false,
+      "dragging": false,
+      "parentId": "subflow-1763534203017",
+      "extent": "parent"
+    },
+    {
+      "id": "dndnode_117",
+      "type": "notesNode",
+      "position": {
+        "x": 1608.2942168968002,
+        "y": 1100.8340460489394
+      },
+      "data": {
+        "label": "## Abstract Noun\n\n### Meaning\n- Names ideas, qualities, feelings (no physical form).\n\n---\n### Examples\n- honesty, beauty, freedom, fear\n\n---\n### Usage\n- Usually uncountable; no plural.\n\n---\n### Bank Tips\n- No article with general idea: *Honesty is the best policy.*\n- From adjective/verb: **kind → kindness**, **decide → decision**.\n\n---\n### Shortcut\n**Abstract = idea/quality**",
+        "color": "rgb(18,131,134)",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 300,
+        "height": 372
+      },
+      "selected": false,
+      "dragging": false,
+      "parentId": "subflow-1763534203017",
+      "extent": "parent"
+    },
+    {
+      "id": "dndnode_118",
+      "type": "notesNode",
+      "position": {
+        "x": 2164.6440988370678,
+        "y": 1108.2882943427242
+      },
+      "data": {
+        "label": "## Material Noun\n\n### Meaning\n- Names substances/materials.\n\n---\n### Examples\n- gold, water, milk, wood\n\n---\n### Usage\n- Generally uncountable; use measure words: *a glass of water*.\n\n---\n### Bank Tips\n- No plural for raw material: *golds ❌ → gold ✅*.\n- No article when speaking generally: *Gold is precious.*\n\n---\n### Shortcut\n**Material = substance**",
+        "color": "rgb(18,131,134)",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 300,
+        "height": 373
+      },
+      "selected": false,
+      "dragging": false,
+      "parentId": "subflow-1763534203017",
+      "extent": "parent"
+    },
+    {
+      "id": "dndnode_119",
+      "type": "notesNode",
+      "position": {
+        "x": 1016.4274357130207,
+        "y": 373.9185958967296
+      },
+      "data": {
+        "label": "## Countable Noun\n\n### Meaning\n- Things we can count (one, two, many).\n\n---\n### Examples\n- book(s), apple(s), idea(s)\n\n---\n### Usage\n- With a/an, numbers, many/few.\n\n---\n### Bank Tips\n- Article: **a/an** for singular only.\n- Plural after numbers: *two books*.\n\n---\n### Shortcut\n**Countable = many/few**",
+        "color": "rgb(18,131,134)",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 300,
+        "height": 336
+      },
+      "selected": false,
+      "dragging": false,
+      "parentId": "subflow-1763534203017",
+      "extent": "parent"
+    },
+    {
+      "id": "dndnode_120",
+      "type": "notesNode",
+      "position": {
+        "x": 2513.5729826201505,
+        "y": 385.9942951240404
+      },
+      "data": {
+        "label": "## Uncountable Noun\n\n### Meaning\n- Mass/abstract items not counted individually.\n\n---\n### Examples\n- sugar, rice, advice, information\n\n---\n### Usage\n- Use much/little, some, a lot of.\n\n---\n### Bank Tips\n- No **s** plural: *informations ❌ → information ✅*.\n- Use measure units: *a piece of advice*.\n\n---\n### Shortcut\n**Uncountable = much/little**",
+        "color": "rgb(18,131,134)",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 300,
+        "height": 374
+      },
+      "selected": false,
+      "dragging": false,
+      "parentId": "subflow-1763534203017",
+      "extent": "parent"
+    },
+    {
+      "id": "dndnode_126",
+      "type": "notesNode",
+      "position": {
+        "x": 124.4257899946042,
+        "y": 1086.657427402893
+      },
+      "data": {
+        "label": "## Proper Noun\n\n### Meaning\n- Specific name of a person, place, thing, or organization.\n\n---\n### Examples\n- Ram, Priya, Patna, India, Amazon, HDFC Bank\n\n---\n### Usage\n- Always capitalized (even in middle of sentence).\n- Can be singular or plural: **The Himalayas**, **The Netherlands**.\n\n---\n### Bank Tips\n- No article before single person's name: ✅ Ram is here | ❌ The Ram is here\n- Use **the** before unique places: **the Ganga**, **the Taj Mahal**.\n- Month, day & festival names are proper nouns: **Holi**, **Monday**, **January**.\n\n---\n### Shortcut\n**Proper = specific name**",
+        "color": "#128386",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 300,
+        "height": 517
+      },
+      "selected": false,
+      "dragging": false,
+      "parentId": "subflow-1763534203017",
+      "extent": "parent"
     }
   ],
   "edges": [
@@ -4490,7 +4547,8 @@
         "stroke": "#000000",
         "strokeWidth": 4
       },
-      "id": "xy-edge__16-dndnode_119"
+      "id": "xy-edge__16-dndnode_119",
+      "selected": false
     },
     {
       "source": "17",
@@ -4499,7 +4557,8 @@
         "stroke": "#000000",
         "strokeWidth": 4
       },
-      "id": "xy-edge__17-dndnode_120"
+      "id": "xy-edge__17-dndnode_120",
+      "selected": false
     },
     {
       "source": "9",
@@ -4558,7 +4617,8 @@
         "stroke": "#000000",
         "strokeWidth": 4
       },
-      "id": "xy-edge__10-dndnode_126"
+      "id": "xy-edge__10-dndnode_126",
+      "selected": false
     },
     {
       "source": "dndnode_26",
@@ -4785,8 +4845,8 @@
     }
   ],
   "viewport": {
-    "x": 491.50019618074384,
-    "y": 456.3365580399525,
-    "zoom": 0.06705994000330628
+    "x": 1357.4716075953993,
+    "y": 131.9119637692978,
+    "zoom": 0.1325300265167506
   }
 }

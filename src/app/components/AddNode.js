@@ -1,5 +1,5 @@
 "use client";
-import React, { useCallback, useRef, useState , useEffect } from "react";
+import React, { useCallback, useRef, useState, useEffect } from "react";
 import {
   ReactFlow,
   addEdge,
@@ -8,7 +8,7 @@ import {
   MiniMap,
   useNodesState,
   useEdgesState,
-    getIncomers,
+  getIncomers,
   getOutgoers,
   getConnectedEdges,
   useReactFlow,
@@ -112,16 +112,26 @@ const FlowCanvas = () => {
     const maxY = Math.max(...selected.map((n) => n.position.y + (n.height || 100)));
     const padding = 30;
 
+    const width = maxX - minX + padding * 2;
+    const height = maxY - minY + padding * 2;
+
     const subflowId = `subflow-${Date.now()}`;
     const groupPos = { x: minX - padding, y: minY - padding };
+
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    const color = `rgb(${r},${g},${b})`;
 
     const subflowNode = {
       id: subflowId,
       type: "subflow",
       position: groupPos,
-      data: { label: `` },
+      data: { label: ``, width, height, color },
       draggable: true,
       selectable: true,
+      width,
+      height,
     };
 
     const children = selected.map((n) => ({
@@ -134,23 +144,23 @@ const FlowCanvas = () => {
     setNodes((nds) => [...nds.filter((n) => !n.selected), subflowNode, ...children]);
   }, [setNodes]);
 
- const onConnect = useCallback(
-  (params) =>
-    setEdges((eds) =>
-      addEdge(
-        {
-          ...params,
-          style: { stroke: "#ff0000" },
-          markerEnd: { type: "arrow", color: "#ff0000" },
-        },
-        eds
-      )
-    ),
-  [setEdges]
-);
+  const onConnect = useCallback(
+    (params) =>
+      setEdges((eds) =>
+        addEdge(
+          {
+            ...params,
+            style: { stroke: "#ff0000" },
+            markerEnd: { type: "arrow", color: "#ff0000" },
+          },
+          eds
+        )
+      ),
+    [setEdges]
+  );
 
-  console.table(nodes);
-  console.table(edges);
+  // console.table(nodes);
+  // console.table(edges);
 
   const handleNodeClick = useCallback((_, node) => {
     setSelectedNode(node);
@@ -176,7 +186,7 @@ const FlowCanvas = () => {
     });
   }, [setNodes]);
 
-   const onNodesDelete = useCallback(
+  const onNodesDelete = useCallback(
     (deleted) => {
       let remainingNodes = [...nodes];
       setEdges(
@@ -184,9 +194,9 @@ const FlowCanvas = () => {
           const incomers = getIncomers(node, remainingNodes, acc);
           const outgoers = getOutgoers(node, remainingNodes, acc);
           const connectedEdges = getConnectedEdges([node], acc);
- 
+
           const remainingEdges = acc.filter((edge) => !connectedEdges.includes(edge));
- 
+
           const createdEdges = incomers.flatMap(({ id: source }) =>
             outgoers.map(({ id: target }) => ({
               id: `${source}->${target}`,
@@ -194,9 +204,9 @@ const FlowCanvas = () => {
               target,
             })),
           );
- 
+
           remainingNodes = remainingNodes.filter((rn) => rn.id !== node.id);
- 
+
           return [...remainingEdges, ...createdEdges];
         }, edges),
       );
@@ -204,10 +214,10 @@ const FlowCanvas = () => {
     [nodes, edges],
   );
 
-    // ✅ This listens for both Backspace and Delete keys
+  // ✅ This listens for both Backspace and Delete keys
   const handleKeyDown = useCallback(
     (event) => {
-      if ( event.key === 'Delete') {
+      if (event.key === 'Delete') {
         event.preventDefault(); // avoid browser navigation
         const selectedNodes = getNodes().filter((n) => n.selected);
         if (selectedNodes.length > 0) {
@@ -334,12 +344,12 @@ const FlowCanvas = () => {
         onNodeDoubleClick={handleNodeDoubleClick}
         onNodesDelete={onNodesDelete}
         fitView
-        minZoom = "0.06"
-        deleteKeyCode = "Delete"
+        minZoom="0.06"
+        deleteKeyCode="Delete"
       >
-        <div style={{ position: "absolute", top: 10, left: 10, zIndex: 10 }}>
-          <Sidebar 
-            onAddNode={handleAddNode} 
+        <div style={{ position: "absolute", top: "2rem", left: "3rem", zIndex: 10 }}>
+          <Sidebar
+            onAddNode={handleAddNode}
             onGroupNodes={handleGroupNodes}
             reactFlowInstance={reactFlowInstance.current}
             onLoadFlow={handleLoadFlow}

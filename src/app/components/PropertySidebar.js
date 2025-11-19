@@ -37,30 +37,30 @@ const PropertySidebar = ({ node, onClose, onUpdate }) => {
     onUpdate(node.id, { src: newSrc });
   };
 
-const handleImageUpload = async (e) => {
-  const file = e.target.files[0];
-  if (!file) return;
+  const handleImageUpload = async (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
 
-  const formData = new FormData();
-  formData.append("file", file);
+    const formData = new FormData();
+    formData.append("file", file);
 
-  try {
-    const res = await fetch("/api/upload", {
-      method: "POST",
-      body: formData,
-    });
+    try {
+      const res = await fetch("/api/upload", {
+        method: "POST",
+        body: formData,
+      });
 
-    const data = await res.json();
-    if (data.success) {
-      setSrc(data.url);
-      onUpdate(node.id, { src: data.url }); // update node image
-    } else {
-      alert(translations.upload_failed);
+      const data = await res.json();
+      if (data.success) {
+        setSrc(data.url);
+        onUpdate(node.id, { src: data.url }); // update node image
+      } else {
+        alert(translations.upload_failed);
+      }
+    } catch (err) {
+      console.error("Error uploading file:", err);
     }
-  } catch (err) {
-    console.error("Error uploading file:", err);
-  }
-};
+  };
 
   // 🟢 Update color
   const handleColorChange = (e) => {
@@ -172,8 +172,8 @@ const handleImageUpload = async (e) => {
         </div>
       )}
 
-      {/* ===== For textNode and notesNode: show color options ===== */}
-      {(node.type === "textNode" || node.type === "notesNode") && (
+      {/* ===== For textNode, notesNode, and subflow: show color options ===== */}
+      {(node.type === "textNode" || node.type === "notesNode" || node.type === "subflow") && (
         <div style={{ marginTop: "1rem" }}>
           <label style={{ display: "block", marginBottom: "0.5rem" }}>
             <strong>{translations.background_color}</strong>
