@@ -21,43 +21,6 @@
       "dragging": false
     },
     {
-      "id": "3",
-      "type": "textNode",
-      "position": {
-        "x": -2190.9429086644277,
-        "y": 515.3723944535195
-      },
-      "data": {
-        "label": "Pronoun",
-        "color": "rgb(2.3228647072244915,238.11282739799864,91.01516977425082)"
-      },
-      "measured": {
-        "width": 264,
-        "height": 96
-      },
-      "selected": false,
-      "dragging": false
-    },
-    {
-      "id": "4",
-      "type": "textNode",
-      "position": {
-        "x": -731.5687126678808,
-        "y": 509.78571812247606
-      },
-      "data": {
-        "label": "Adjective",
-        "color": "rgb(63,92,148)",
-        "textColor": "#ffffff"
-      },
-      "measured": {
-        "width": 282,
-        "height": 96
-      },
-      "selected": false,
-      "dragging": false
-    },
-    {
       "id": "5",
       "type": "textNode",
       "position": {
@@ -150,136 +113,6 @@
       "dragging": false
     },
     {
-      "id": "18",
-      "type": "textNode",
-      "position": {
-        "x": -2534.7092264315183,
-        "y": 622.5281412525819
-      },
-      "data": {
-        "label": "Personal",
-        "color": "rgb(219.7313828801139,73.05711297859224,42.71556739665602)"
-      },
-      "measured": {
-        "width": 275,
-        "height": 96
-      },
-      "selected": false,
-      "dragging": false
-    },
-    {
-      "id": "19",
-      "type": "textNode",
-      "position": {
-        "x": -2428.609444314776,
-        "y": 622.5352338818934
-      },
-      "data": {
-        "label": "Reflexive",
-        "color": "rgb(202.03642165329146,225.7825561777435,223.22343182011528)"
-      },
-      "measured": {
-        "width": 285,
-        "height": 96
-      },
-      "selected": false,
-      "dragging": false
-    },
-    {
-      "id": "20",
-      "type": "textNode",
-      "position": {
-        "x": -2326.713323885778,
-        "y": 623.3838767171246
-      },
-      "data": {
-        "label": "Demonstrative",
-        "color": "rgb(144.52730257228197,158.13990484388998,221.71633404407282)"
-      },
-      "measured": {
-        "width": 435,
-        "height": 96
-      },
-      "selected": false,
-      "dragging": false
-    },
-    {
-      "id": "21",
-      "type": "textNode",
-      "position": {
-        "x": -2186.8337646973646,
-        "y": 626.5542916398177
-      },
-      "data": {
-        "label": "Interrogative",
-        "color": "rgb(249.6493962368017,158.45384179263976,190.56344844454472)",
-        "textColor": "#ffffff"
-      },
-      "measured": {
-        "width": 378,
-        "height": 96
-      },
-      "selected": false,
-      "dragging": false
-    },
-    {
-      "id": "22",
-      "type": "textNode",
-      "position": {
-        "x": -2065.393302988229,
-        "y": 626.6950946492672
-      },
-      "data": {
-        "label": "Relative",
-        "color": "rgb(119.74651228339,90.89558791063737,123.21077030040345)",
-        "textColor": "#ffffff"
-      },
-      "measured": {
-        "width": 253,
-        "height": 96
-      },
-      "selected": false,
-      "dragging": false
-    },
-    {
-      "id": "23",
-      "type": "textNode",
-      "position": {
-        "x": -1972.8075504152703,
-        "y": 626.6909733795463
-      },
-      "data": {
-        "label": "Indefinite",
-        "color": "rgb(232,51,63)",
-        "textColor": "#000000"
-      },
-      "measured": {
-        "width": 282,
-        "height": 96
-      },
-      "selected": false,
-      "dragging": false
-    },
-    {
-      "id": "24",
-      "type": "textNode",
-      "position": {
-        "x": -1875.1102935719853,
-        "y": 626.4334967488312
-      },
-      "data": {
-        "label": "Distributive",
-        "color": "rgb(231.80833779399617,89.6135100709978,136.944050313709)",
-        "textColor": "#ffffff"
-      },
-      "measured": {
-        "width": 339,
-        "height": 96
-      },
-      "selected": false,
-      "dragging": false
-    },
-    {
       "id": "dndnode_1",
       "type": "textNode",
       "position": {
@@ -292,114 +125,6 @@
       },
       "measured": {
         "width": 310,
-        "height": 96
-      },
-      "selected": false,
-      "dragging": false
-    },
-    {
-      "id": "dndnode_2",
-      "type": "textNode",
-      "position": {
-        "x": -977.4359851500478,
-        "y": 619.7941660488448
-      },
-      "data": {
-        "label": "Quality",
-        "color": "rgb(141,149,248)"
-      },
-      "measured": {
-        "width": 221,
-        "height": 96
-      },
-      "selected": false,
-      "dragging": false
-    },
-    {
-      "id": "dndnode_3",
-      "type": "textNode",
-      "position": {
-        "x": -887.0866535454248,
-        "y": 621.422212649377
-      },
-      "data": {
-        "label": "Quantity",
-        "color": "rgb(25,219,248)"
-      },
-      "measured": {
-        "width": 260,
-        "height": 96
-      },
-      "selected": false,
-      "dragging": false
-    },
-    {
-      "id": "dndnode_4",
-      "type": "textNode",
-      "position": {
-        "x": -792.9634134598193,
-        "y": 620.2568616649618
-      },
-      "data": {
-        "label": "Number",
-        "color": "rgb(13,218,84)"
-      },
-      "measured": {
-        "width": 250,
-        "height": 96
-      },
-      "selected": false,
-      "dragging": false
-    },
-    {
-      "id": "dndnode_5",
-      "type": "textNode",
-      "position": {
-        "x": -700.8259145534763,
-        "y": 621.0633090800899
-      },
-      "data": {
-        "label": "Demonstrative",
-        "color": "rgb(249,208,27)"
-      },
-      "measured": {
-        "width": 435,
-        "height": 96
-      },
-      "selected": false,
-      "dragging": false
-    },
-    {
-      "id": "dndnode_6",
-      "type": "textNode",
-      "position": {
-        "x": -566.6253945553939,
-        "y": 622.6196234495103
-      },
-      "data": {
-        "label": "Interrogative",
-        "color": "rgb(74,239,228)"
-      },
-      "measured": {
-        "width": 378,
-        "height": 96
-      },
-      "selected": false,
-      "dragging": false
-    },
-    {
-      "id": "dndnode_7",
-      "type": "textNode",
-      "position": {
-        "x": -449.94296525638447,
-        "y": 623.7567047681902
-      },
-      "data": {
-        "label": "Possessive",
-        "color": "rgb(212,165,186)"
-      },
-      "measured": {
-        "width": 346,
         "height": 96
       },
       "selected": false,
@@ -1543,120 +1268,6 @@
       "dragging": false
     },
     {
-      "id": "dndnode_73",
-      "type": "notesNode",
-      "position": {
-        "x": -1548,
-        "y": 996
-      },
-      "data": {
-        "label": "## Quality Adjective\n\n### Meaning\n- Shows what kind of person or thing.\n- Example: *good, tall, smart, red*\n\n---\n\n### Usage\n- Describes quality: *a smart boy*\n- Few → less → least (for quality)\n\n---\n\n### Bank Tip\n- Used before noun: *a beautiful girl*\n- Used after be: *She is smart*\n\n---\n\n### Shortcut\n**Quality = what kind**",
-        "color": "rgb(209,145,255)",
-        "textColor": "#000000"
-      },
-      "measured": {
-        "width": 300,
-        "height": 330
-      },
-      "selected": false,
-      "dragging": false
-    },
-    {
-      "id": "dndnode_74",
-      "type": "notesNode",
-      "position": {
-        "x": -1206,
-        "y": 966
-      },
-      "data": {
-        "label": "## Quantity Adjective\n\n### Meaning\n- Shows how much (uncountable)\n- Example: *some, much, little*\n\n---\n\n### Usage\n- *I have little time.*\n- *She drank some water.*\n\n---\n\n### Bank Tip\n- For countable use NUMBER, not quantity\n- little → less → least\n\n---\n\n### Shortcut\n**Quantity = how much (uncountable)**",
-        "color": "rgb(209,145,255)",
-        "textColor": "#000000"
-      },
-      "measured": {
-        "width": 300,
-        "height": 348
-      },
-      "selected": false,
-      "dragging": false
-    },
-    {
-      "id": "dndnode_75",
-      "type": "notesNode",
-      "position": {
-        "x": -868,
-        "y": 978
-      },
-      "data": {
-        "label": "## Number Adjective\n\n### Meaning\n- Shows how many (countable)\n- Example: *one, two, first, second*\n\n---\n\n### Usage\n- *I have two books.*\n- *He won first prize.*\n\n---\n\n### Bank Tip\n- Use NUMBER for countable\n- many → more → most\n\n---\n\n### Shortcut\n**Number = how many**",
-        "color": "rgb(209,145,255)",
-        "textColor": "#000000"
-      },
-      "measured": {
-        "width": 300,
-        "height": 312
-      },
-      "selected": false,
-      "dragging": false
-    },
-    {
-      "id": "dndnode_76",
-      "type": "notesNode",
-      "position": {
-        "x": -550,
-        "y": 954
-      },
-      "data": {
-        "label": "## Demonstrative Adjective\n\n### Meaning\n- Points out nouns.\n- Example: *this, that, these, those*\n\n---\n\n### Usage\n- *This car*, *Those books*\n- Near vs far\n\n---\n\n### Bank Tip\n- Must agree in number\n- this/that → singular\n- these/those → plural\n\n---\n\n### Shortcut\n**Demonstrative = pointing words**",
-        "color": "rgb(209,145,255)",
-        "textColor": "#000000"
-      },
-      "measured": {
-        "width": 300,
-        "height": 376
-      },
-      "selected": false,
-      "dragging": false
-    },
-    {
-      "id": "dndnode_77",
-      "type": "notesNode",
-      "position": {
-        "x": -207.26425150234456,
-        "y": 948.0017315453779
-      },
-      "data": {
-        "label": "## Interrogative Adjective\n\n### Meaning\n- Used to ask questions.\n- Example: *which, what, whose*\n\n---\n\n### Usage\n- *Which book?*\n- *Whose car?*\n\n---\n\n### Bank Tip\n- Must come before noun\n- which/what + noun\n\n---\n\n### Shortcut\n**Interrogative = question with noun**",
-        "color": "rgb(209,145,255)",
-        "textColor": "#000000"
-      },
-      "measured": {
-        "width": 300,
-        "height": 358
-      },
-      "selected": false,
-      "dragging": false
-    },
-    {
-      "id": "dndnode_78",
-      "type": "notesNode",
-      "position": {
-        "x": 140.42141716744766,
-        "y": 928.528503004688
-      },
-      "data": {
-        "label": "## Possessive Adjective\n\n### Meaning\n- Shows ownership.\n- Example: *my, your, his, her, their*\n\n---\n\n### Usage\n- *my book, her pen*\n- Not same as possessive pronoun\n\n---\n\n### Bank Tip\n- my/mine → my (adjective), mine (pronoun)\n- your/yours → your (adj), yours (pro)\n\n---\n\n### Shortcut\n**Possessive = ownership**",
-        "color": "rgb(209,145,255)",
-        "textColor": "#000000"
-      },
-      "measured": {
-        "width": 300,
-        "height": 394
-      },
-      "selected": false,
-      "dragging": false
-    },
-    {
       "id": "dndnode_79",
       "type": "notesNode",
       "position": {
@@ -2208,139 +1819,6 @@
       "dragging": false
     },
     {
-      "id": "dndnode_108",
-      "type": "notesNode",
-      "position": {
-        "x": -3873.3018055482607,
-        "y": 942.4214171674478
-      },
-      "data": {
-        "label": "## Personal Pronoun\n\n### Definition\nUsed instead of nouns to refer to people or things directly.\n\n### Examples\n- I, we, you, he, she, it, they\n\n---\n### Use Cases\n- Subject: **He** runs fast.\n- Object: I saw **her**.\n- Possessive: **His** car is new.\n\n---\n### Bank Tips\n- Subject form: I/We/He/She/They\n- Object form: Me/Us/Him/Her/Them\n- Avoid double subjects: ❌ He he went\n\n---\n### Shortcut\n**Personal = person replacing noun**",
-        "color": "rgb(72,168,255)",
-        "textColor": "#ffffff"
-      },
-      "measured": {
-        "width": 300,
-        "height": 443
-      },
-      "selected": false,
-      "dragging": false
-    },
-    {
-      "id": "dndnode_109",
-      "type": "notesNode",
-      "position": {
-        "x": -3554.3640061937713,
-        "y": 931.0535429186198
-      },
-      "data": {
-        "label": "## Reflexive Pronoun\n\n### Definition\nRefers back to the subject itself.\n\n### Examples\n- Myself, ourselves, yourself, themselves\n\n---\n### Use Cases\n- He hurt **himself**.\n- She prepared the food **herself**.\n\n---\n### Bank Tips\n- Never use reflexive without same subject.\n- ❌ Myself did this → ✅ I did this myself.\n\n---\n### Shortcut\n**Reflexive = subject & object same**",
-        "color": "rgb(72,168,255)",
-        "textColor": "#ffffff"
-      },
-      "measured": {
-        "width": 300,
-        "height": 407
-      },
-      "selected": false,
-      "dragging": false
-    },
-    {
-      "id": "dndnode_110",
-      "type": "notesNode",
-      "position": {
-        "x": -3239.215498255558,
-        "y": 953.7892914162755
-      },
-      "data": {
-        "label": "## Demonstrative Pronoun\n\n### Definition\nPoints to specific things.\n\n### Examples\n- This, that, these, those\n\n---\n### Use Cases\n- **This** is my book.\n- **Those** were great days.\n\n---\n### Bank Tips\n- 'This/That' for singular, 'These/Those' for plural.\n\n---\n### Shortcut\n**Demonstrative = pointing pronoun**",
-        "color": "rgb(72,168,255)",
-        "textColor": "#ffffff"
-      },
-      "measured": {
-        "width": 300,
-        "height": 380
-      },
-      "selected": false,
-      "dragging": false
-    },
-    {
-      "id": "dndnode_111",
-      "type": "notesNode",
-      "position": {
-        "x": -2921.118801690586,
-        "y": 961.3678742488275
-      },
-      "data": {
-        "label": "## Interrogative Pronoun\n\n### Definition\nUsed for asking questions.\n\n### Examples\n- Who, whom, whose, which, what\n\n---\n### Use Cases\n- **Who** came?\n- **Which** is yours?\n\n---\n### Bank Tips\n- 'Who' = subject, 'Whom' = object\n- 'Whose' = possession\n\n---\n### Shortcut\n**Interrogative = question word**",
-        "color": "rgb(72,168,255)",
-        "textColor": "#ffffff"
-      },
-      "measured": {
-        "width": 300,
-        "height": 362
-      },
-      "selected": false,
-      "dragging": false
-    },
-    {
-      "id": "dndnode_112",
-      "type": "notesNode",
-      "position": {
-        "x": -2604.916750833752,
-        "y": 948.1053542918617
-      },
-      "data": {
-        "label": "## Relative Pronoun\n\n### Definition\nJoins two clauses and refers to noun before it.\n\n### Examples\n- Who, which, that, whose, whom\n\n---\n### Use Cases\n- The man **who** came is my uncle.\n\n---\n### Bank Tips\n- Do not omit 'that' wrongly.\n- Use 'which' for things, 'who' for people.\n\n---\n### Shortcut\n**Relative = joins noun with clause**",
-        "color": "rgb(72,168,255)",
-        "textColor": "#ffffff"
-      },
-      "measured": {
-        "width": 300,
-        "height": 370
-      },
-      "selected": false,
-      "dragging": false
-    },
-    {
-      "id": "dndnode_113",
-      "type": "notesNode",
-      "position": {
-        "x": -2273.5575343118144,
-        "y": 951.8946457081379
-      },
-      "data": {
-        "label": "## Indefinite Pronoun\n\n### Definition\nRefers to persons or things not specific.\n\n### Examples\n- Someone, anything, everybody, few, many\n\n---\n### Use Cases\n- **Everyone** loves music.\n- **Few** were present.\n\n---\n### Bank Tips\n- Singular → each, everyone, anyone\n- Plural → few, many, several\n\n---\n### Shortcut\n**Indefinite = not specific**",
-        "color": "rgb(72,168,255)",
-        "textColor": "#ffffff"
-      },
-      "measured": {
-        "width": 300,
-        "height": 388
-      },
-      "selected": false,
-      "dragging": false
-    },
-    {
-      "id": "dndnode_114",
-      "type": "notesNode",
-      "position": {
-        "x": -1936.514380665463,
-        "y": 961.3678742488278
-      },
-      "data": {
-        "label": "## Distributive Pronoun\n\n### Definition\nRefers to each one of a group separately.\n\n### Examples\n- Each, either, neither\n\n---\n### Use Cases\n- **Each** of us is ready.\n- **Neither** is correct.\n\n---\n### Bank Tips\n- Always singular.\n- Use singular verb.\n\n---\n### Shortcut\n**Distributive = one by one**",
-        "color": "rgb(72,168,255)",
-        "textColor": "#ffffff"
-      },
-      "measured": {
-        "width": 300,
-        "height": 380
-      },
-      "selected": false,
-      "dragging": false
-    },
-    {
       "id": "dndnode_121",
       "type": "notesNode",
       "position": {
@@ -2847,8 +2325,8 @@
       "id": "subflow-1763534203017",
       "type": "subflow",
       "position": {
-        "x": -7294.795479192495,
-        "y": 142.60125865444388
+        "x": -8750.629527395331,
+        "y": 304.1169643177493
       },
       "data": {
         "label": "",
@@ -2873,8 +2351,8 @@
       "id": "2",
       "type": "textNode",
       "position": {
-        "x": 1832.7793542720783,
-        "y": 335
+        "x": 1362.7816421009748,
+        "y": 63.59287043640461
       },
       "data": {
         "label": "Noun",
@@ -2994,8 +2472,8 @@
       "id": "16",
       "type": "textNode",
       "position": {
-        "x": 1415.3349098425433,
-        "y": 472.59581945135454
+        "x": 620.9725794125079,
+        "y": 432.87770292985283
       },
       "data": {
         "label": "Countable",
@@ -3015,8 +2493,8 @@
       "id": "17",
       "type": "textNode",
       "position": {
-        "x": 1992.7006781263262,
-        "y": 442.6085856709069
+        "x": 1853.6872703010704,
+        "y": 429.3692134970729
       },
       "data": {
         "label": "Uncountable",
@@ -3119,8 +2597,8 @@
       "id": "dndnode_119",
       "type": "notesNode",
       "position": {
-        "x": 1016.4274357130207,
-        "y": 373.9185958967296
+        "x": 129.38950006614868,
+        "y": 340.8201654621448
       },
       "data": {
         "label": "## Countable Noun\n\n### Meaning\n- Things we can count (one, two, many).\n\n---\n### Examples\n- book(s), apple(s), idea(s)\n\n---\n### Usage\n- With a/an, numbers, many/few.\n\n---\n### Bank Tips\n- Article: **a/an** for singular only.\n- Plural after numbers: *two books*.\n\n---\n### Shortcut\n**Countable = many/few**",
@@ -3140,8 +2618,8 @@
       "id": "dndnode_120",
       "type": "notesNode",
       "position": {
-        "x": 2513.5729826201505,
-        "y": 385.9942951240404
+        "x": 2394.418633055644,
+        "y": 405.85335338479115
       },
       "data": {
         "label": "## Uncountable Noun\n\n### Meaning\n- Mass/abstract items not counted individually.\n\n---\n### Examples\n- sugar, rice, advice, information\n\n---\n### Usage\n- Use much/little, some, a lot of.\n\n---\n### Bank Tips\n- No **s** plural: *informations ❌ → information ✅*.\n- Use measure units: *a piece of advice*.\n\n---\n### Shortcut\n**Uncountable = much/little**",
@@ -3176,6 +2654,633 @@
       "selected": false,
       "dragging": false,
       "parentId": "subflow-1763534203017",
+      "extent": "parent"
+    },
+    {
+      "id": "subflow-1763584209403",
+      "type": "subflow",
+      "position": {
+        "x": -5388.935194532041,
+        "y": 324.1525151672414
+      },
+      "data": {
+        "label": "",
+        "width": 2538.321417435187,
+        "height": 1047.8250806606286,
+        "color": "rgb(82,29,47)"
+      },
+      "draggable": true,
+      "selectable": true,
+      "width": 3102,
+      "height": 1704,
+      "measured": {
+        "width": 3102,
+        "height": 1704
+      },
+      "selected": false,
+      "resizing": false,
+      "dragging": false
+    },
+    {
+      "id": "3",
+      "type": "textNode",
+      "position": {
+        "x": 1677.9191383112775,
+        "y": 30
+      },
+      "data": {
+        "label": "Pronoun",
+        "color": "rgb(2.3228647072244915,238.11282739799864,91.01516977425082)"
+      },
+      "measured": {
+        "width": 264,
+        "height": 96
+      },
+      "selected": false,
+      "dragging": false,
+      "parentId": "subflow-1763584209403",
+      "extent": "parent"
+    },
+    {
+      "id": "18",
+      "type": "textNode",
+      "position": {
+        "x": 324.19475787014744,
+        "y": 626.7858166637868
+      },
+      "data": {
+        "label": "Personal",
+        "color": "rgb(219.7313828801139,73.05711297859224,42.71556739665602)"
+      },
+      "measured": {
+        "width": 275,
+        "height": 96
+      },
+      "selected": false,
+      "dragging": false,
+      "parentId": "subflow-1763584209403",
+      "extent": "parent"
+    },
+    {
+      "id": "19",
+      "type": "textNode",
+      "position": {
+        "x": 693.0208709369235,
+        "y": 626.7929092930983
+      },
+      "data": {
+        "label": "Reflexive",
+        "color": "rgb(202.03642165329146,225.7825561777435,223.22343182011528)"
+      },
+      "measured": {
+        "width": 285,
+        "height": 96
+      },
+      "selected": false,
+      "dragging": false,
+      "parentId": "subflow-1763584209403",
+      "extent": "parent"
+    },
+    {
+      "id": "20",
+      "type": "textNode",
+      "position": {
+        "x": 1045.1325446516657,
+        "y": 627.6415521283295
+      },
+      "data": {
+        "label": "Demonstrative",
+        "color": "rgb(144.52730257228197,158.13990484388998,221.71633404407282)"
+      },
+      "measured": {
+        "width": 435,
+        "height": 96
+      },
+      "selected": false,
+      "dragging": false,
+      "parentId": "subflow-1763584209403",
+      "extent": "parent"
+    },
+    {
+      "id": "21",
+      "type": "textNode",
+      "position": {
+        "x": 1504.0369342794052,
+        "y": 624.5565782188789
+      },
+      "data": {
+        "label": "Interrogative",
+        "color": "rgb(249.6493962368017,158.45384179263976,190.56344844454472)",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 378,
+        "height": 96
+      },
+      "selected": false,
+      "dragging": false,
+      "parentId": "subflow-1763584209403",
+      "extent": "parent"
+    },
+    {
+      "id": "22",
+      "type": "textNode",
+      "position": {
+        "x": 1919.480671099292,
+        "y": 618.4419923961848
+      },
+      "data": {
+        "label": "Relative",
+        "color": "rgb(119.74651228339,90.89558791063737,123.21077030040345)",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 253,
+        "height": 96
+      },
+      "selected": false,
+      "dragging": false,
+      "parentId": "subflow-1763584209403",
+      "extent": "parent"
+    },
+    {
+      "id": "23",
+      "type": "textNode",
+      "position": {
+        "x": 2291.853733943005,
+        "y": 605.9270934621766
+      },
+      "data": {
+        "label": "Indefinite",
+        "color": "rgb(232,51,63)",
+        "textColor": "#000000"
+      },
+      "measured": {
+        "width": 282,
+        "height": 96
+      },
+      "selected": false,
+      "dragging": false,
+      "parentId": "subflow-1763584209403",
+      "extent": "parent"
+    },
+    {
+      "id": "24",
+      "type": "textNode",
+      "position": {
+        "x": 2612.754844741497,
+        "y": 611.9250056636051
+      },
+      "data": {
+        "label": "Distributive",
+        "color": "rgb(231.80833779399617,89.6135100709978,136.944050313709)",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 339,
+        "height": 96
+      },
+      "selected": false,
+      "dragging": false,
+      "parentId": "subflow-1763584209403",
+      "extent": "parent"
+    },
+    {
+      "id": "dndnode_108",
+      "type": "notesNode",
+      "position": {
+        "x": 318,
+        "y": 871.614426592929
+      },
+      "data": {
+        "label": "## Personal Pronoun\n\n### Definition\nUsed instead of nouns to refer to people or things directly.\n\n### Examples\n- I, we, you, he, she, it, they\n\n---\n### Use Cases\n- Subject: **He** runs fast.\n- Object: I saw **her**.\n- Possessive: **His** car is new.\n\n---\n### Bank Tips\n- Subject form: I/We/He/She/They\n- Object form: Me/Us/Him/Her/Them\n- Avoid double subjects: ❌ He he went\n\n---\n### Shortcut\n**Personal = person replacing noun**",
+        "color": "rgb(72,168,255)",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 300,
+        "height": 443
+      },
+      "selected": false,
+      "dragging": false,
+      "parentId": "subflow-1763584209403",
+      "extent": "parent"
+    },
+    {
+      "id": "dndnode_109",
+      "type": "notesNode",
+      "position": {
+        "x": 706.0320333343225,
+        "y": 917.8250806606286
+      },
+      "data": {
+        "label": "## Reflexive Pronoun\n\n### Definition\nRefers back to the subject itself.\n\n### Examples\n- Myself, ourselves, yourself, themselves\n\n---\n### Use Cases\n- He hurt **himself**.\n- She prepared the food **herself**.\n\n---\n### Bank Tips\n- Never use reflexive without same subject.\n- ❌ Myself did this → ✅ I did this myself.\n\n---\n### Shortcut\n**Reflexive = subject & object same**",
+        "color": "rgb(72,168,255)",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 300,
+        "height": 407
+      },
+      "selected": false,
+      "dragging": false,
+      "parentId": "subflow-1763584209403",
+      "extent": "parent"
+    },
+    {
+      "id": "dndnode_110",
+      "type": "notesNode",
+      "position": {
+        "x": 1124.8218922422875,
+        "y": 906.0137121683676
+      },
+      "data": {
+        "label": "## Demonstrative Pronoun\n\n### Definition\nPoints to specific things.\n\n### Examples\n- This, that, these, those\n\n---\n### Use Cases\n- **This** is my book.\n- **Those** were great days.\n\n---\n### Bank Tips\n- 'This/That' for singular, 'These/Those' for plural.\n\n---\n### Shortcut\n**Demonstrative = pointing pronoun**",
+        "color": "rgb(72,168,255)",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 300,
+        "height": 380
+      },
+      "selected": false,
+      "dragging": false,
+      "parentId": "subflow-1763584209403",
+      "extent": "parent"
+    },
+    {
+      "id": "dndnode_111",
+      "type": "notesNode",
+      "position": {
+        "x": 1535.0442341137036,
+        "y": 890.5608836743088
+      },
+      "data": {
+        "label": "## Interrogative Pronoun\n\n### Definition\nUsed for asking questions.\n\n### Examples\n- Who, whom, whose, which, what\n\n---\n### Use Cases\n- **Who** came?\n- **Which** is yours?\n\n---\n### Bank Tips\n- 'Who' = subject, 'Whom' = object\n- 'Whose' = possession\n\n---\n### Shortcut\n**Interrogative = question word**",
+        "color": "rgb(72,168,255)",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 300,
+        "height": 362
+      },
+      "selected": false,
+      "dragging": false,
+      "parentId": "subflow-1763584209403",
+      "extent": "parent"
+    },
+    {
+      "id": "dndnode_112",
+      "type": "notesNode",
+      "position": {
+        "x": 1897.3091076237602,
+        "y": 888.8140693806483
+      },
+      "data": {
+        "label": "## Relative Pronoun\n\n### Definition\nJoins two clauses and refers to noun before it.\n\n### Examples\n- Who, which, that, whose, whom\n\n---\n### Use Cases\n- The man **who** came is my uncle.\n\n---\n### Bank Tips\n- Do not omit 'that' wrongly.\n- Use 'which' for things, 'who' for people.\n\n---\n### Shortcut\n**Relative = joins noun with clause**",
+        "color": "rgb(72,168,255)",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 300,
+        "height": 370
+      },
+      "selected": false,
+      "dragging": false,
+      "parentId": "subflow-1763584209403",
+      "extent": "parent"
+    },
+    {
+      "id": "dndnode_113",
+      "type": "notesNode",
+      "position": {
+        "x": 2297.7625581255306,
+        "y": 869.5719494703137
+      },
+      "data": {
+        "label": "## Indefinite Pronoun\n\n### Definition\nRefers to persons or things not specific.\n\n### Examples\n- Someone, anything, everybody, few, many\n\n---\n### Use Cases\n- **Everyone** loves music.\n- **Few** were present.\n\n---\n### Bank Tips\n- Singular → each, everyone, anyone\n- Plural → few, many, several\n\n---\n### Shortcut\n**Indefinite = not specific**",
+        "color": "rgb(72,168,255)",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 300,
+        "height": 388
+      },
+      "selected": false,
+      "dragging": false,
+      "parentId": "subflow-1763584209403",
+      "extent": "parent"
+    },
+    {
+      "id": "dndnode_114",
+      "type": "notesNode",
+      "position": {
+        "x": 2646.321417435187,
+        "y": 879.0451780110034
+      },
+      "data": {
+        "label": "## Distributive Pronoun\n\n### Definition\nRefers to each one of a group separately.\n\n### Examples\n- Each, either, neither\n\n---\n### Use Cases\n- **Each** of us is ready.\n- **Neither** is correct.\n\n---\n### Bank Tips\n- Always singular.\n- Use singular verb.\n\n---\n### Shortcut\n**Distributive = one by one**",
+        "color": "rgb(72,168,255)",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 300,
+        "height": 380
+      },
+      "selected": false,
+      "dragging": false,
+      "parentId": "subflow-1763584209403",
+      "extent": "parent"
+    },
+    {
+      "id": "subflow-1763584337964",
+      "type": "subflow",
+      "position": {
+        "x": -1998.2320523668964,
+        "y": 260.10878655174395
+      },
+      "data": {
+        "label": "",
+        "width": 2261.0203864983723,
+        "height": 934.571174589185,
+        "color": "rgb(34,75,211)"
+      },
+      "draggable": true,
+      "selectable": true,
+      "width": 2667,
+      "height": 1577,
+      "measured": {
+        "width": 2667,
+        "height": 1577
+      },
+      "selected": false,
+      "resizing": false
+    },
+    {
+      "id": "4",
+      "type": "textNode",
+      "position": {
+        "x": 973.8360618591485,
+        "y": 30
+      },
+      "data": {
+        "label": "Adjective",
+        "color": "rgb(63,92,148)",
+        "textColor": "#ffffff"
+      },
+      "measured": {
+        "width": 282,
+        "height": 96
+      },
+      "selected": false,
+      "dragging": false,
+      "parentId": "subflow-1763584337964",
+      "extent": "parent"
+    },
+    {
+      "id": "dndnode_2",
+      "type": "textNode",
+      "position": {
+        "x": 57.665334185879146,
+        "y": 492.79974013221215
+      },
+      "data": {
+        "label": "Quality",
+        "color": "rgb(141,149,248)"
+      },
+      "measured": {
+        "width": 221,
+        "height": 96
+      },
+      "selected": false,
+      "dragging": false,
+      "parentId": "subflow-1763584337964",
+      "extent": "parent"
+    },
+    {
+      "id": "dndnode_3",
+      "type": "textNode",
+      "position": {
+        "x": 389.0887154644952,
+        "y": 488.54793186264703
+      },
+      "data": {
+        "label": "Quantity",
+        "color": "rgb(25,219,248)"
+      },
+      "measured": {
+        "width": 260,
+        "height": 96
+      },
+      "selected": false,
+      "dragging": false,
+      "parentId": "subflow-1763584337964",
+      "extent": "parent"
+    },
+    {
+      "id": "dndnode_4",
+      "type": "textNode",
+      "position": {
+        "x": 747.8054247044829,
+        "y": 487.3825808782318
+      },
+      "data": {
+        "label": "Number",
+        "color": "rgb(13,218,84)"
+      },
+      "measured": {
+        "width": 250,
+        "height": 96
+      },
+      "selected": false,
+      "dragging": false,
+      "parentId": "subflow-1763584337964",
+      "extent": "parent"
+    },
+    {
+      "id": "dndnode_5",
+      "type": "textNode",
+      "position": {
+        "x": 1086.8968281549164,
+        "y": 482.30917342326256
+      },
+      "data": {
+        "label": "Demonstrative",
+        "color": "rgb(249,208,27)"
+      },
+      "measured": {
+        "width": 435,
+        "height": 96
+      },
+      "selected": false,
+      "dragging": false,
+      "parentId": "subflow-1763584337964",
+      "extent": "parent"
+    },
+    {
+      "id": "dndnode_6",
+      "type": "textNode",
+      "position": {
+        "x": 1579.7684952289396,
+        "y": 477.9856329225855
+      },
+      "data": {
+        "label": "Interrogative",
+        "color": "rgb(74,239,228)"
+      },
+      "measured": {
+        "width": 378,
+        "height": 96
+      },
+      "selected": false,
+      "dragging": false,
+      "parentId": "subflow-1763584337964",
+      "extent": "parent"
+    },
+    {
+      "id": "dndnode_7",
+      "type": "textNode",
+      "position": {
+        "x": 2049.2422167337927,
+        "y": 432.08387528048615
+      },
+      "data": {
+        "label": "Possessive",
+        "color": "rgb(212,165,186)"
+      },
+      "measured": {
+        "width": 346,
+        "height": 96
+      },
+      "selected": false,
+      "dragging": false,
+      "parentId": "subflow-1763584337964",
+      "extent": "parent"
+    },
+    {
+      "id": "dndnode_73",
+      "type": "notesNode",
+      "position": {
+        "x": 30,
+        "y": 804.571174589185
+      },
+      "data": {
+        "label": "## Quality Adjective\n\n### Meaning\n- Shows what kind of person or thing.\n- Example: *good, tall, smart, red*\n\n---\n\n### Usage\n- Describes quality: *a smart boy*\n- Few → less → least (for quality)\n\n---\n\n### Bank Tip\n- Used before noun: *a beautiful girl*\n- Used after be: *She is smart*\n\n---\n\n### Shortcut\n**Quality = what kind**",
+        "color": "rgb(209,145,255)",
+        "textColor": "#000000"
+      },
+      "measured": {
+        "width": 300,
+        "height": 330
+      },
+      "selected": false,
+      "dragging": false,
+      "parentId": "subflow-1763584337964",
+      "extent": "parent"
+    },
+    {
+      "id": "dndnode_74",
+      "type": "notesNode",
+      "position": {
+        "x": 387.68753199517914,
+        "y": 797.8465899926856
+      },
+      "data": {
+        "label": "## Quantity Adjective\n\n### Meaning\n- Shows how much (uncountable)\n- Example: *some, much, little*\n\n---\n\n### Usage\n- *I have little time.*\n- *She drank some water.*\n\n---\n\n### Bank Tip\n- For countable use NUMBER, not quantity\n- little → less → least\n\n---\n\n### Shortcut\n**Quantity = how much (uncountable)**",
+        "color": "rgb(209,145,255)",
+        "textColor": "#000000"
+      },
+      "measured": {
+        "width": 300,
+        "height": 348
+      },
+      "selected": false,
+      "dragging": false,
+      "parentId": "subflow-1763584337964",
+      "extent": "parent"
+    },
+    {
+      "id": "dndnode_75",
+      "type": "notesNode",
+      "position": {
+        "x": 737.4472417353736,
+        "y": 803.9667351225881
+      },
+      "data": {
+        "label": "## Number Adjective\n\n### Meaning\n- Shows how many (countable)\n- Example: *one, two, first, second*\n\n---\n\n### Usage\n- *I have two books.*\n- *He won first prize.*\n\n---\n\n### Bank Tip\n- Use NUMBER for countable\n- many → more → most\n\n---\n\n### Shortcut\n**Number = how many**",
+        "color": "rgb(209,145,255)",
+        "textColor": "#000000"
+      },
+      "measured": {
+        "width": 300,
+        "height": 312
+      },
+      "selected": false,
+      "dragging": false,
+      "parentId": "subflow-1763584337964",
+      "extent": "parent"
+    },
+    {
+      "id": "dndnode_76",
+      "type": "notesNode",
+      "position": {
+        "x": 1155.4047745270293,
+        "y": 750.5674607721013
+      },
+      "data": {
+        "label": "## Demonstrative Adjective\n\n### Meaning\n- Points out nouns.\n- Example: *this, that, these, those*\n\n---\n\n### Usage\n- *This car*, *Those books*\n- Near vs far\n\n---\n\n### Bank Tip\n- Must agree in number\n- this/that → singular\n- these/those → plural\n\n---\n\n### Shortcut\n**Demonstrative = pointing words**",
+        "color": "rgb(209,145,255)",
+        "textColor": "#000000"
+      },
+      "measured": {
+        "width": 300,
+        "height": 376
+      },
+      "selected": false,
+      "dragging": false,
+      "parentId": "subflow-1763584337964",
+      "extent": "parent"
+    },
+    {
+      "id": "dndnode_77",
+      "type": "notesNode",
+      "position": {
+        "x": 1615.7376204266325,
+        "y": 785.728176408161
+      },
+      "data": {
+        "label": "## Interrogative Adjective\n\n### Meaning\n- Used to ask questions.\n- Example: *which, what, whose*\n\n---\n\n### Usage\n- *Which book?*\n- *Whose car?*\n\n---\n\n### Bank Tip\n- Must come before noun\n- which/what + noun\n\n---\n\n### Shortcut\n**Interrogative = question with noun**",
+        "color": "rgb(209,145,255)",
+        "textColor": "#000000"
+      },
+      "measured": {
+        "width": 300,
+        "height": 358
+      },
+      "selected": false,
+      "dragging": false,
+      "parentId": "subflow-1763584337964",
+      "extent": "parent"
+    },
+    {
+      "id": "dndnode_78",
+      "type": "notesNode",
+      "position": {
+        "x": 2081.0203864983723,
+        "y": 766.2549478674708
+      },
+      "data": {
+        "label": "## Possessive Adjective\n\n### Meaning\n- Shows ownership.\n- Example: *my, your, his, her, their*\n\n---\n\n### Usage\n- *my book, her pen*\n- Not same as possessive pronoun\n\n---\n\n### Bank Tip\n- my/mine → my (adjective), mine (pronoun)\n- your/yours → your (adj), yours (pro)\n\n---\n\n### Shortcut\n**Possessive = ownership**",
+        "color": "rgb(209,145,255)",
+        "textColor": "#000000"
+      },
+      "measured": {
+        "width": 300,
+        "height": 394
+      },
+      "selected": false,
+      "dragging": false,
+      "parentId": "subflow-1763584337964",
       "extent": "parent"
     }
   ],
@@ -4841,12 +4946,13 @@
         "stroke": "#000000",
         "strokeWidth": 4
       },
-      "id": "xy-edge__4-dndnode_7"
+      "id": "xy-edge__4-dndnode_7",
+      "selected": false
     }
   ],
   "viewport": {
-    "x": 1357.4716075953993,
-    "y": 131.9119637692978,
-    "zoom": 0.1325300265167506
+    "x": 1658.9616646352779,
+    "y": -2.1982290755393024,
+    "zoom": 0.15106456512739838
   }
 }

@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { ReactFlowProvider } from "@xyflow/react";
-import FlowCanvas from "./components/AddNode";
+import FlowCanvas from "./components/FlowCanvas";
 
 const initialNodes = [
   {
