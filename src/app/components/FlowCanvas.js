@@ -18,6 +18,7 @@ import Sidebar from "./Sidebar";
 import { TextNode, ImageNode } from "./customNodes";
 import { NotesNode } from "./NotesNode";
 import GroupNode from "./GroupNode";
+import Footer from "./Footer";
 import PropertySidebar from "./PropertySidebar";
 import FileListOverlay from "./FileListOverlay";
 import { useNodeOperations } from "../hooks/useNodeOperations";
@@ -209,6 +210,7 @@ const FlowCanvas = () => {
                     onClose={handleCloseOverlay}
                 />
             )}
+            <Footer />
         </div>
     );
 };
