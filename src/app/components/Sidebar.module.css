@@ -182,7 +182,6 @@
     overflow-y: hidden;
     gap: 0.5rem;
     position: fixed;
-    bottom: 0;
     top: auto;
     left: 0 !important;
     /* Override drag position on mobile */
