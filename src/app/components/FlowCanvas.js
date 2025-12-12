@@ -21,6 +21,7 @@ import GroupNode from "./GroupNode";
 import Footer from "./Footer";
 import PropertySidebar from "./PropertySidebar";
 import FileListOverlay from "./FileListOverlay";
+import GroupActionPopup from "./GroupActionPopup";
 import { useNodeOperations } from "../hooks/useNodeOperations";
 import { useFileOperations } from "../hooks/useFileOperations";
 
@@ -44,6 +45,7 @@ const FlowCanvas = () => {
     const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
     const [selectedNode, setSelectedNode] = useState(null);
     const [isSelectionMode, setIsSelectionMode] = useState(false);
+    const [groupPopupState, setGroupPopupState] = useState({ show: false, node: null, group: null });
 
     const toggleSelectionMode = useCallback(() => {
         setIsSelectionMode((prev) => !prev);
@@ -162,6 +164,61 @@ const FlowCanvas = () => {
         return () => window.removeEventListener('keydown', handleKeyDown);
     }, [handleKeyDown]);
 
+    const onNodeDragStop = useCallback(
+        (event, node) => {
+            // Check if the node is dropped on a group
+            const intersectingNodes = getNodes().filter(
+                (n) =>
+                    n.id !== node.id &&
+                    n.type === 'subflow' &&
+                    node.position.x >= n.position.x &&
+                    node.position.x <= n.position.x + n.measured.width &&
+                    node.position.y >= n.position.y &&
+                    node.position.y <= n.position.y + n.measured.height
+            );
+
+            if (intersectingNodes.length > 0) {
+                const groupNode = intersectingNodes[0]; // Take the first intersecting group
+
+                // If node is not already a child of this group
+                if (node.parentId !== groupNode.id) {
+                    setGroupPopupState({ show: true, node, group: groupNode });
+                }
+            }
+        },
+        [getNodes]
+    );
+
+    const handleAddToGroup = useCallback(() => {
+        const { node, group } = groupPopupState;
+        if (!node || !group) return;
+
+        const relativePosition = {
+            x: node.position.x - group.position.x,
+            y: node.position.y - group.position.y,
+        };
+
+        setNodes((nds) =>
+            nds.map((n) => {
+                if (n.id === node.id) {
+                    return {
+                        ...n,
+                        parentId: group.id,
+                        extent: 'parent',
+                        position: relativePosition,
+                    };
+                }
+                return n;
+            })
+        );
+
+        setGroupPopupState({ show: false, node: null, group: null });
+    }, [groupPopupState, setNodes]);
+
+    const handleCancelGroup = useCallback(() => {
+        setGroupPopupState({ show: false, node: null, group: null });
+    }, []);
+
     return (
         <div style={{ width: "100%", height: "100vh", touchAction: "none", overscrollBehavior: "none" }} ref={reactFlowWrapper}>
             <ReactFlow
@@ -180,7 +237,7 @@ const FlowCanvas = () => {
                 deleteKeyCode="Delete"
                 panOnDrag={!isSelectionMode}
                 selectionOnDrag={isSelectionMode}
-                panOnScroll={!isSelectionMode}
+                onNodeDragStop={onNodeDragStop}
             >
                 <Sidebar
                     onAddNode={handleAddNode}
@@ -202,6 +259,12 @@ const FlowCanvas = () => {
                         onUpdate={handleUpdateNode}
                     />
                 </div>
+                {groupPopupState.show && (
+                    <GroupActionPopup
+                        onConfirm={handleAddToGroup}
+                        onCancel={handleCancelGroup}
+                    />
+                )}
             </ReactFlow>
             {showFileOverlay && (
                 <FileListOverlay
