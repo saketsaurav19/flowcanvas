@@ -163,7 +163,7 @@ const FlowCanvas = () => {
     }, [handleKeyDown]);
 
     return (
-        <div style={{ width: "100%", height: "100vh" }} ref={reactFlowWrapper}>
+        <div style={{ width: "100%", height: "100vh", touchAction: "none", overscrollBehavior: "none" }} ref={reactFlowWrapper}>
             <ReactFlow
                 onInit={handleInit}
                 nodes={nodes}
