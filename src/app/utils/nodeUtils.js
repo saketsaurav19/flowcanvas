@@ -36,10 +36,32 @@ export const generateRandomPosition = (rect, reactFlowInstance) => {
  * @returns {Object} Bounding box with position, width, and height
  */
 export const calculateGroupBounds = (selectedNodes, padding = 30) => {
+    const getNodeWidth = (n) => {
+        if (n.measured && typeof n.measured.width === 'number') return n.measured.width;
+        if (typeof n.width === 'number') return n.width;
+        if (typeof n.width === 'string') return parseFloat(n.width);
+        if (n.style && typeof n.style.width === 'number') return n.style.width;
+        if (n.style && typeof n.style.width === 'string') return parseFloat(n.style.width);
+        if (n.data && typeof n.data.width === 'number') return n.data.width;
+        if (n.data && typeof n.data.width === 'string') return parseFloat(n.data.width);
+        return 150;
+    };
+
+    const getNodeHeight = (n) => {
+        if (n.measured && typeof n.measured.height === 'number') return n.measured.height;
+        if (typeof n.height === 'number') return n.height;
+        if (typeof n.height === 'string') return parseFloat(n.height);
+        if (n.style && typeof n.style.height === 'number') return n.style.height;
+        if (n.style && typeof n.style.height === 'string') return parseFloat(n.style.height);
+        if (n.data && typeof n.data.height === 'number') return n.data.height;
+        if (n.data && typeof n.data.height === 'string') return parseFloat(n.data.height);
+        return 100;
+    };
+
     const minX = Math.min(...selectedNodes.map((n) => n.position.x));
     const minY = Math.min(...selectedNodes.map((n) => n.position.y));
-    const maxX = Math.max(...selectedNodes.map((n) => n.position.x + (n.width || 150)));
-    const maxY = Math.max(...selectedNodes.map((n) => n.position.y + (n.height || 100)));
+    const maxX = Math.max(...selectedNodes.map((n) => n.position.x + getNodeWidth(n)));
+    const maxY = Math.max(...selectedNodes.map((n) => n.position.y + getNodeHeight(n)));
 
     const width = maxX - minX + padding * 2;
     const height = maxY - minY + padding * 2;

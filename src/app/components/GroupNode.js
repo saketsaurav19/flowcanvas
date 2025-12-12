@@ -23,6 +23,7 @@ function GroupNode({ id, data, selected }) {
           padding: "15px",
           boxSizing: "border-box",
           position: "relative",
+          pointerEvents: 'none', // Allow clicks to pass through to canvas for selection
         }}
       >
         <div
@@ -31,6 +32,8 @@ function GroupNode({ id, data, selected }) {
             fontSize: "1.1em",
             marginBottom: "10px",
             color: "#212121",
+            pointerEvents: 'all', // Allow dragging/selecting the group by its label
+            cursor: 'grab',
           }}
         >
           {data.label}

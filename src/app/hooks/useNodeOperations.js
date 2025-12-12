@@ -69,7 +69,26 @@ export const useNodeOperations = ({
             return;
         }
 
-        const { position, width, height } = calculateGroupBounds(selected);
+        const selectedIds = new Set(selected.map((n) => n.id));
+
+        // Filter for "top-level" nodes in the selection:
+        // Nodes whose parent is NOT also in the selected set.
+        // This prevents double-reparenting children of selected groups.
+        const nodesToReparent = selected.filter((n) => !n.parentId || !selectedIds.has(n.parentId));
+
+        if (nodesToReparent.length === 0) {
+            // Should not happen if selected.length >= 2, but safety check
+            return;
+        }
+
+        // Check if all top-level nodes share the same parent
+        // If so, the new group will be a child of that parent (nested group)
+        const commonParentId = nodesToReparent[0].parentId;
+        const allHaveSameParent = nodesToReparent.every((n) => n.parentId === commonParentId);
+        const parentId = allHaveSameParent ? commonParentId : undefined;
+
+        // Calculate bounds based ONLY on the top-level nodes we are grouping
+        const { position, width, height } = calculateGroupBounds(nodesToReparent);
         const subflowId = `subflow-${Date.now()}`;
         const color = generateRandomColor();
 
@@ -78,20 +97,56 @@ export const useNodeOperations = ({
             type: 'subflow',
             position,
             data: { label: '', width, height, color },
+            style: { width, height },
             draggable: true,
             selectable: true,
             width,
             height,
+            parentId,
+            extent: parentId ? 'parent' : undefined,
         };
 
-        const children = selected.map((n) => ({
+        // Reparent only the top-level nodes
+        const children = nodesToReparent.map((n) => ({
             ...n,
             parentId: subflowId,
             extent: 'parent',
             position: { x: n.position.x - position.x, y: n.position.y - position.y },
         }));
 
-        setNodes((nds) => [...nds.filter((n) => !n.selected), subflowNode, ...children]);
+        const nodesToReparentIds = new Set(nodesToReparent.map(n => n.id));
+
+        setNodes((nds) => {
+            // Helper to recursively find all descendants of a set of parent IDs
+            const getDescendants = (nodes, parentIds) => {
+                let descendants = [];
+                const children = nodes.filter(n => parentIds.has(n.parentId));
+                if (children.length > 0) {
+                    descendants = [...children];
+                    const childIds = new Set(children.map(n => n.id));
+                    descendants = [...descendants, ...getDescendants(nodes, childIds)];
+                }
+                return descendants;
+            };
+
+            // 1. Identify all nodes that are NOT being directly reparented (candidates for remaining or moving)
+            const otherNodes = nds.filter((n) => !nodesToReparentIds.has(n.id));
+
+            // 2. Find all descendants of the nodes we are reparenting
+            // These need to be moved to the end of the array to render on top of the new group
+            const descendants = getDescendants(otherNodes, nodesToReparentIds);
+            const descendantIds = new Set(descendants.map(n => n.id));
+
+            // 3. Filter out descendants from the "other" list to avoid duplicates
+            const remainingNodes = otherNodes.filter(n => !descendantIds.has(n.id));
+
+            return [
+                ...remainingNodes,
+                subflowNode,
+                ...children,
+                ...descendants // Render descendants last (on top)
+            ];
+        });
     }, [reactFlowInstance, setNodes]);
 
     /**

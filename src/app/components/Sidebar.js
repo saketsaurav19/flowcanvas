@@ -9,11 +9,62 @@ const Sidebar = ({
     onSaveFlow,
     onLoadFlow,
     onBrowseExamples,
-    onUploadFromDisk
+    onUploadFromDisk,
+    isSelectionMode,
+    onToggleSelectionMode
 }) => {
+    const [isCollapsed, setIsCollapsed] = React.useState(true);
+    const [position, setPosition] = React.useState({ x: 3, y: 5 });
+    const [isDragging, setIsDragging] = React.useState(false);
+    const dragStartRef = React.useRef({ x: 0, y: 0 });
+
+    const handleMouseDown = (e) => {
+        if (e.target.closest(`.${styles.toggleButton}`)) return;
+        setIsDragging(true);
+        dragStartRef.current = {
+            x: e.clientX - position.x,
+            y: e.clientY - position.y
+        };
+    };
+
+    const handleMouseMove = React.useCallback((e) => {
+        if (isDragging) {
+            setPosition({
+                x: e.clientX - dragStartRef.current.x,
+                y: e.clientY - dragStartRef.current.y
+            });
+        }
+    }, [isDragging]);
+
+    const handleMouseUp = React.useCallback(() => {
+        setIsDragging(false);
+    }, []);
+
+    React.useEffect(() => {
+        if (isDragging) {
+            window.addEventListener('mousemove', handleMouseMove);
+            window.addEventListener('mouseup', handleMouseUp);
+        }
+        return () => {
+            window.removeEventListener('mousemove', handleMouseMove);
+            window.removeEventListener('mouseup', handleMouseUp);
+        };
+    }, [isDragging, handleMouseMove, handleMouseUp]);
+
     return (
-        <div className={styles.container}>
-            <div className={styles.header}>
+        <div
+            className={`${styles.container} ${isCollapsed ? styles.collapsed : ''}`}
+            style={{ left: position.x, top: position.y }}
+        >
+            <button
+                className={styles.toggleButton}
+                onClick={() => setIsCollapsed(!isCollapsed)}
+                title={isCollapsed ? "Expand" : "Collapse"}
+            >
+                {isCollapsed ? "❯" : "❮"}
+            </button>
+
+            <div className={styles.header} onMouseDown={handleMouseDown}>
                 <h3 className={styles.title}>FlowCanvas</h3>
                 <p className={styles.subtitle}>Node Editor</p>
             </div>
@@ -53,6 +104,15 @@ const Sidebar = ({
                 <button onClick={onGroupNodes} className={styles.button} title={translations.group_nodes}>
                     <span className={styles.icon}>📦</span>
                     <span className={styles.buttonText}>{translations.group_nodes}</span>
+                </button>
+                <button
+                    onClick={onToggleSelectionMode}
+                    className={`${styles.button} ${isSelectionMode ? styles.active : ''}`}
+                    title={isSelectionMode ? "Switch to Pan Mode" : "Switch to Selection Mode"}
+                    style={{ backgroundColor: isSelectionMode ? '#e2e8f0' : undefined }}
+                >
+                    <span className={styles.icon}>{isSelectionMode ? "🖐️" : "\u2B1A"}</span>
+                    <span className={styles.buttonText}>{isSelectionMode ? "Pan Mode" : "Select Mode"}</span>
                 </button>
             </div>
 

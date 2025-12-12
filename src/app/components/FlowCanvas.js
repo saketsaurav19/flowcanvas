@@ -43,6 +43,11 @@ const FlowCanvas = () => {
     const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
     const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
     const [selectedNode, setSelectedNode] = useState(null);
+    const [isSelectionMode, setIsSelectionMode] = useState(false);
+
+    const toggleSelectionMode = useCallback(() => {
+        setIsSelectionMode((prev) => !prev);
+    }, []);
 
     // Initialize custom hooks
     const { handleAddNode, handleGroupNodes, handleUpdateNode } = useNodeOperations({
@@ -173,25 +178,20 @@ const FlowCanvas = () => {
                 fitView
                 minZoom={0.06}
                 deleteKeyCode="Delete"
+                panOnDrag={!isSelectionMode}
+                selectionOnDrag={isSelectionMode}
+                panOnScroll={!isSelectionMode}
             >
-                <div
-                    style={{
-                        position: "absolute",
-                        top: "2rem",
-                        left: "3rem",
-                        zIndex: 10
-                    }}
-                    className="sidebar-container"
-                >
-                    <Sidebar
-                        onAddNode={handleAddNode}
-                        onGroupNodes={handleGroupNodes}
-                        onSaveFlow={handleSaveFlow}
-                        onLoadFlow={handleLoadFlow}
-                        onBrowseExamples={handleBrowseExamples}
-                        onUploadFromDisk={handleUploadFromDisk}
-                    />
-                </div>
+                <Sidebar
+                    onAddNode={handleAddNode}
+                    onGroupNodes={handleGroupNodes}
+                    onSaveFlow={handleSaveFlow}
+                    onLoadFlow={handleLoadFlow}
+                    onBrowseExamples={handleBrowseExamples}
+                    onUploadFromDisk={handleUploadFromDisk}
+                    isSelectionMode={isSelectionMode}
+                    onToggleSelectionMode={toggleSelectionMode}
+                />
                 <Background />
                 <Controls />
                 <MiniMap />
