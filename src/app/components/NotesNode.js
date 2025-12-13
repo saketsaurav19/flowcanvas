@@ -6,23 +6,25 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
 
-export const NotesNode = memo(({ data, isConnectable }) => {
+export const NotesNode = memo(({ data = {}, isConnectable }) => {
   return (
     <div className={styles.notesNode} style={{ backgroundColor: data.color }}>
       <Handle
         type="target"
         position={Position.Top}
         isConnectable={isConnectable}
+        style={{ width: 50, height: 50 }}
       />
-      <div style={{ color: data.textColor || "#000000" , padding: "1rem", }}>
+      <div style={{ color: data.textColor || "#000000", padding: "1rem", }}>
         <ReactMarkdown remarkPlugins={[remarkGfm]}>
-        {data.label}
+          {data.label}
         </ReactMarkdown>
-        </div>
+      </div>
       <Handle
         type="source"
         position={Position.Bottom}
         isConnectable={isConnectable}
+        style={{ width: 50, height: 50 }}
       />
     </div>
   );

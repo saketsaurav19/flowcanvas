@@ -22,6 +22,9 @@ import Footer from "./Footer";
 import PropertySidebar from "./PropertySidebar";
 import FileListOverlay from "./FileListOverlay";
 import GroupActionPopup from "./GroupActionPopup";
+import SettingsModal from "./SettingsModal";
+import GeminiPromptModal from "./GeminiPromptModal";
+import { generateFlow } from "../utils/geminiGenerator";
 import { useNodeOperations } from "../hooks/useNodeOperations";
 import { useFileOperations } from "../hooks/useFileOperations";
 
@@ -46,6 +49,8 @@ const FlowCanvas = () => {
     const [selectedNode, setSelectedNode] = useState(null);
     const [isSelectionMode, setIsSelectionMode] = useState(false);
     const [groupPopupState, setGroupPopupState] = useState({ show: false, node: null, group: null });
+    const [showSettings, setShowSettings] = useState(false);
+    const [showGeminiModal, setShowGeminiModal] = useState(false);
 
     const toggleSelectionMode = useCallback(() => {
         setIsSelectionMode((prev) => !prev);
@@ -219,6 +224,43 @@ const FlowCanvas = () => {
         setGroupPopupState({ show: false, node: null, group: null });
     }, []);
 
+    const handleGeminiClick = useCallback(() => {
+        const apiKey = localStorage.getItem('gemini_api_key');
+        if (!apiKey) {
+            alert("Please save your Gemini API Key in Settings first.");
+            setShowSettings(true);
+            return;
+        }
+        setShowGeminiModal(true);
+    }, []);
+
+    const handleGenerateFlow = useCallback(async (prompt) => {
+        const apiKey = localStorage.getItem('gemini_api_key');
+        try {
+            const currentNodes = getNodes();
+            // Filter out circular references or huge data if needed, but basic nodes are fine
+            const flowData = await generateFlow(prompt, currentNodes, edges, apiKey);
+
+            if (flowData.nodes) {
+                setNodes((nds) => {
+                    const nodeMap = new Map(nds.map((n) => [n.id, n]));
+                    flowData.nodes.forEach((n) => nodeMap.set(n.id, n));
+                    return Array.from(nodeMap.values());
+                });
+            }
+            if (flowData.edges) {
+                setEdges((eds) => {
+                    const edgeMap = new Map(eds.map((e) => [e.id, e]));
+                    flowData.edges.forEach((e) => edgeMap.set(e.id, e));
+                    return Array.from(edgeMap.values());
+                });
+            }
+        } catch (error) {
+            console.error("Flow generation failed:", error);
+            throw error; // Re-throw to be caught by the modal
+        }
+    }, [getNodes, edges, setNodes, setEdges]);
+
     return (
         <div style={{ width: "100%", height: "100vh", touchAction: "none", overscrollBehavior: "none" }} ref={reactFlowWrapper}>
             <ReactFlow
@@ -243,11 +285,13 @@ const FlowCanvas = () => {
                     onAddNode={handleAddNode}
                     onGroupNodes={handleGroupNodes}
                     onSaveFlow={handleSaveFlow}
-                    onLoadFlow={handleLoadFlow}
+
                     onBrowseExamples={handleBrowseExamples}
                     onUploadFromDisk={handleUploadFromDisk}
                     isSelectionMode={isSelectionMode}
                     onToggleSelectionMode={toggleSelectionMode}
+                    onSettings={() => setShowSettings(true)}
+                    onGeminiAI={handleGeminiClick}
                 />
                 <Background />
                 <Controls />
@@ -257,12 +301,22 @@ const FlowCanvas = () => {
                         node={selectedNode}
                         onClose={() => setSelectedNode(null)}
                         onUpdate={handleUpdateNode}
+                        onDelete={(id) => deleteElements({ nodes: [{ id }] })}
                     />
                 </div>
                 {groupPopupState.show && (
                     <GroupActionPopup
                         onConfirm={handleAddToGroup}
                         onCancel={handleCancelGroup}
+                    />
+                )}
+                {showSettings && (
+                    <SettingsModal onClose={() => setShowSettings(false)} />
+                )}
+                {showGeminiModal && (
+                    <GeminiPromptModal
+                        onClose={() => setShowGeminiModal(false)}
+                        onGenerate={handleGenerateFlow}
                     />
                 )}
             </ReactFlow>

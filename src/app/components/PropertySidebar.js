@@ -5,14 +5,16 @@ import { rgbToHex } from "../utils/colorUtils";
 import { generateRandomColor } from "../utils/colorUtils";
 import styles from "./PropertySidebar.module.css";
 
-const PropertySidebar = ({ node, onClose, onUpdate }) => {
+const PropertySidebar = ({ node, onClose, onUpdate, onDelete }) => {
   const [label, setLabel] = useState(node?.data?.label || "");
   const [src, setSrc] = useState(node?.data?.src || "");
+  const [parentId, setParentId] = useState(node?.parentId || "");
 
   // Update local states when the selected node changes
   useEffect(() => {
     setLabel(node?.data?.label || "");
     setSrc(node?.data?.src || "");
+    setParentId(node?.parentId || "");
   }, [node]);
 
   if (!node) return null;
@@ -22,6 +24,30 @@ const PropertySidebar = ({ node, onClose, onUpdate }) => {
     const newLabel = e.target.value;
     setLabel(newLabel);
     onUpdate(node.id, { label: newLabel });
+  };
+
+  // Update Parent ID
+  const handleParentIdChange = (e) => {
+    const newParentId = e.target.value;
+    setParentId(newParentId);
+  };
+
+  const handleParentIdBlur = () => {
+    if (parentId !== (node.parentId || "")) {
+      if (window.confirm(translations.confirm_parent_change || "Are you sure you want to change the parent ID? This might move the node.")) {
+        onUpdate(node.id, { parentId: parentId || null });
+      } else {
+        setParentId(node.parentId || "");
+      }
+    }
+  };
+
+  // Delete Node
+  const handleDeleteNode = () => {
+    if (window.confirm(translations.confirm_delete_node || "Are you sure you want to delete this node?")) {
+      onDelete(node.id);
+      onClose();
+    }
   };
 
   // Update image source
@@ -109,6 +135,19 @@ const PropertySidebar = ({ node, onClose, onUpdate }) => {
           />
         </div>
 
+        {/* Parent ID Field */}
+        <div className={styles.formGroup}>
+          <label className={styles.label}>{translations.parent_id || "Parent ID"}</label>
+          <input
+            type="text"
+            value={parentId}
+            onChange={handleParentIdChange}
+            onBlur={handleParentIdBlur}
+            placeholder="Enter Group ID"
+            className={styles.input}
+          />
+        </div>
+
         {/* For imageNode: show image options */}
         {node.type === "imageNode" && (
           <>
@@ -172,6 +211,16 @@ const PropertySidebar = ({ node, onClose, onUpdate }) => {
             </div>
           </>
         )}
+
+        {/* Delete Node Button */}
+        <div className={styles.separator} style={{ margin: '20px 0', borderTop: '1px solid #eee' }}></div>
+        <button
+          onClick={handleDeleteNode}
+          className={styles.button}
+          style={{ backgroundColor: '#ff4444', color: 'white' }}
+        >
+          🗑️ {translations.delete_node || "Delete Node"}
+        </button>
       </div>
     </div>
   );

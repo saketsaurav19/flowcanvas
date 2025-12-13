@@ -7,11 +7,13 @@ const Sidebar = ({
     onAddNode,
     onGroupNodes,
     onSaveFlow,
-    onLoadFlow,
+
     onBrowseExamples,
     onUploadFromDisk,
     isSelectionMode,
-    onToggleSelectionMode
+    onToggleSelectionMode,
+    onSettings,
+    onGeminiAI
 }) => {
     const [isCollapsed, setIsCollapsed] = React.useState(true);
     const [position, setPosition] = React.useState({ x: 3, y: 5 });
@@ -55,6 +57,7 @@ const Sidebar = ({
         <div
             className={`${styles.container} ${isCollapsed ? styles.collapsed : ''}`}
             style={{ left: position.x, top: position.y }}
+            onMouseDown={handleMouseDown}
         >
             <button
                 className={styles.toggleButton}
@@ -64,7 +67,7 @@ const Sidebar = ({
                 {isCollapsed ? "❯" : "❮"}
             </button>
 
-            <div className={styles.header} onMouseDown={handleMouseDown}>
+            <div className={styles.header}>
                 <h3 className={styles.title}>FlowCanvas</h3>
                 <p className={styles.subtitle}>Node Editor</p>
             </div>
@@ -123,30 +126,7 @@ const Sidebar = ({
                     <span className={styles.buttonText}>Save Flow</span>
                 </button>
 
-                <label className={styles.button} style={{ cursor: 'pointer' }} title="Restore Flow">
-                    <span className={styles.icon}>📂</span>
-                    <span className={styles.buttonText}>Restore Flow</span>
-                    <input
-                        type="file"
-                        accept="application/json"
-                        onChange={(e) => {
-                            const file = e.target.files?.[0];
-                            if (file) {
-                                const reader = new FileReader();
-                                reader.onload = (event) => {
-                                    try {
-                                        const flow = JSON.parse(event.target.result);
-                                        onLoadFlow(flow, file.name);
-                                    } catch (err) {
-                                        alert(translations.invalid_json_file);
-                                    }
-                                };
-                                reader.readAsText(file);
-                            }
-                        }}
-                        style={{ display: 'none' }}
-                    />
-                </label>
+
 
                 <button onClick={onBrowseExamples} className={styles.button} title="Browse Examples">
                     <span className={styles.icon}>🌟</span>
@@ -154,7 +134,7 @@ const Sidebar = ({
                 </button>
 
                 <label className={styles.button} style={{ cursor: 'pointer' }} title="Upload Flow">
-                    <span className={styles.icon}>⬆️</span>
+                    <span className={styles.icon}>📂</span>
                     <span className={styles.buttonText}>Upload Flow</span>
                     <input
                         type="file"
@@ -163,6 +143,18 @@ const Sidebar = ({
                         style={{ display: 'none' }}
                     />
                 </label>
+            </div>
+
+            <div className={styles.section}>
+                <h4 className={styles.sectionTitle}>AI & Settings</h4>
+                <button onClick={onGeminiAI} className={styles.button} title="Gemini AI">
+                    <span className={styles.icon}>✨</span>
+                    <span className={styles.buttonText}>Gemini AI</span>
+                </button>
+                <button onClick={onSettings} className={styles.button} title="Settings">
+                    <span className={styles.icon}>⚙️</span>
+                    <span className={styles.buttonText}>Settings</span>
+                </button>
             </div>
         </div>
     );

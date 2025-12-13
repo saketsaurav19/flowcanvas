@@ -1,11 +1,17 @@
 // components/GroupNode.js
 import React, { memo } from "react";
-import { NodeResizer } from "@xyflow/react";
+import { NodeResizer, Handle, Position } from "@xyflow/react";
 import { rgbToRgba } from "../utils/colorUtils";
 
-function GroupNode({ id, data, selected }) {
+function GroupNode({ id, data = {}, selected, isConnectable }) {
   return (
     <>
+      <Handle
+        type="target"
+        position={Position.Top}
+        isConnectable={isConnectable}
+        style={{ width: 50, height: 50 }}
+      />
       <NodeResizer
         color="#ff0071"
         isVisible={selected}
@@ -39,6 +45,12 @@ function GroupNode({ id, data, selected }) {
           {data.label}
         </div>
       </div>
+      <Handle
+        type="source"
+        position={Position.Bottom}
+        isConnectable={isConnectable}
+        style={{ width: 50, height: 50 }}
+      />
     </>
   );
 }

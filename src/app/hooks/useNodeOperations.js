@@ -157,7 +157,31 @@ export const useNodeOperations = ({
             setNodes((nds) => {
                 return nds.map((n) => {
                     if (n.id === id) {
-                        return { ...n, data: { ...n.data, ...newData } };
+                        // Separate top-level properties from data properties
+                        const topLevelProps = {};
+                        const dataProps = {};
+
+                        Object.keys(newData).forEach(key => {
+                            if (key === 'parentId' || key === 'extent') {
+                                topLevelProps[key] = newData[key];
+                            } else {
+                                dataProps[key] = newData[key];
+                            }
+                        });
+
+                        // If parentId is being cleared, remove extent as well
+                        if (topLevelProps.parentId === null) {
+                            topLevelProps.parentId = undefined;
+                            topLevelProps.extent = undefined;
+                        } else if (topLevelProps.parentId) {
+                            topLevelProps.extent = 'parent';
+                        }
+
+                        return {
+                            ...n,
+                            ...topLevelProps,
+                            data: { ...n.data, ...dataProps }
+                        };
                     }
                     return n;
                 });
