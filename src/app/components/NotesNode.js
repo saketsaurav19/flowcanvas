@@ -13,7 +13,12 @@ export const NotesNode = memo(({ data = {}, isConnectable }) => {
         type="target"
         position={Position.Top}
         isConnectable={isConnectable}
-        style={{ width: 50, height: 50 }}
+        style={{
+          width: 50,
+          height: 50,
+          opacity: data.hideHandle ? 0 : 1,
+          pointerEvents: data.hideHandle ? 'none' : 'all',
+        }}
       />
       <div style={{ color: data.textColor || "#000000", padding: "1rem", }}>
         <ReactMarkdown remarkPlugins={[remarkGfm]}>
@@ -24,7 +29,12 @@ export const NotesNode = memo(({ data = {}, isConnectable }) => {
         type="source"
         position={Position.Bottom}
         isConnectable={isConnectable}
-        style={{ width: 50, height: 50 }}
+        style={{
+          width: 50,
+          height: 50,
+          opacity: data.hideHandle ? 0 : 1,
+          pointerEvents: data.hideHandle ? 'none' : 'all',
+        }}
       />
     </div>
   );

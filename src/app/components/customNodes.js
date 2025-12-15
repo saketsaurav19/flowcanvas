@@ -4,6 +4,13 @@ import { Handle, Position } from "@xyflow/react";
 
 // 🟦 Simple text node
 export const TextNode = memo(({ data = {}, isConnectable }) => {
+  const handleStyle = {
+    width: 50,
+    height: 50,
+    opacity: data.hideHandle ? 0 : 1,
+    pointerEvents: data.hideHandle ? 'none' : 'all',
+  };
+
   return (
     <>
       <Handle
@@ -11,7 +18,7 @@ export const TextNode = memo(({ data = {}, isConnectable }) => {
         position={Position.Top}
         onConnect={(params) => console.log("handle onConnect", params)}
         isConnectable={isConnectable}
-        style={{ width: 50, height: 50 }}
+        style={handleStyle}
       />
       <div
         style={{
@@ -29,7 +36,7 @@ export const TextNode = memo(({ data = {}, isConnectable }) => {
         type="source"
         position={Position.Bottom}
         isConnectable={isConnectable}
-        style={{ width: 50, height: 50 }}
+        style={handleStyle}
       />
     </>
   );
@@ -37,6 +44,13 @@ export const TextNode = memo(({ data = {}, isConnectable }) => {
 
 // 🟩 Image node (with connection handles)
 export const ImageNode = memo(({ data = {}, isConnectable }) => {
+  const handleStyle = {
+    width: 50,
+    height: 50,
+    opacity: data.hideHandle ? 0 : 1,
+    pointerEvents: data.hideHandle ? 'none' : 'all',
+  };
+
   return (
     <div
       style={{
@@ -53,7 +67,7 @@ export const ImageNode = memo(({ data = {}, isConnectable }) => {
         position={Position.Top}
         onConnect={(params) => console.log("handle onConnect", params)}
         isConnectable={isConnectable}
-        style={{ width: 50, height: 50 }}
+        style={handleStyle}
       />
 
       <img
@@ -68,7 +82,7 @@ export const ImageNode = memo(({ data = {}, isConnectable }) => {
         type="source"
         position={Position.Bottom}
         isConnectable={isConnectable}
-        style={{ width: 50, height: 50 }}
+        style={handleStyle}
       />
     </div>
   );

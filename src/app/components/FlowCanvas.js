@@ -46,6 +46,7 @@ const FlowCanvas = () => {
 
     const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
     const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
+    const [selectedEdge, setSelectedEdge] = useState(null);
     const [selectedNode, setSelectedNode] = useState(null);
     const [isSelectionMode, setIsSelectionMode] = useState(false);
     const [groupPopupState, setGroupPopupState] = useState({ show: false, node: null, group: null });
@@ -106,10 +107,18 @@ const FlowCanvas = () => {
     // Handle node selection
     const handleNodeClick = useCallback((_, node) => {
         setSelectedNode(node);
+        setSelectedEdge(null); // Clear edge selection
     }, []);
 
     const handleNodeDoubleClick = useCallback((_, node) => {
         setSelectedNode(node);
+        setSelectedEdge(null); // Clear edge selection
+    }, []);
+
+    // Handle edge selection
+    const handleEdgeClick = useCallback((_, edge) => {
+        setSelectedEdge(edge);
+        setSelectedNode(null); // Clear node selection
     }, []);
 
     // Update selected node when nodes change
@@ -121,6 +130,27 @@ const FlowCanvas = () => {
             }
         }
     }, [nodes, selectedNode]);
+
+    // Update selected edge when edges change
+    useEffect(() => {
+        if (selectedEdge) {
+            const updatedEdge = edges.find(e => e.id === selectedEdge.id);
+            if (updatedEdge) {
+                setSelectedEdge(updatedEdge);
+            }
+        }
+    }, [edges, selectedEdge]);
+
+    const handleUpdateEdge = useCallback((id, newData) => {
+        setEdges((eds) =>
+            eds.map((edge) => {
+                if (edge.id === id) {
+                    return { ...edge, ...newData };
+                }
+                return edge;
+            })
+        );
+    }, [setEdges]);
 
     // Handle node deletion with edge reconnection
     const onNodesDelete = useCallback(
@@ -156,12 +186,17 @@ const FlowCanvas = () => {
             if (event.key === 'Delete') {
                 event.preventDefault();
                 const selectedNodes = getNodes().filter((n) => n.selected);
+                const selectedEdges = edges.filter((e) => e.selected);
+
                 if (selectedNodes.length > 0) {
                     deleteElements({ nodes: selectedNodes });
                 }
+                if (selectedEdges.length > 0) {
+                    deleteElements({ edges: selectedEdges });
+                }
             }
         },
-        [getNodes, deleteElements]
+        [getNodes, edges, deleteElements]
     );
 
     useEffect(() => {
@@ -177,9 +212,9 @@ const FlowCanvas = () => {
                     n.id !== node.id &&
                     n.type === 'subflow' &&
                     node.position.x >= n.position.x &&
-                    node.position.x <= n.position.x + n.measured.width &&
+                    node.position.x <= n.position.x + n.measured.width || "inherit" &&
                     node.position.y >= n.position.y &&
-                    node.position.y <= n.position.y + n.measured.height
+                    node.position.y <= n.position.y + n.measured.height || "inherit"
             );
 
             if (intersectingNodes.length > 0) {
@@ -273,6 +308,7 @@ const FlowCanvas = () => {
                 onConnect={onConnect}
                 onNodeClick={handleNodeClick}
                 onNodeDoubleClick={handleNodeDoubleClick}
+                onEdgeClick={handleEdgeClick}
                 onNodesDelete={onNodesDelete}
                 fitView
                 minZoom={0.06}
@@ -285,7 +321,6 @@ const FlowCanvas = () => {
                     onAddNode={handleAddNode}
                     onGroupNodes={handleGroupNodes}
                     onSaveFlow={handleSaveFlow}
-
                     onBrowseExamples={handleBrowseExamples}
                     onUploadFromDisk={handleUploadFromDisk}
                     isSelectionMode={isSelectionMode}
@@ -299,9 +334,15 @@ const FlowCanvas = () => {
                 <div style={{ position: "absolute", top: 10, right: 10, zIndex: 10 }}>
                     <PropertySidebar
                         node={selectedNode}
-                        onClose={() => setSelectedNode(null)}
+                        edge={selectedEdge}
+                        onClose={() => {
+                            setSelectedNode(null);
+                            setSelectedEdge(null);
+                        }}
                         onUpdate={handleUpdateNode}
+                        onUpdateEdge={handleUpdateEdge}
                         onDelete={(id) => deleteElements({ nodes: [{ id }] })}
+                        onDeleteEdge={(id) => deleteElements({ edges: [{ id }] })}
                     />
                 </div>
                 {groupPopupState.show && (

@@ -10,7 +10,12 @@ function GroupNode({ id, data = {}, selected, isConnectable }) {
         type="target"
         position={Position.Top}
         isConnectable={isConnectable}
-        style={{ width: 50, height: 50 }}
+        style={{
+          width: 50,
+          height: 50,
+          opacity: data.hideHandle ? 0 : 1,
+          pointerEvents: data.hideHandle ? 'none' : 'all',
+        }}
       />
       <NodeResizer
         color="#ff0071"
@@ -21,8 +26,8 @@ function GroupNode({ id, data = {}, selected, isConnectable }) {
 
       <div
         style={{
-          width: "100%",
-          height: "100%",
+          width: "inherit",
+          height: "inherit",
           backgroundColor: rgbToRgba(data.color, 0.3) || "rgba(173, 216, 230, 0.3)",
           border: "2px dashed #4287f5",
           borderRadius: "8px",
@@ -35,7 +40,7 @@ function GroupNode({ id, data = {}, selected, isConnectable }) {
         <div
           style={{
             fontWeight: "bold",
-            fontSize: "1.1em",
+            fontSize: data.fontSize ? `${data.fontSize}px` : "1.1em",
             marginBottom: "10px",
             color: "#212121",
             pointerEvents: 'all', // Allow dragging/selecting the group by its label
@@ -49,7 +54,12 @@ function GroupNode({ id, data = {}, selected, isConnectable }) {
         type="source"
         position={Position.Bottom}
         isConnectable={isConnectable}
-        style={{ width: 50, height: 50 }}
+        style={{
+          width: 50,
+          height: 50,
+          opacity: data.hideHandle ? 0 : 1,
+          pointerEvents: data.hideHandle ? 'none' : 'all',
+        }}
       />
     </>
   );
