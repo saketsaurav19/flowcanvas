@@ -13,7 +13,8 @@ const Sidebar = ({
     isSelectionMode,
     onToggleSelectionMode,
     onSettings,
-    onGeminiAI
+    onGeminiAI,
+    onLayout
 }) => {
     const [isCollapsed, setIsCollapsed] = React.useState(true);
     const [position, setPosition] = React.useState({ x: 3, y: 5 });
@@ -116,6 +117,10 @@ const Sidebar = ({
                 >
                     <span className={styles.icon}>{isSelectionMode ? "🖐️" : "\u2B1A"}</span>
                     <span className={styles.buttonText}>{isSelectionMode ? "Pan Mode" : "Select Mode"}</span>
+                </button>
+                <button onClick={onLayout} className={styles.button} title="Auto Layout">
+                    <span className={styles.icon}>🕸️</span>
+                    <span className={styles.buttonText}>Auto Layout</span>
                 </button>
             </div>
 

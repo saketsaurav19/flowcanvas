@@ -27,6 +27,7 @@ import GeminiPromptModal from "./GeminiPromptModal";
 import { generateFlow } from "../utils/geminiGenerator";
 import { useNodeOperations } from "../hooks/useNodeOperations";
 import { useFileOperations } from "../hooks/useFileOperations";
+import { getLayoutedElements } from "../utils/layoutUtils";
 
 const nodeTypes = {
     textNode: TextNode,
@@ -41,7 +42,7 @@ const initialEdges = [];
 const FlowCanvas = () => {
     const reactFlowWrapper = useRef(null);
     const reactFlowInstance = useRef(null);
-    const { getNodes, deleteElements } = useReactFlow();
+    const { getNodes, getEdges, deleteElements } = useReactFlow();
     const nodeIdRef = useRef(1);
 
     const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
@@ -52,6 +53,7 @@ const FlowCanvas = () => {
     const [groupPopupState, setGroupPopupState] = useState({ show: false, node: null, group: null });
     const [showSettings, setShowSettings] = useState(false);
     const [showGeminiModal, setShowGeminiModal] = useState(false);
+    const [shouldFitView, setShouldFitView] = useState(false);
 
     const toggleSelectionMode = useCallback(() => {
         setIsSelectionMode((prev) => !prev);
@@ -204,17 +206,50 @@ const FlowCanvas = () => {
         return () => window.removeEventListener('keydown', handleKeyDown);
     }, [handleKeyDown]);
 
+    // Helper to get absolute position of a node
+    const getNodeAbsolutePosition = useCallback((nodeId, currentNodes) => {
+        const node = currentNodes.find(n => n.id === nodeId);
+        if (!node) return { x: 0, y: 0 };
+
+        let x = node.position.x;
+        let y = node.position.y;
+        let parentId = node.parentId;
+
+        while (parentId) {
+            const parent = currentNodes.find(n => n.id === parentId);
+            if (parent) {
+                x += parent.position.x;
+                y += parent.position.y;
+                parentId = parent.parentId;
+            } else {
+                break;
+            }
+        }
+
+        return { x, y };
+    }, []);
+
     const onNodeDragStop = useCallback(
         (event, node) => {
+            const currentNodes = getNodes();
+            const nodeAbsPos = getNodeAbsolutePosition(node.id, currentNodes);
+
             // Check if the node is dropped on a group
-            const intersectingNodes = getNodes().filter(
-                (n) =>
-                    n.id !== node.id &&
-                    n.type === 'subflow' &&
-                    node.position.x >= n.position.x &&
-                    node.position.x <= n.position.x + n.measured.width || "inherit" &&
-                    node.position.y >= n.position.y &&
-                    node.position.y <= n.position.y + n.measured.height || "inherit"
+            const intersectingNodes = currentNodes.filter(
+                (n) => {
+                    if (n.id === node.id || n.type !== 'subflow') return false;
+
+                    const groupAbsPos = getNodeAbsolutePosition(n.id, currentNodes);
+                    const width = n.measured?.width || n.width || 0;
+                    const height = n.measured?.height || n.height || 0;
+
+                    return (
+                        nodeAbsPos.x >= groupAbsPos.x &&
+                        nodeAbsPos.x <= groupAbsPos.x + width &&
+                        nodeAbsPos.y >= groupAbsPos.y &&
+                        nodeAbsPos.y <= groupAbsPos.y + height
+                    );
+                }
             );
 
             if (intersectingNodes.length > 0) {
@@ -226,7 +261,7 @@ const FlowCanvas = () => {
                 }
             }
         },
-        [getNodes]
+        [getNodes, getNodeAbsolutePosition]
     );
 
     const handleAddToGroup = useCallback(() => {
@@ -269,32 +304,84 @@ const FlowCanvas = () => {
         setShowGeminiModal(true);
     }, []);
 
-    const handleGenerateFlow = useCallback(async (prompt) => {
+    const handleAutoLayout = useCallback(async (overrideNodes, overrideEdges) => {
+        // Check if overrideNodes is an event object or not an array
+        const isEvent = overrideNodes && overrideNodes.preventDefault;
+
+        // Use provided overrides, or fall back to current state from getNodes() to ensure we have measured dimensions
+        const nodesToLayout = (Array.isArray(overrideNodes) && !isEvent) ? overrideNodes : getNodes();
+        const edgesToLayout = (Array.isArray(overrideEdges) && !isEvent) ? overrideEdges : getEdges();
+
+        const layouted = await getLayoutedElements(nodesToLayout, edgesToLayout, { 'elk.algorithm': 'layered', 'elk.direction': 'DOWN' });
+
+        setNodes([...layouted.nodes]);
+        console.log("Layouted Nodes:", layouted.nodes);
+        setEdges([...layouted.edges]);
+        console.log("Layouted Edges:", layouted.edges);
+
+        setShouldFitView(true);
+    }, [getNodes, getEdges, setNodes, setEdges]);
+
+    useEffect(() => {
+        if (shouldFitView && reactFlowInstance.current) {
+            window.requestAnimationFrame(() => {
+                reactFlowInstance.current.fitView();
+            });
+            setShouldFitView(false);
+            console.log("Fit View triggered via useEffect");
+        }
+    }, [shouldFitView]);
+
+    const handleGenerateFlow = useCallback(async (prompt, model, abortSignal) => {
         const apiKey = localStorage.getItem('gemini_api_key');
         try {
             const currentNodes = getNodes();
             // Filter out circular references or huge data if needed, but basic nodes are fine
-            const flowData = await generateFlow(prompt, currentNodes, edges, apiKey);
+            const flowData = await generateFlow(prompt, currentNodes, edges, apiKey, model, abortSignal);
+
+            let newNodes = [];
+            let newEdges = [];
 
             if (flowData.nodes) {
-                setNodes((nds) => {
-                    const nodeMap = new Map(nds.map((n) => [n.id, n]));
-                    flowData.nodes.forEach((n) => nodeMap.set(n.id, n));
-                    return Array.from(nodeMap.values());
-                });
+                const nodeMap = new Map(currentNodes.map((n) => [n.id, n]));
+                flowData.nodes.forEach((n) => nodeMap.set(n.id, n));
+                newNodes = Array.from(nodeMap.values());
+            } else {
+                newNodes = currentNodes;
             }
+
             if (flowData.edges) {
-                setEdges((eds) => {
-                    const edgeMap = new Map(eds.map((e) => [e.id, e]));
-                    flowData.edges.forEach((e) => edgeMap.set(e.id, e));
-                    return Array.from(edgeMap.values());
-                });
+                const edgeMap = new Map(edges.map((e) => [e.id, e]));
+                flowData.edges.forEach((e) => edgeMap.set(e.id, e));
+                newEdges = Array.from(edgeMap.values());
+            } else {
+                newEdges = edges;
             }
+
+            // First set the nodes and edges to allow React Flow to render them
+            // This ensures that 'measured' dimensions are available for the layout engine
+            setNodes(newNodes);
+            setEdges(newEdges);
+
+            // Wait for a render cycle (using setTimeout) before applying layout
+            console.log("Waiting for render before auto-layout...");
+            setTimeout(async () => {
+                console.log("Applying auto-layout...");
+                try {
+                    // Call without arguments to use the current state (which should be updated by now)
+                    await handleAutoLayout();
+                    console.log("Auto-layout applied successfully.");
+                } catch (layoutError) {
+                    console.error("Auto-layout failed in handleGenerateFlow:", layoutError);
+                }
+            }, 500);
         } catch (error) {
             console.error("Flow generation failed:", error);
             throw error; // Re-throw to be caught by the modal
         }
-    }, [getNodes, edges, setNodes, setEdges]);
+    }, [getNodes, edges, setNodes, setEdges, handleAutoLayout]);
+
+
 
     return (
         <div style={{ width: "100%", height: "100vh", touchAction: "none", overscrollBehavior: "none" }} ref={reactFlowWrapper}>
@@ -327,6 +414,7 @@ const FlowCanvas = () => {
                     onToggleSelectionMode={toggleSelectionMode}
                     onSettings={() => setShowSettings(true)}
                     onGeminiAI={handleGeminiClick}
+                    onLayout={handleAutoLayout}
                 />
                 <Background />
                 <Controls />

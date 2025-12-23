@@ -12,7 +12,7 @@ export const TextNode = memo(({ data = {}, isConnectable }) => {
   };
 
   return (
-    <>
+    <div style={{ position: "relative", height: "auto", width: "100%" }}>
       <Handle
         type="target"
         position={Position.Top}
@@ -27,7 +27,13 @@ export const TextNode = memo(({ data = {}, isConnectable }) => {
           borderRadius: "5px",
           background: data.color || "#fff",
           color: data.textColor || "#000",
-          fontSize: "4rem"
+          fontSize: "2rem",
+          width: "auto",
+          minWidth: "100px",
+          maxWidth: "600px",
+          height: "auto",
+          wordBreak: "break-word",
+          whiteSpace: "pre-wrap"
         }}
       >
         {data.label}
@@ -38,7 +44,7 @@ export const TextNode = memo(({ data = {}, isConnectable }) => {
         isConnectable={isConnectable}
         style={handleStyle}
       />
-    </>
+    </div>
   );
 });
 

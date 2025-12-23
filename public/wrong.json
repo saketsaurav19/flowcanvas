@@ -1,0 +1,112 @@
+{
+    "nodes": {
+        "history_of_bihar": {
+            "label": "History of Bihar",
+            "position": {
+                "x": 400,
+                "y": 0
+            }
+        },
+        "ancient_bihar": {
+            "label": "Ancient Bihar",
+            "position": {
+                "x": 200,
+                "y": 100
+            }
+        },
+        "medieval_bihar": {
+            "label": "Medieval Bihar",
+            "position": {
+                "x": 400,
+                "y": 100
+            }
+        },
+        "modern_bihar": {
+            "label": "Modern Bihar",
+            "position": {
+                "x": 600,
+                "y": 100
+            }
+        },
+        "prehistoric_period": {
+            "label": "Prehistoric Period",
+            "position": {
+                "x": 100,
+                "y": 200
+            }
+        },
+        "vedic_era": {
+            "label": "Vedic Era",
+            "position": {
+                "x": 100,
+                "y": 300
+            }
+        },
+        "mahajanapadas": {
+            "label": "Mahajanapadas (Early Kingdoms)",
+            "position": {
+                "x": 100,
+                "y": 400
+            }
+        },
+        "mauryan_empire": {
+            "label": "Mauryan Empire",
+            "position": {
+                "x": 100,
+                "y": 500
+            }
+        },
+        "gupta_empire": {
+            "label": "Gupta Empire",
+            "position": {
+                "x": 100,
+                "y": 600
+            }
+        },
+        "buddhism_jainism": {
+            "label": "Rise of Buddhism and Jainism",
+            "position": {
+                "x": 300,
+                "y": 200
+            }
+        }
+    },
+    "edges": {
+        "e1": {
+            "source": "history_of_bihar",
+            "target": "ancient_bihar"
+        },
+        "e2": {
+            "source": "history_of_bihar",
+            "target": "medieval_bihar"
+        },
+        "e3": {
+            "source": "history_of_bihar",
+            "target": "modern_bihar"
+        },
+        "e4": {
+            "source": "ancient_bihar",
+            "target": "prehistoric_period"
+        },
+        "e5": {
+            "source": "prehistoric_period",
+            "target": "vedic_era"
+        },
+        "e6": {
+            "source": "vedic_era",
+            "target": "mahajanapadas"
+        },
+        "e7": {
+            "source": "mahajanapadas",
+            "target": "mauryan_empire"
+        },
+        "e8": {
+            "source": "mauryan_empire",
+            "target": "gupta_empire"
+        },
+        "e9": {
+            "source": "ancient_bihar",
+            "target": "buddhism_jainism"
+        }
+    }
+}
