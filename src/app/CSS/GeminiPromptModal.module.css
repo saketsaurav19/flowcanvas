@@ -20,6 +20,12 @@
     max-width: 90%;
 }
 
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
 .header {
     display: flex;
     justify-content: space-between;

@@ -1,140 +1,201 @@
-import { GoogleGenAI } from "@google/genai";
+import { Type } from "@google/genai";
+import { geminiNative } from "./geminiNative";
+import { generateFlow as generateJson } from "./geminiCall";
+import { applyPatch } from 'fast-json-patch';
+import { SYSTEM_PROMPTS, USER_PROMPTS } from '../locales/promt';
 
-export const generateFlow = async (topic, currentNodes, currentEdges, apiKey) => {
+/**
+ * Optimized Flow Generation using 4 Phases and JSON Patch (RFC 6902)
+ */
+export const generateFlow = async (topic, currentNodes, currentEdges, apiKey, model, abortSignal) => {
   if (!apiKey) {
     throw new Error("API Key is missing.");
   }
 
-  const ai = new GoogleGenAI({ apiKey });
+  console.log("🚀 Starting 4-Phase Flow Generation (JSON Patch RFC 6902)...");
 
-  const systemInstruction = `
-You are an expert system architect and flowchart designer.
-Your goal is to output a valid JSON object containing 'nodes' and 'edges' based on the user's instruction and the current flow context.
+  // --- SCHEMAS ---
 
-STRICT OUTPUT RULES:
-1. Return ONLY a valid JSON object.
-2. Do NOT include markdown formatting (like \`\`\`json).
-3. Do NOT include any conversational text.
+  // RFC 6902 JSON Patch Schema for Gemini
+  const JSON_PATCH_SCHEMA = {
+    type: Type.ARRAY,
+    description: "An array of JSON Patch operations as per RFC 6902.",
+    items: {
+      type: Type.OBJECT,
+      required: ["op", "path"],
+      properties: {
+        op: {
+          type: Type.STRING,
+          enum: ["add", "remove", "replace", "move", "copy", "test"],
+          description: "The operation to perform."
+        },
+        path: {
+          type: Type.STRING,
+          description: "JSON Pointer path (e.g., /nodes/node_1 or /nodes/node_1/data/label)."
+        },
+        value: {
+          type: Type.OBJECT,
+          description: "The value to add or replace. For nodes, use the full node structure.",
+          properties: {
+            id: { type: Type.STRING },
+            type: { type: Type.STRING },
+            data: {
+              type: Type.OBJECT,
+              properties: {
+                label: { type: Type.STRING },
+                use_case: { type: Type.STRING },
+                src: { type: Type.STRING },
+                color: { type: Type.STRING }
+              }
+            },
+            position: {
+              type: Type.OBJECT,
+              properties: {
+                x: { type: Type.NUMBER },
+                y: { type: Type.NUMBER }
+              }
+            },
+            source: { type: Type.STRING },
+            target: { type: Type.STRING },
+            label: { type: Type.STRING }
+          }
+        },
+        from: {
+          type: Type.STRING,
+          description: "The source path for move or copy operations."
+        }
+      }
+    }
+  };
 
-NODE SCHEMA & USAGE:
-- **Common Fields**:
-  - \`id\`: string (unique identifier)
-  - \`type\`: string ('textNode', 'imageNode', 'notesNode', 'subflow')
-  - \`position\`: { \`x\`: number, \`y\`: number }
-  - \`data\`: object (properties vary by type)
-  - \`parentId\`: string (OPTIONAL, for nodes inside a group)
-  - \`extent\`: string ('parent' IF \`parentId\` is set)
-  - \`style\`: object (OPTIONAL, CSS styles)
-
-- **'textNode'**:
-  - \`data\`: { \`label\`: string, \`color\`: string (hex), \`textColor\`: string (hex) }
-- **'imageNode'**:
-  - \`data\`: { \`label\`: string, \`src\`: string (URL) }
-- **'notesNode'**:
-  - \`data\`: { \`label\`: string (markdown), \`color\`: string (hex), \`textColor\`: string (hex) }
-- **'subflow' (Group Node)**:
-  - \`data\`: { \`label\`: string, \`color\`: string (hex) }
-  - \`style\`: { \`backgroundColor\`: string (rgba) }
-
-GROUPING LOGIC:
-- Children of a group MUST have \`parentId\` set to the group's ID, \`extent: 'parent'\`, and \`position\` relative to the group (0,0 is top-left).
-
-LAYOUT & STYLING:
-- Use a clear TOP-DOWN hierarchy for new flows.
-- Maintain ~100px vertical and ~500px horizontal spacing.
-- Assign DISTINCT background colors to each node for visual separation.
-- If modifying, respect existing layout unless asked to reorganize.
-
-RETURN FORMAT:
-{
-  "nodes": [ ... ],
-  "edges": [ ... ]
-}
-`;
-
-  const userPrompt = `
-CURRENT FLOW CONTEXT:
-Nodes: ${JSON.stringify(currentNodes.map(n => ({ id: n.id, label: n.data.label, type: n.type, parentId: n.parentId })))}
-Edges: ${JSON.stringify(currentEdges.map(e => ({ id: e.id, source: e.source, target: e.target, label: e.label || "" })))}
-
-USER INSTRUCTION:
-${topic}
-`;
-
-  try {
-    const response = await ai.models.generateContent({
-      model: "gemini-2.5-flash",
-      contents: userPrompt,
-      config: {
-        responseMimeType: "application/json",
-        systemInstruction: systemInstruction,
+  // --- PREPARE CONTEXT (Map-based for reliable patching) ---
+  const nodeMap = currentNodes.reduce((acc, node) => {
+    acc[node.id] = {
+      id: node.id,
+      type: node.type,
+      parentId: node.parentId,
+      data: {
+        label: node.data?.label || "",
+        color: node.data?.color,
+        textColor: node.data?.textColor,
+        use_case: node.data?.use_case,
+        src: node.data?.src
       },
+      position: node.position || { x: 0, y: 0 },
+      measured: node.measured
+    };
+    return acc;
+  }, {});
+
+  const edgeMap = currentEdges.reduce((acc, edge) => {
+    acc[edge.id] = {
+      id: edge.id,
+      source: edge.source,
+      target: edge.target,
+      label: edge.label
+    };
+    return acc;
+  }, {});
+
+  let currentGraphContext = {
+    nodes: nodeMap,
+    edges: edgeMap
+  };
+
+  // --- PHASE 1: Intent -> Logical Steps (TEXT) ---
+  console.log("Phase 1: Analyzing Intent...");
+  const phase1SystemPrompt = SYSTEM_PROMPTS.PHASE_1;
+  const phase1UserPrompt = USER_PROMPTS.PHASE_1(topic);
+  const logicalSteps = await geminiNative(phase1UserPrompt, apiKey, phase1SystemPrompt, currentNodes, currentEdges);
+  console.log("Phase 1 Output:", logicalSteps);
+
+  // --- PHASE 2: Logical Steps -> Graph Semantics (Nodes/Edges, NO POSITIONS) ---
+  console.log("Phase 2: Generating Structure Patches...");
+  const phase2SystemPrompt = SYSTEM_PROMPTS.PHASE_2;
+  const phase2UserPrompt = USER_PROMPTS.PHASE_2(logicalSteps, currentGraphContext);
+
+  const structurePatchJson = await generateJson(
+    phase2UserPrompt, "application/json", 0.1, JSON_PATCH_SCHEMA, phase2SystemPrompt, [], [], apiKey, model, abortSignal
+  );
+
+  let structureOps = parsePatch(structurePatchJson);
+  const docAfterPhase2 = JSON.parse(JSON.stringify(currentGraphContext));
+  const phase2Result = applyPatch(docAfterPhase2, structureOps, false, true);
+  currentGraphContext = phase2Result.newDocument;
+
+  // --- PHASE 3: Graph -> Layout + Styling (POSITIONS ONLY) ---
+  console.log("Phase 3: Generating Layout Patches...");
+  const phase3SystemPrompt = SYSTEM_PROMPTS.PHASE_3;
+  const phase3UserPrompt = USER_PROMPTS.PHASE_3(currentGraphContext);
+
+  const layoutPatchJson = await generateJson(
+    phase3UserPrompt, "application/json", 0.1, JSON_PATCH_SCHEMA, phase3SystemPrompt, [], [], apiKey, model, abortSignal
+  );
+
+  let layoutOps = parsePatch(layoutPatchJson);
+  const docAfterPhase3 = JSON.parse(JSON.stringify(currentGraphContext));
+  const phase3Result = applyPatch(docAfterPhase3, layoutOps, false, true);
+  currentGraphContext = phase3Result.newDocument;
+
+  // --- PHASE 4: Validation / Repair (OPTIONAL LOOP) ---
+  console.log("Phase 4: Validating Graph...");
+
+  const validateGraph = (graph) => {
+    const issues = [];
+    const nodeIds = new Set(Object.keys(graph.nodes));
+
+    Object.entries(graph.edges).forEach(([id, edge]) => {
+      if (!nodeIds.has(edge.source)) issues.push(`Edge ${id} has invalid source ${edge.source}`);
+      if (!nodeIds.has(edge.target)) issues.push(`Edge ${id} has invalid target ${edge.target}`);
     });
 
-    const text = response.text;
+    return issues;
+  };
 
-    // Clean up markdown if present
-    const jsonString = text.replace(/```json/g, '').replace(/```/g, '').trim();
-
-    const flowData = JSON.parse(jsonString);
-
-    // Post-process edges to ensure they have IDs
-    if (flowData.edges) {
-      flowData.edges = flowData.edges.map((edge, index) => ({
-        ...edge,
-        id: edge.id || `gen-edge-${Date.now()}-${index}`
-      }));
-    }
-
-    // Post-process group nodes to ensure they are large enough
-    // Removed as per user request to not assign width/height
-
-    if (flowData.nodes) {
-      const groupNodes = flowData.nodes.filter(n => n.type === 'subflow');
-
-      groupNodes.forEach(group => {
-        const children = flowData.nodes.filter(n => n.parentId === group.id);
-
-        if (children.length > 0) {
-          let maxX = 0;
-          let maxY = 0;
-
-          children.forEach(child => {
-            // Estimate child dimensions based on type or use existing measurements
-            let width = child.measured?.width || child.style?.width || child.width || 150;
-            let height = child.measured?.height || child.style?.height || child.height || 80;
-
-            if (!child.measured && !child.style?.width && !child.width) {
-              if (child.type === 'textNode') { width = 200; height = 100; }
-              else if (child.type === 'imageNode') { width = 150; height = 150; }
-              else if (child.type === 'notesNode') { width = 250; height = 200; }
-            }
-
-            const childRight = (child.position.x || 0) + width;
-            const childBottom = (child.position.y || 0) + height;
-
-            if (childRight > maxX) maxX = childRight;
-            if (childBottom > maxY) maxY = childBottom;
-          });
-
-          // Add padding
-          const padding = 100;
-          const requiredWidth = maxX + padding;
-          const requiredHeight = maxY + padding;
-
-          // Update group style
-          group.style = {
-            ...group.style,
-            width: requiredWidth,
-            height: requiredHeight,
-          };
-        }
-      });
-    }
-
-    return flowData;
-  } catch (error) {
-    console.error("Gemini API Error:", error);
-    throw new Error("Failed to generate flow from Gemini.");
+  let issues = validateGraph(currentGraphContext);
+  if (issues.length > 0) {
+    console.warn("Found structural issues, attempting repair...");
+    const repairPrompt = USER_PROMPTS.REPAIR(issues);
+    const repairPatchJson = await generateJson(
+      repairPrompt, "application/json", 0.1, JSON_PATCH_SCHEMA, SYSTEM_PROMPTS.REPAIR, [], [], apiKey, model, abortSignal
+    );
+    const repairOps = parsePatch(repairPatchJson);
+    const docAfterRepair = JSON.parse(JSON.stringify(currentGraphContext));
+    const repairResult = applyPatch(docAfterRepair, repairOps, false, true);
+    currentGraphContext = repairResult.newDocument;
   }
+
+  // --- CONVERT BACK TO ARRAYS ---
+  const finalNodes = Object.entries(currentGraphContext.nodes)
+    .filter(([id, n]) => n && typeof n === 'object')
+    .map(([id, n]) => ({
+      ...n,
+      id: id,
+      data: {
+        ...n.data,
+        label: n.data?.label || n.label || id
+      }
+    }));
+
+  const finalEdges = Object.entries(currentGraphContext.edges)
+    .filter(([id, e]) => e && typeof e === 'object')
+    .map(([id, e]) => ({
+      ...e,
+      id: id
+    }));
+
+  return { nodes: finalNodes, edges: finalEdges };
 };
+
+function parsePatch(jsonString) {
+  let ops;
+  try {
+    ops = JSON.parse(jsonString);
+  } catch (e) {
+    const cleaned = jsonString.replace(/```json/g, '').replace(/```/g, '').trim();
+    try { ops = JSON.parse(cleaned); } catch (e2) { return []; }
+  }
+  if (!Array.isArray(ops) && ops.patch) ops = ops.patch;
+  if (!Array.isArray(ops) && ops.operations) ops = ops.operations;
+  return Array.isArray(ops) ? ops : (ops.op ? [ops] : []);
+}

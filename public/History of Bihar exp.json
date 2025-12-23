@@ -1,0 +1,286 @@
+{
+  "nodes": [
+    {
+      "id": "biharHistory",
+      "type": "textNode",
+      "position": {
+        "x": 100,
+        "y": 100
+      },
+      "data": {
+        "label": "Bihar History Overview"
+      },
+      "measured": {
+        "width": 347,
+        "height": 59
+      }
+    },
+    {
+      "id": "ancientPeriod",
+      "type": "subflow",
+      "position": {
+        "x": 100,
+        "y": 300
+      },
+      "data": {
+        "label": "Ancient Period"
+      },
+      "measured": {
+        "width": 158,
+        "height": 65
+      }
+    },
+    {
+      "id": "paleolithic",
+      "type": "textNode",
+      "position": {
+        "x": 100,
+        "y": 450
+      },
+      "data": {
+        "label": "Paleolithic Findings"
+      },
+      "parentId": "ancientPeriod",
+      "measured": {
+        "width": 298,
+        "height": 59
+      }
+    },
+    {
+      "id": "buddhism",
+      "type": "textNode",
+      "position": {
+        "x": 100,
+        "y": 550
+      },
+      "data": {
+        "label": "Birthplace of Buddhism"
+      },
+      "parentId": "ancientPeriod",
+      "measured": {
+        "width": 351,
+        "height": 59
+      }
+    },
+    {
+      "id": "jainism",
+      "type": "textNode",
+      "position": {
+        "x": 100,
+        "y": 650
+      },
+      "data": {
+        "label": "Birthplace of Jainism"
+      },
+      "parentId": "ancientPeriod",
+      "measured": {
+        "width": 317,
+        "height": 59
+      }
+    },
+    {
+      "id": "magadha",
+      "type": "textNode",
+      "position": {
+        "x": 100,
+        "y": 750
+      },
+      "data": {
+        "label": "Magadha Empire"
+      },
+      "parentId": "ancientPeriod",
+      "measured": {
+        "width": 266,
+        "height": 59
+      }
+    },
+    {
+      "id": "mauryan",
+      "type": "textNode",
+      "position": {
+        "x": 100,
+        "y": 850
+      },
+      "data": {
+        "label": "Mauryan Empire"
+      },
+      "parentId": "ancientPeriod",
+      "measured": {
+        "width": 257,
+        "height": 59
+      }
+    },
+    {
+      "id": "pala",
+      "type": "textNode",
+      "position": {
+        "x": 100,
+        "y": 950
+      },
+      "data": {
+        "label": "Pala Empire"
+      },
+      "parentId": "ancientPeriod",
+      "measured": {
+        "width": 196,
+        "height": 59
+      }
+    },
+    {
+      "id": "medievalPeriod",
+      "type": "subflow",
+      "position": {
+        "x": 400,
+        "y": 300
+      },
+      "data": {
+        "label": "Medieval Period"
+      },
+      "measured": {
+        "width": 168,
+        "height": 65
+      }
+    },
+    {
+      "id": "sherShahSuri",
+      "type": "textNode",
+      "position": {
+        "x": 400,
+        "y": 450
+      },
+      "data": {
+        "label": "Sher Shah Suri's Rule"
+      },
+      "parentId": "medievalPeriod",
+      "measured": {
+        "width": 336,
+        "height": 59
+      }
+    },
+    {
+      "id": "modernPeriod",
+      "type": "subflow",
+      "position": {
+        "x": 700,
+        "y": 300
+      },
+      "data": {
+        "label": "Modern Period"
+      },
+      "measured": {
+        "width": 157,
+        "height": 65
+      }
+    },
+    {
+      "id": "champaran",
+      "type": "textNode",
+      "position": {
+        "x": 700,
+        "y": 450
+      },
+      "data": {
+        "label": "Champaran Satyagraha"
+      },
+      "parentId": "modernPeriod",
+      "measured": {
+        "width": 362,
+        "height": 59
+      }
+    },
+    {
+      "id": "postIndependence",
+      "type": "subflow",
+      "position": {
+        "x": 1000,
+        "y": 300
+      },
+      "data": {
+        "label": "Post-Independence Period"
+      },
+      "measured": {
+        "width": 256,
+        "height": 65
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "source": "biharHistory",
+      "target": "ancientPeriod",
+      "label": "Chronological Start"
+    },
+    {
+      "id": "e2",
+      "source": "ancientPeriod",
+      "target": "medievalPeriod",
+      "label": "Transition to Medieval"
+    },
+    {
+      "id": "e3",
+      "source": "medievalPeriod",
+      "target": "modernPeriod",
+      "label": "Transition to Modern"
+    },
+    {
+      "id": "e4",
+      "source": "modernPeriod",
+      "target": "postIndependence",
+      "label": "Transition to Post-Independence"
+    },
+    {
+      "id": "e5",
+      "source": "ancientPeriod",
+      "target": "paleolithic",
+      "label": "Early Findings"
+    },
+    {
+      "id": "e6",
+      "source": "paleolithic",
+      "target": "buddhism",
+      "label": "Emergence of Religions"
+    },
+    {
+      "id": "e7",
+      "source": "buddhism",
+      "target": "jainism",
+      "label": "Parallel Development"
+    },
+    {
+      "id": "e8",
+      "source": "jainism",
+      "target": "magadha",
+      "label": "Rise of Dynasties"
+    },
+    {
+      "id": "e9",
+      "source": "magadha",
+      "target": "mauryan",
+      "label": "Key Dynasty"
+    },
+    {
+      "id": "e10",
+      "source": "mauryan",
+      "target": "pala",
+      "label": "Later Empire"
+    },
+    {
+      "id": "e11",
+      "source": "medievalPeriod",
+      "target": "sherShahSuri",
+      "label": "Significant Ruler"
+    },
+    {
+      "id": "e12",
+      "source": "modernPeriod",
+      "target": "champaran",
+      "label": "Key Movement"
+    }
+  ],
+  "viewport": {
+    "x": 105.8537651335132,
+    "y": 29.61908766149628,
+    "zoom": 0.35677247452678257
+  }
+}

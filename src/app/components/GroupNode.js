@@ -26,8 +26,8 @@ function GroupNode({ id, data = {}, selected, isConnectable }) {
 
       <div
         style={{
-          width: "inherit",
-          height: "inherit",
+          width: "100%",
+          height: "100%",
           backgroundColor: rgbToRgba(data.color, 0.3) || "rgba(173, 216, 230, 0.3)",
           border: "2px dashed #4287f5",
           borderRadius: "8px",

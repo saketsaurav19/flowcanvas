@@ -334,7 +334,7 @@ const PropertySidebar = ({ node, edge, onClose, onUpdate, onUpdateEdge, onDelete
                       type="number"
                       min="12"
                       max="100"
-                      value={node?.data?.fontSize || 16}
+                      value={node?.data?.fontSize || 64}
                       onChange={(e) => {
                         const val = e.target.value;
                         if (val === "") {
@@ -462,7 +462,7 @@ const PropertySidebar = ({ node, edge, onClose, onUpdate, onUpdateEdge, onDelete
               />
             </div>
 
-            <div className={styles.formGroup} style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+            <div ff={styles.formGroup} style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
               <label className={styles.label} style={{ marginBottom: 0 }}>Arrow Marker</label>
               <input
                 type="checkbox"
