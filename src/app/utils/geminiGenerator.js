@@ -17,6 +17,7 @@ export const generateFlow = async (topic, currentNodes, currentEdges, apiKey, mo
   // --- SCHEMAS ---
 
   // RFC 6902 JSON Patch Schema for Gemini
+  // Updated to include full node structure from English.json (measured, parentId, etc.)
   const JSON_PATCH_SCHEMA = {
     type: Type.ARRAY,
     description: "An array of JSON Patch operations as per RFC 6902.",
@@ -39,13 +40,18 @@ export const generateFlow = async (topic, currentNodes, currentEdges, apiKey, mo
           properties: {
             id: { type: Type.STRING },
             type: { type: Type.STRING },
+            parentId: { type: Type.STRING, description: "ID of the parent subflow node, if any." },
+            extent: { type: Type.STRING, enum: ["parent"], description: "Constrain node to parent bounds." },
             data: {
               type: Type.OBJECT,
               properties: {
                 label: { type: Type.STRING },
                 use_case: { type: Type.STRING },
                 src: { type: Type.STRING },
-                color: { type: Type.STRING }
+                color: { type: Type.STRING },
+                textColor: { type: Type.STRING },
+                width: { type: Type.NUMBER },
+                height: { type: Type.NUMBER }
               }
             },
             position: {
@@ -54,6 +60,17 @@ export const generateFlow = async (topic, currentNodes, currentEdges, apiKey, mo
                 x: { type: Type.NUMBER },
                 y: { type: Type.NUMBER }
               }
+            },
+            measured: {
+              type: Type.OBJECT,
+              properties: {
+                width: { type: Type.NUMBER },
+                height: { type: Type.NUMBER }
+              }
+            },
+            style: {
+              type: Type.OBJECT,
+              description: "CSS properties for the node/edge."
             },
             source: { type: Type.STRING },
             target: { type: Type.STRING },
@@ -69,30 +86,24 @@ export const generateFlow = async (topic, currentNodes, currentEdges, apiKey, mo
   };
 
   // --- PREPARE CONTEXT (Map-based for reliable patching) ---
+  // Using spread operator to preserve ALL fields (measured, extent, dragging, etc.)
   const nodeMap = currentNodes.reduce((acc, node) => {
+    // Ensure data exists and copy all properties
     acc[node.id] = {
-      id: node.id,
-      type: node.type,
-      parentId: node.parentId,
+      ...node,
+      // Ensure defaults if missing (though spreading node usually covers this)
       data: {
+        ...(node.data || {}),
         label: node.data?.label || "",
-        color: node.data?.color,
-        textColor: node.data?.textColor,
-        use_case: node.data?.use_case,
-        src: node.data?.src
       },
-      position: node.position || { x: 0, y: 0 },
-      measured: node.measured
+      position: node.position || { x: 0, y: 0 }
     };
     return acc;
   }, {});
 
   const edgeMap = currentEdges.reduce((acc, edge) => {
     acc[edge.id] = {
-      id: edge.id,
-      source: edge.source,
-      target: edge.target,
-      label: edge.label
+      ...edge
     };
     return acc;
   }, {});
@@ -166,23 +177,11 @@ export const generateFlow = async (topic, currentNodes, currentEdges, apiKey, mo
   }
 
   // --- CONVERT BACK TO ARRAYS ---
-  const finalNodes = Object.entries(currentGraphContext.nodes)
-    .filter(([id, n]) => n && typeof n === 'object')
-    .map(([id, n]) => ({
-      ...n,
-      id: id,
-      data: {
-        ...n.data,
-        label: n.data?.label || n.label || id
-      }
-    }));
+  const finalNodes = Object.values(currentGraphContext.nodes)
+    .filter((n) => n && typeof n === 'object');
 
-  const finalEdges = Object.entries(currentGraphContext.edges)
-    .filter(([id, e]) => e && typeof e === 'object')
-    .map(([id, e]) => ({
-      ...e,
-      id: id
-    }));
+  const finalEdges = Object.values(currentGraphContext.edges)
+    .filter((e) => e && typeof e === 'object');
 
   return { nodes: finalNodes, edges: finalEdges };
 };
