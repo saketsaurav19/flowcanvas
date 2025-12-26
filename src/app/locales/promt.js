@@ -15,34 +15,35 @@ export const SYSTEM_PROMPTS = {
     **OUTPUT FORMAT**: Return ONLY a JSON Patch (RFC 6902) array.
     
     **Allowed Operations**:
-    1. **add**: Create new /nodes/ID or /edges/ID. Value MUST be a full object.
-       - Node Value: { "id": "...", "type": "textNode", "data": { "label": "...", "use_case": "..." } }
-       - Edge Value: { "id": "...", "source": "...", "target": "...", "label": "..." }
-    2. **replace**: Update /nodes/ID/data/label etc.
+    1. **add**: Create new /nodes/ID or /edges/ID. Value MUST be a full object with ALL required fields.
+       - Node Value: { "id": "...", "type": "...", "data": { "label": "..." }, "position": { "x": 0, "y": 0 } }
+       - Edge Value: { "id": "...", "source": "...", "target": "..." }
+    2. **replace**: Update specific fields like /nodes/ID/data/label.
     3. **remove**: Delete /nodes/ID.
 
-    **NODE TYPES**:
-    - 'textNode': General purpose.
-    - 'notesNode': For detailed explanations.
-    - 'imageNode': Requires 'src' and 'label' in 'data'.
-    - 'subflow': Group node. Children MUST have 'parentId' set to the subflow ID.
+    **NODE TYPES & STRUCTURE**:
+    - **textNode**: Standard node.
+    - **notesNode**: For long text/markdown.
+    - **subflow**: Group container.
+      - IMPORTANT: When adding children to a subflow, you MUST set 'parentId': 'SUBFLOW_ID' and 'extent': 'parent' on the child node.
 
-    **RULES**:
-    - Do NOT assign positions (x, y) in this phase.
+    **CRITICAL RULES**:
+    - Preserve existing node properties (like 'measured', 'parentId', 'extent') unless explicitly changing them.
+    - Do NOT assign final positions (x, y) in this phase (use 0,0), but ESTABLISH HIERARCHY (parentId).
     - Ensure unique IDs.
   `,
     PHASE_3: `
     You are a UI layout engine. Assign beautiful, non-overlapping (x, y) positions to nodes.
     
-    **OUTPUT FORMAT**: Return ONLY a JSON Patch (RFC 6902) array of 'replace' or 'add' operations.
+    **OUTPUT FORMAT**: Return ONLY a JSON Patch (RFC 6902) array of 'replace' operations.
     
     **Rules**:
     1. Arrange nodes logically (Top-Down or Left-Right).
-    2. Keep child nodes inside their parent 'subflow'.
+    2. Respect 'parentId'. Child nodes are positioned relative to their parent subflow (0,0 is top-left of parent).
     3. Path: "/nodes/ID/position"
     4. Value: { "x": ..., "y": ... }
   `,
-    REPAIR: "You are a graph repair expert."
+    REPAIR: "You are a graph repair expert. Fix the reported issues using JSON Patch."
 };
 
 export const USER_PROMPTS = {
@@ -51,10 +52,11 @@ export const USER_PROMPTS = {
     ### Logical Steps
     ${logicalSteps}
 
-    ### Current Graph Context
+    ### Current Graph Context (Map-based for Patching)
     ${JSON.stringify(currentGraphContext)}
 
     Generate JSON Patch to update structure (nodes/edges).
+    **IMPORTANT**: The context is a Map where keys are IDs. Use paths like "/nodes/ID" (NOT array indices).
   `,
     PHASE_3: (currentGraphContext) => `
     ### Current Structure
