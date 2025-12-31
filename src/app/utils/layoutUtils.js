@@ -40,7 +40,7 @@ export const getLayoutedElements = async (nodes, edges, options = {}) => {
 
         // 1. Create Elk node objects for all nodes
         nodes.forEach((node) => {
-            const isGroup = node.type === 'subflow';
+            const isGroup = node.type === 'groupNode';
             const width = Number(node.measured?.width || node.width || 150);
             const height = Number(node.measured?.height || node.height || 50);
 
@@ -105,7 +105,7 @@ export const getLayoutedElements = async (nodes, edges, options = {}) => {
                         return;
                     }
 
-                    const isGroup = originalNode.type === 'subflow' || (child.children && child.children.length > 0);
+                    const isGroup = originalNode.type === 'groupNode' || (child.children && child.children.length > 0);
 
                     const newNode = {
                         ...originalNode,
@@ -134,7 +134,7 @@ export const getLayoutedElements = async (nodes, edges, options = {}) => {
             const originalNode = nodeMap.get(child.id);
             if (!originalNode) return;
 
-            const isGroup = originalNode.type === 'subflow' || (child.children && child.children.length > 0);
+            const isGroup = originalNode.type === 'groupNode' || (child.children && child.children.length > 0);
 
             const newNode = {
                 ...originalNode,
@@ -157,7 +157,7 @@ export const getLayoutedElements = async (nodes, edges, options = {}) => {
         // Post-process: Adjust group node dimensions to fit children
         // Elk sometimes gives generous or fixed sizes, but we want it to fit tightly around children
         layoutedNodes.forEach(node => {
-            if (node.type === 'subflow') {
+            if (node.type === 'groupNode') {
                 const children = layoutedNodes.filter(n => n.parentId === node.id);
                 if (children.length > 0) {
                     let minX = Infinity;

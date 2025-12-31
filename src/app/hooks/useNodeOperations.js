@@ -18,13 +18,18 @@ export const useNodeOperations = ({
      * Adds a new node to the canvas
      */
     const handleAddNode = useCallback(
-        (type = 'textNode') => {
+        (type = 'textNode', positionOverride = null) => {
             const wrapper = reactFlowWrapper.current;
             const instance = reactFlowInstance.current;
             if (!wrapper || !instance) return;
 
-            const rect = wrapper.getBoundingClientRect();
-            const position = generateRandomPosition(rect, instance);
+            let position;
+            if (positionOverride) {
+                position = positionOverride;
+            } else {
+                const rect = wrapper.getBoundingClientRect();
+                position = generateRandomPosition(rect, instance);
+            }
             const newId = generateNodeId(nodeIdRef);
 
             const newNode = {
@@ -58,7 +63,7 @@ export const useNodeOperations = ({
     );
 
     /**
-     * Groups selected nodes into a subflow
+     * Groups selected nodes into a groupNode
      */
     const handleGroupNodes = useCallback(() => {
         if (!reactFlowInstance.current) return;
@@ -89,12 +94,12 @@ export const useNodeOperations = ({
 
         // Calculate bounds based ONLY on the top-level nodes we are grouping
         const { position, width, height } = calculateGroupBounds(nodesToReparent);
-        const subflowId = `subflow-${Date.now()}`;
+        const groupId = `groupNode-${Date.now()}`;
         const color = generateRandomColor();
 
-        const subflowNode = {
-            id: subflowId,
-            type: 'subflow',
+        const groupNode = {
+            id: groupId,
+            type: 'groupNode',
             position,
             data: { label: '', width, height, color },
             style: { width, height },
@@ -109,7 +114,7 @@ export const useNodeOperations = ({
         // Reparent only the top-level nodes
         const children = nodesToReparent.map((n) => ({
             ...n,
-            parentId: subflowId,
+            parentId: groupId,
             extent: 'parent',
             position: { x: n.position.x - position.x, y: n.position.y - position.y },
         }));
@@ -142,7 +147,7 @@ export const useNodeOperations = ({
 
             return [
                 ...remainingNodes,
-                subflowNode,
+                groupNode,
                 ...children,
                 ...descendants // Render descendants last (on top)
             ];
@@ -162,7 +167,7 @@ export const useNodeOperations = ({
                         const dataProps = {};
 
                         Object.keys(newData).forEach(key => {
-                            if (key === 'parentId' || key === 'extent') {
+                            if (key === 'parentId' || key === 'extent' || key === 'type') {
                                 topLevelProps[key] = newData[key];
                             } else {
                                 dataProps[key] = newData[key];

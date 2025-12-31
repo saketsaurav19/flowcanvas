@@ -2,20 +2,25 @@
 import React, { memo } from "react";
 import { NodeResizer, Handle, Position } from "@xyflow/react";
 import { rgbToRgba } from "../utils/colorUtils";
+import { useSettings } from "../context/SettingsContext";
 
 function GroupNode({ id, data = {}, selected, isConnectable }) {
+  const { handleSize } = useSettings();
+
+  const handleStyle = {
+    width: handleSize,
+    height: handleSize,
+    opacity: data.hideHandle ? 0 : 1,
+    pointerEvents: data.hideHandle ? 'none' : 'all',
+  };
+
   return (
     <>
       <Handle
         type="target"
         position={Position.Top}
         isConnectable={isConnectable}
-        style={{
-          width: 50,
-          height: 50,
-          opacity: data.hideHandle ? 0 : 1,
-          pointerEvents: data.hideHandle ? 'none' : 'all',
-        }}
+        style={handleStyle}
       />
       <NodeResizer
         color="#ff0071"
@@ -54,12 +59,7 @@ function GroupNode({ id, data = {}, selected, isConnectable }) {
         type="source"
         position={Position.Bottom}
         isConnectable={isConnectable}
-        style={{
-          width: 50,
-          height: 50,
-          opacity: data.hideHandle ? 0 : 1,
-          pointerEvents: data.hideHandle ? 'none' : 'all',
-        }}
+        style={handleStyle}
       />
     </>
   );

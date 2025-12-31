@@ -8,7 +8,7 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  overflow-y: auto;
+  overflow: hidden;
   position: absolute;
   z-index: 100;
   transition: width 0.3s ease, padding 0.3s ease;
@@ -16,11 +16,24 @@
   cursor: grab;
 }
 
+.scrollContainer {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-right: 0.5rem;
+  /* Space for scrollbar */
+  margin-right: -0.5rem;
+  /* Pull back to align visually */
+  width: 100%;
+}
+
 .collapsed {
   width: 60px;
   padding: 1rem 0.5rem;
   overflow: hidden;
-  overflow-y: scroll;
+  overflow-y: hidden;
 }
 
 .header {
@@ -53,7 +66,7 @@
 .toggleButton {
   position: absolute;
   top: 10px;
-  right: 10px;
+  left: 10px;
   background: rgba(255, 255, 255, 0.2);
   border: none;
   border-radius: 50%;
@@ -147,21 +160,21 @@
 }
 
 /* Custom scrollbar */
-.container::-webkit-scrollbar {
+.scrollContainer::-webkit-scrollbar {
   width: 6px;
 }
 
-.container::-webkit-scrollbar-track {
+.scrollContainer::-webkit-scrollbar-track {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
 }
 
-.container::-webkit-scrollbar-thumb {
+.scrollContainer::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.3);
   border-radius: 10px;
 }
 
-.container::-webkit-scrollbar-thumb:hover {
+.scrollContainer::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.5);
 }
 

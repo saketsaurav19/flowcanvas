@@ -1,24 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import styles from '../CSS/SettingsModal.module.css';
+import { useSettings } from '../context/SettingsContext';
 
 const SettingsModal = ({ onClose }) => {
-    const [apiKey, setApiKey] = useState('');
+    const { handleSize, updateHandleSize, apiKey, updateApiKey } = useSettings();
+    const [localApiKey, setLocalApiKey] = useState(apiKey);
     const [message, setMessage] = useState(null);
-
-    useEffect(() => {
-        const savedKey = localStorage.getItem('gemini_api_key');
-        if (savedKey) {
-            setApiKey(savedKey);
-        }
-    }, []);
 
     const handleSave = () => {
         try {
-            localStorage.setItem('gemini_api_key', apiKey);
-            setMessage({ type: 'success', text: 'API Key saved successfully!' });
+            updateApiKey(localApiKey);
+            setMessage({ type: 'success', text: 'Settings saved successfully!' });
             setTimeout(() => setMessage(null), 3000);
         } catch (error) {
-            setMessage({ type: 'error', text: 'Failed to save API Key.' });
+            setMessage({ type: 'error', text: 'Failed to save settings.' });
         }
     };
 
@@ -34,12 +29,26 @@ const SettingsModal = ({ onClose }) => {
                         <label className={styles.label}>Gemini API Key</label>
                         <input
                             type="password"
-                            value={apiKey}
-                            onChange={(e) => setApiKey(e.target.value)}
+                            value={localApiKey}
+                            onChange={(e) => setLocalApiKey(e.target.value)}
                             placeholder="Enter your Gemini API Key"
                             className={styles.input}
                         />
                     </div>
+
+                    <div className={styles.formGroup}>
+                        <label className={styles.label}>Handle Size: {handleSize}px</label>
+                        <input
+                            type="range"
+                            min="10"
+                            max="100"
+                            value={handleSize}
+                            onChange={(e) => updateHandleSize(parseInt(e.target.value))}
+                            className={styles.slider}
+                            style={{ width: '100%' }}
+                        />
+                    </div>
+
                     <button onClick={handleSave} className={styles.saveButton}>
                         Save Settings
                     </button>

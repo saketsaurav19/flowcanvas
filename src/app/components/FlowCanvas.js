@@ -28,12 +28,16 @@ import { generateFlow } from "../utils/geminiGenerator";
 import { useNodeOperations } from "../hooks/useNodeOperations";
 import { useFileOperations } from "../hooks/useFileOperations";
 import { getLayoutedElements } from "../utils/layoutUtils";
+import { SettingsProvider } from "../context/SettingsContext";
+
+import UndoRedoControls from "./UndoRedoControls";
+import { useUndoRedo } from "../hooks/useUndoRedo";
 
 const nodeTypes = {
     textNode: TextNode,
     imageNode: ImageNode,
     notesNode: NotesNode,
-    subflow: GroupNode,
+    groupNode: GroupNode,
 };
 
 const initialNodes = [];
@@ -54,6 +58,49 @@ const FlowCanvas = () => {
     const [showSettings, setShowSettings] = useState(false);
     const [showGeminiModal, setShowGeminiModal] = useState(false);
     const [shouldFitView, setShouldFitView] = useState(false);
+
+    // Track if update is from undo/redo to prevent history loop
+    const isUndoRedoOperation = useRef(false);
+
+    const { takeSnapshot, debouncedTakeSnapshot, undo, redo, canUndo, canRedo } = useUndoRedo(initialNodes, initialEdges);
+
+    // Track mouse position for shortcuts
+    const mousePosRef = useRef({ x: 0, y: 0 });
+
+    // Track changes for undo/redo
+    useEffect(() => {
+        if (isUndoRedoOperation.current) {
+            isUndoRedoOperation.current = false;
+            return;
+        }
+        // Only snapshot if nodes or edges have content
+        if (nodes.length > 0) {
+            debouncedTakeSnapshot(nodes, edges);
+        }
+    }, [nodes, edges, debouncedTakeSnapshot]);
+
+    const handleUndo = useCallback(() => {
+        const previousState = undo();
+        if (previousState) {
+            isUndoRedoOperation.current = true;
+            setNodes(previousState.nodes);
+            setEdges(previousState.edges);
+        }
+    }, [undo, setNodes, setEdges]);
+
+    const handleRedo = useCallback(() => {
+        const nextState = redo();
+        if (nextState) {
+            isUndoRedoOperation.current = true;
+            setNodes(nextState.nodes);
+            setEdges(nextState.edges);
+        }
+    }, [redo, setNodes, setEdges]);
+
+
+    const handleMouseMove = useCallback((e) => {
+        mousePosRef.current = { x: e.clientX, y: e.clientY };
+    }, []);
 
     const toggleSelectionMode = useCallback(() => {
         setIsSelectionMode((prev) => !prev);
@@ -182,30 +229,6 @@ const FlowCanvas = () => {
         [nodes, edges, setEdges]
     );
 
-    // Handle keyboard shortcuts
-    const handleKeyDown = useCallback(
-        (event) => {
-            if (event.key === 'Delete') {
-                event.preventDefault();
-                const selectedNodes = getNodes().filter((n) => n.selected);
-                const selectedEdges = edges.filter((e) => e.selected);
-
-                if (selectedNodes.length > 0) {
-                    deleteElements({ nodes: selectedNodes });
-                }
-                if (selectedEdges.length > 0) {
-                    deleteElements({ edges: selectedEdges });
-                }
-            }
-        },
-        [getNodes, edges, deleteElements]
-    );
-
-    useEffect(() => {
-        window.addEventListener('keydown', handleKeyDown);
-        return () => window.removeEventListener('keydown', handleKeyDown);
-    }, [handleKeyDown]);
-
     // Helper to get absolute position of a node
     const getNodeAbsolutePosition = useCallback((nodeId, currentNodes) => {
         const node = currentNodes.find(n => n.id === nodeId);
@@ -237,7 +260,7 @@ const FlowCanvas = () => {
             // Check if the node is dropped on a group
             const intersectingNodes = currentNodes.filter(
                 (n) => {
-                    if (n.id === node.id || n.type !== 'subflow') return false;
+                    if (n.id === node.id || n.type !== 'groupNode') return false;
 
                     const groupAbsPos = getNodeAbsolutePosition(n.id, currentNodes);
                     const width = n.measured?.width || n.width || 0;
@@ -253,7 +276,14 @@ const FlowCanvas = () => {
             );
 
             if (intersectingNodes.length > 0) {
-                const groupNode = intersectingNodes[0]; // Take the first intersecting group
+                // Sort by size (area) ascending, so we drop into the smallest (most specific) group
+                intersectingNodes.sort((a, b) => {
+                    const aArea = (a.measured?.width || a.width || 0) * (a.measured?.height || a.height || 0);
+                    const bArea = (b.measured?.width || b.width || 0) * (b.measured?.height || b.height || 0);
+                    return aArea - bArea;
+                });
+
+                const groupNode = intersectingNodes[0]; // Take the smallest intersecting group
 
                 // If node is not already a child of this group
                 if (node.parentId !== groupNode.id) {
@@ -268,9 +298,13 @@ const FlowCanvas = () => {
         const { node, group } = groupPopupState;
         if (!node || !group) return;
 
+        const currentNodes = getNodes();
+        const nodeAbsPos = getNodeAbsolutePosition(node.id, currentNodes);
+        const groupAbsPos = getNodeAbsolutePosition(group.id, currentNodes);
+
         const relativePosition = {
-            x: node.position.x - group.position.x,
-            y: node.position.y - group.position.y,
+            x: nodeAbsPos.x - groupAbsPos.x,
+            y: nodeAbsPos.y - groupAbsPos.y,
         };
 
         setNodes((nds) =>
@@ -281,6 +315,8 @@ const FlowCanvas = () => {
                         parentId: group.id,
                         extent: 'parent',
                         position: relativePosition,
+                        // Ensure data is preserved but parentId updated
+                        data: { ...n.data },
                     };
                 }
                 return n;
@@ -339,6 +375,8 @@ const FlowCanvas = () => {
             // Filter out circular references or huge data if needed, but basic nodes are fine
             const flowData = await generateFlow(prompt, currentNodes, edges, apiKey, model, abortSignal);
 
+            console.log("Flow Data:", flowData);
+
             let newNodes = [];
             let newEdges = [];
 
@@ -383,8 +421,130 @@ const FlowCanvas = () => {
 
 
 
+    // Handle keyboard shortcuts
+    const handleKeyDown = useCallback(
+        (event) => {
+            // Helper to get flow position from mouse position
+            const getFlowPosition = () => {
+                if (reactFlowInstance.current) {
+                    return reactFlowInstance.current.screenToFlowPosition({
+                        x: mousePosRef.current.x,
+                        y: mousePosRef.current.y
+                    });
+                }
+                return null;
+            };
+
+            // Universal Shortcuts (Ctrl/Cmd)
+            if (event.ctrlKey || event.metaKey) {
+                switch (event.key.toLowerCase()) {
+                    case 'z':
+                        event.preventDefault();
+                        if (event.shiftKey) {
+                            handleRedo();
+                        } else {
+                            handleUndo();
+                        }
+                        break;
+                    case 'y':
+                        event.preventDefault();
+                        handleRedo();
+                        break;
+                    case 's':
+                        event.preventDefault();
+                        handleSaveFlow();
+                        break;
+                    case 'o':
+                        event.preventDefault();
+                        document.querySelector('input[type="file"][accept=".json"]')?.click();
+                        break;
+                    default:
+                        break;
+                }
+            }
+
+            // Shift Shortcuts
+            if (event.shiftKey) {
+                switch (event.key.toLowerCase()) {
+                    case 't': // Add Text Node
+                        handleAddNode('textNode', getFlowPosition());
+                        break;
+                    case 'i': // Add Image Node
+                        handleAddNode('imageNode', getFlowPosition());
+                        break;
+                    case 'n': // Add Notes Node
+                        handleAddNode('notesNode', getFlowPosition());
+                        break;
+                    case 'g': // Group Nodes
+                        const selectedNodes = getNodes().filter(n => n.selected);
+                        if (selectedNodes.length === 1) {
+                            handleUpdateNode(selectedNodes[0].id, { type: 'groupNode' });
+                        } else {
+                            handleGroupNodes();
+                        }
+                        break;
+                    case 'v': // Toggle Selection Mode
+                        toggleSelectionMode();
+                        break;
+                    case 'l': // Auto Layout
+                        handleAutoLayout();
+                        break;
+                    case 'b': // Browse Examples
+                        handleBrowseExamples();
+                        break;
+                    case 'a': // Gemini AI
+                        handleGeminiClick();
+                        break;
+                    case '<': // Settings (using < for comma as shift+, is <)
+                    case ',': // Just in case
+                        setShowSettings(true);
+                        break;
+                    default:
+                        break;
+                }
+            }
+
+            // Delete key
+            if (event.key === 'Delete') {
+                event.preventDefault();
+                const selectedNodes = getNodes().filter((n) => n.selected);
+                const selectedEdges = edges.filter((e) => e.selected);
+
+                if (selectedNodes.length > 0) {
+                    deleteElements({ nodes: selectedNodes });
+                }
+                if (selectedEdges.length > 0) {
+                    deleteElements({ edges: selectedEdges });
+                }
+            }
+        },
+        [
+            getNodes,
+            edges,
+            deleteElements,
+            handleAddNode,
+            handleGroupNodes,
+            handleUpdateNode,
+            handleSaveFlow,
+            handleBrowseExamples,
+            toggleSelectionMode,
+            handleAutoLayout,
+            handleGeminiClick
+        ]
+    );
+
+    useEffect(() => {
+        window.addEventListener('keydown', handleKeyDown);
+        return () => window.removeEventListener('keydown', handleKeyDown);
+    }, [handleKeyDown]);
+
+
     return (
-        <div style={{ width: "100%", height: "100vh", touchAction: "none", overscrollBehavior: "none" }} ref={reactFlowWrapper}>
+        <div
+            style={{ width: "100%", height: "100vh", touchAction: "none", overscrollBehavior: "none" }}
+            ref={reactFlowWrapper}
+            onMouseMove={handleMouseMove}
+        >
             <ReactFlow
                 onInit={handleInit}
                 nodes={nodes}
@@ -404,6 +564,14 @@ const FlowCanvas = () => {
                 selectionOnDrag={isSelectionMode}
                 onNodeDragStop={onNodeDragStop}
             >
+                <div style={{ position: "absolute", top: 10, right: 50, zIndex: 10 }}>
+                    <UndoRedoControls
+                        onUndo={handleUndo}
+                        onRedo={handleRedo}
+                        canUndo={canUndo}
+                        canRedo={canRedo}
+                    />
+                </div>
                 <Sidebar
                     onAddNode={handleAddNode}
                     onGroupNodes={handleGroupNodes}
@@ -461,4 +629,10 @@ const FlowCanvas = () => {
     );
 };
 
-export default FlowCanvas;
+const FlowCanvasWithProvider = () => (
+    <SettingsProvider>
+        <FlowCanvas />
+    </SettingsProvider>
+);
+
+export default FlowCanvasWithProvider;

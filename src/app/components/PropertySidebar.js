@@ -237,7 +237,19 @@ const PropertySidebar = ({ node, edge, onClose, onUpdate, onUpdateEdge, onDelete
               </div>
               <div className={styles.infoItem}>
                 <span className={styles.infoLabel}>{translations.type}</span>
-                <span className={styles.infoValue}>{node.type}</span>
+                <span className={styles.infoValue}>
+                  <select
+                    value={node.type}
+                    onChange={(e) => onUpdate(node.id, { type: e.target.value })}
+                    className={styles.input}
+                    style={{ padding: '2px 5px' }}
+                  >
+                    <option value="textNode">Text Node</option>
+                    <option value="groupNode">Group Node</option>
+                    <option value="notesNode">Notes Node</option>
+                    <option value="imageNode">Image Node</option>
+                  </select>
+                </span>
               </div>
             </div>
 
@@ -297,8 +309,8 @@ const PropertySidebar = ({ node, edge, onClose, onUpdate, onUpdateEdge, onDelete
               </>
             )}
 
-            {/* For textNode, notesNode, and subflow: show color options */}
-            {(node.type === "textNode" || node.type === "notesNode" || node.type === "subflow") && (
+            {/* For textNode, notesNode, and groupNode: show color options */}
+            {(node.type === "textNode" || node.type === "notesNode" || node.type === "groupNode") && (
               <>
                 <div className={styles.formGroup}>
                   <label className={styles.label}>{translations.background_color}</label>
@@ -327,7 +339,7 @@ const PropertySidebar = ({ node, edge, onClose, onUpdate, onUpdateEdge, onDelete
                   </button>
                 </div>
 
-                {node.type === "subflow" && (
+                {node.type === "groupNode" && (
                   <div className={styles.formGroup}>
                     <label className={styles.label}>Label Font Size</label>
                     <input
