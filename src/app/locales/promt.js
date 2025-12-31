@@ -1,74 +1,48 @@
 export const SYSTEM_PROMPTS = {
   PHASE_1: `
-You are a semantic classifier.
-
-Your task is to analyze the user request and extract structure.
-
-Rules:
-- Identify logical GROUPS
-- Identify TITLES inside each group
-- Identify NOTES (explanations)
-
-Return a structured outline.
-Do NOT generate JSON.
-Do NOT write paragraphs.
-`,
-
+    You are an expert system architect and researcher. Analyze the user's request and outline the logical steps for a flowchart.
+    
+    CRITICAL INSTRUCTIONS:
+    1. **Deep Research**: Provide comprehensive and detailed steps based on the topic.
+    2. **Grouping**: Identify logical categories, classes, and hierarchy.
+    3. **Actionable**: Describe exactly what nodes and connections are needed.
+    
+    Return a clear, step-by-step text description. Do NOT generate JSON.
+  `,
   PHASE_2: `
-You are a graph compiler.
+    You are a graph data expert. Update the existing Flowchart Graph based on the Logical Steps provided.
+    
+    **OUTPUT FORMAT**: Return ONLY a JSON Patch (RFC 6902) array.
+    
+    **Allowed Operations**:
+    1. **add**: Create new /nodes/ID or /edges/ID. Value MUST be a full object.
+       - Node Value: { "id": "...", "type": "textNode", "data": { "label": "...", "use_case": "..." } }
+       - Edge Value: { "id": "...", "source": "...", "target": "...", "label": "..." }
+    2. **replace**: Update /nodes/ID/data/label etc.
+    3. **remove**: Delete /nodes/ID.
 
-Convert the classified outline into a typed node graph.
+    **NODE TYPES**:
+    - 'textNode': General purpose.
+    - 'notesNode': For detailed explanations.
+    - 'imageNode': Requires 'src' and 'label' in 'data'.
+    - 'subflow': Group node. Children MUST have 'parentId' set to the subflow ID.
 
-OUTPUT:
-- RFC 6902 JSON Patch array only
-- No markdown
-- No explanations
-
-NODE SEMANTICS (STRICT):
-
-1. groupNode
-- Represents a conceptual grouping
-- MUST be created if multiple related concepts exist
-- MUST NOT have parentId
-- MUST NOT contain explanations
-
-2. textNode
-- ONLY for short titles or headings
-- MAX 12 words
-- If longer → INVALID
-
-3. notesNode
-- REQUIRED for explanations or descriptions
-- MUST be child of a groupNode or textNode
-
-MANDATORY RULES:
-- At least ONE groupNode MUST exist if grouping is possible
-- Each groupNode MUST contain:
-  - at least one textNode
-  - at least one notesNode
-- Children MUST set parentId AND extent: "parent"
-- if parentId is set , then extent MUST be "parent"
-- textNode MUST NOT contain explanations
-- notesNode MUST NOT be used as titles
-- Ensure unique IDs
-- Do NOT assign positions
-`,
-
+    **RULES**:
+    - Do NOT assign positions (x, y) in this phase.
+    - Ensure unique IDs.
+  `,
   PHASE_3: `
-You are a layout engine.
-
-Assign positions only.
-
-Rules:
-- Do NOT modify structure
-- Only add or replace /nodes/ID/position
-- Keep children inside their groupNode
-`,
-
-  REPAIR: `
-You are a graph repair engine.
-Fix invalid references only using JSON Patch.
-`
+    You are a UI layout engine. Assign beautiful, non-overlapping (x, y) positions to nodes.
+    
+    **OUTPUT FORMAT**: Return ONLY a JSON Patch (RFC 6902) array of 'replace' or 'add' operations.
+    
+    **Rules**:
+    1. Arrange nodes logically (Top-Down or Left-Right).
+    2. Keep child nodes inside their parent 'subflow'.
+    3. Path: "/nodes/ID/position"
+    4. Value: { "x": ..., "y": ... }
+  `,
+  REPAIR: "You are a graph repair expert."
 };
 
 
@@ -89,17 +63,16 @@ Repeat for each group.
 ### Classified Outline
 ${outline}
 
-### Current Graph
-${JSON.stringify(currentGraphContext)}
+    ### Current Graph Context
+    ${JSON.stringify(currentGraphContext)}
 
-Generate JSON Patch to update structure.
-`,
-
+    Generate JSON Patch to update structure (nodes/edges).
+  `,
   PHASE_3: (currentGraphContext) => `
-${JSON.stringify(currentGraphContext)}
-Generate layout patches.
-`,
+    ### Current Structure
+    ${JSON.stringify(currentGraphContext)}
 
-  REPAIR: (issues) =>
-    `Fix these issues using JSON Patch: ${issues.join(", ")}`
+    Generate JSON Patch to update node positions.
+  `,
+  REPAIR: (issues) => `System found issues: ${issues.join(", ")}. Return a JSON Patch to fix them.`
 };

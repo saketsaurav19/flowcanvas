@@ -14,22 +14,71 @@ export const generateFlow = async (topic, currentNodes, currentEdges, apiKey, mo
 
   console.log("🚀 Starting 4-Phase Flow Generation (JSON Patch RFC 6902)...");
 
+  // --- SCHEMAS ---
+
+  // RFC 6902 JSON Patch Schema for Gemini
+  const JSON_PATCH_SCHEMA = {
+    type: Type.ARRAY,
+    description: "An array of JSON Patch operations as per RFC 6902.",
+    items: {
+      type: Type.OBJECT,
+      required: ["op", "path"],
+      properties: {
+        op: {
+          type: Type.STRING,
+          enum: ["add", "remove", "replace", "move", "copy", "test"],
+          description: "The operation to perform."
+        },
+        path: {
+          type: Type.STRING,
+          description: "JSON Pointer path (e.g., /nodes/node_1 or /nodes/node_1/data/label)."
+        },
+        value: {
+          type: Type.OBJECT,
+          description: "The value to add or replace. For nodes, use the full node structure.",
+          properties: {
+            id: { type: Type.STRING },
+            type: { type: Type.STRING },
+            data: {
+              type: Type.OBJECT,
+              properties: {
+                label: { type: Type.STRING },
+                use_case: { type: Type.STRING },
+                src: { type: Type.STRING },
+                color: { type: Type.STRING }
+              }
+            },
+            position: {
+              type: Type.OBJECT,
+              properties: {
+                x: { type: Type.NUMBER },
+                y: { type: Type.NUMBER }
+              }
+            },
+            source: { type: Type.STRING },
+            target: { type: Type.STRING },
+            label: { type: Type.STRING }
+          }
+        },
+        from: {
+          type: Type.STRING,
+          description: "The source path for move or copy operations."
+        }
+      }
+    }
+  };
+
   // --- PREPARE CONTEXT (Map-based for reliable patching) ---
+  // Using spread operator to preserve ALL fields (measured, extent, dragging, etc.)
   const nodeMap = currentNodes.reduce((acc, node) => {
-    if (!node) return acc;
     acc[node.id] = {
-      id: node.id,
-      type: node.type,
-      parentId: node.parentId,
+      ...node,
+      // Ensure defaults if missing (though spreading node usually covers this)
       data: {
+        ...(node.data || {}),
         label: node.data?.label || "",
-        color: node.data?.color,
-        textColor: node.data?.textColor,
-        use_case: node.data?.use_case,
-        src: node.data?.src
       },
-      position: node.position || { x: 0, y: 0 },
-      measured: node.measured
+      position: node.position || { x: 0, y: 0 }
     };
     return acc;
   }, {});
@@ -37,10 +86,7 @@ export const generateFlow = async (topic, currentNodes, currentEdges, apiKey, mo
   const edgeMap = currentEdges.reduce((acc, edge) => {
     if (!edge) return acc;
     acc[edge.id] = {
-      id: edge.id,
-      source: edge.source,
-      target: edge.target,
-      label: edge.label
+      ...edge
     };
     return acc;
   }, {});
@@ -118,23 +164,11 @@ export const generateFlow = async (topic, currentNodes, currentEdges, apiKey, mo
   }
 
   // --- CONVERT BACK TO ARRAYS ---
-  const finalNodes = Object.entries(currentGraphContext.nodes)
-    .filter(([id, n]) => n && typeof n === 'object')
-    .map(([id, n]) => ({
-      ...n,
-      id: id,
-      data: {
-        ...n.data,
-        label: n.data?.label || n.label || id
-      }
-    }));
+  const finalNodes = Object.values(currentGraphContext.nodes)
+    .filter((n) => n && typeof n === 'object');
 
-  const finalEdges = Object.entries(currentGraphContext.edges)
-    .filter(([id, e]) => e && typeof e === 'object')
-    .map(([id, e]) => ({
-      ...e,
-      id: id
-    }));
+  const finalEdges = Object.values(currentGraphContext.edges)
+    .filter((e) => e && typeof e === 'object');
 
   return { nodes: finalNodes, edges: finalEdges };
 };
