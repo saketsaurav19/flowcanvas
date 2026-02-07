@@ -192,8 +192,10 @@
     padding: 0.75rem;
     border-radius: 0;
     flex-direction: row;
-    overflow-x: scroll;
+    overflow-x: auto;
     overflow-y: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
     gap: 0.5rem;
     position: fixed;
     top: auto;
@@ -235,15 +237,8 @@
 
   /* Horizontal scrollbar for mobile */
   .container::-webkit-scrollbar {
-    height: 4px;
-    width: auto;
-  }
-
-  .container::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.1);
-  }
-
-  .container::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.3);
+    height: 0;
+    width: 0;
+    display: none;
   }
 }
