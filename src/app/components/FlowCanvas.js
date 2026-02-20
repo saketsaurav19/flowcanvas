@@ -5,7 +5,7 @@ import {
     addEdge,
     Background,
     Controls,
-    MiniMap,
+    MiniMap, Panel,
     useNodesState,
     useEdgesState,
     getIncomers,
@@ -13,6 +13,7 @@ import {
     getConnectedEdges,
     useReactFlow,
 } from "@xyflow/react";
+import canvasStyles from "./FlowCanvas.module.css";
 import "@xyflow/react/dist/style.css";
 import Sidebar from "./Sidebar";
 import { TextNode, ImageNode } from "./customNodes";
@@ -563,16 +564,7 @@ const FlowCanvas = () => {
                 panOnDrag={!isSelectionMode}
                 selectionOnDrag={isSelectionMode}
                 onNodeDragStop={onNodeDragStop}
-            >
-                <div style={{ position: "absolute", top: 10, right: 50, zIndex: 10 }}>
-                    <UndoRedoControls
-                        onUndo={handleUndo}
-                        onRedo={handleRedo}
-                        canUndo={canUndo}
-                        canRedo={canRedo}
-                    />
-                </div>
-                <Sidebar
+            >                <Sidebar
                     onAddNode={handleAddNode}
                     onGroupNodes={handleGroupNodes}
                     onSaveFlow={handleSaveFlow}
@@ -585,8 +577,16 @@ const FlowCanvas = () => {
                     onLayout={handleAutoLayout}
                 />
                 <Background />
-                <Controls />
-                <MiniMap />
+                <Panel position="bottom-left" className={canvasStyles.controlsWrapper}>
+                    <UndoRedoControls
+                        onUndo={handleUndo}
+                        onRedo={handleRedo}
+                        canUndo={canUndo}
+                        canRedo={canRedo}
+                    />
+                    <Controls style={{ position: "static", margin: 0 }} />
+                </Panel>
+                <MiniMap className={canvasStyles.minimap} />
                 <div style={{ position: "absolute", top: 10, right: 10, zIndex: 10 }}>
                     <PropertySidebar
                         node={selectedNode}
