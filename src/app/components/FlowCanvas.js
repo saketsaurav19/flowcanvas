@@ -1,4 +1,5 @@
 "use client";
+import styles from './FlowCanvas.module.css';
 import React, { useCallback, useRef, useState, useEffect } from "react";
 import {
     ReactFlow,
@@ -564,7 +565,7 @@ const FlowCanvas = () => {
                 selectionOnDrag={isSelectionMode}
                 onNodeDragStop={onNodeDragStop}
             >
-                <div style={{ position: "absolute", top: 10, right: 50, zIndex: 10 }}>
+                <div className={styles.undoRedoWrapper}>
                     <UndoRedoControls
                         onUndo={handleUndo}
                         onRedo={handleRedo}
@@ -585,8 +586,8 @@ const FlowCanvas = () => {
                     onLayout={handleAutoLayout}
                 />
                 <Background />
-                <Controls />
-                <MiniMap />
+                <Controls className={styles.controls} />
+                <MiniMap className={styles.minimap} />
                 <div style={{ position: "absolute", top: 10, right: 10, zIndex: 10 }}>
                     <PropertySidebar
                         node={selectedNode}
