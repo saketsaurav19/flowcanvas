@@ -2,23 +2,23 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin-bottom: 50px; /* Space for footer on mobile and desktop */
+    margin-bottom: 80px; /* Space for footer on mobile and desktop */
     pointer-events: all;
 }
 
 .minimap {
-    margin-bottom: 50px; /* Space for footer on mobile and desktop */
+    margin-bottom: 80px; /* Space for footer on mobile and desktop */
 }
 
 /* Mobile adjustments if needed */
 @media (max-width: 768px) {
     .controlsWrapper {
-        margin-bottom: 60px; /* Extra space if footer is taller on mobile */
+        margin-bottom: 90px; /* Extra space if footer is taller on mobile */
         margin-left: 10px;
     }
 
     .minimap {
-        margin-bottom: 60px; /* Extra space if footer is taller on mobile */
+        margin-bottom: 90px; /* Extra space if footer is taller on mobile */
         margin-right: 10px;
     }
 }
