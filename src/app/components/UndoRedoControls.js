@@ -3,13 +3,13 @@ import { Undo2, Redo2 } from 'lucide-react';
 
 const UndoRedoControls = ({ onUndo, onRedo, canUndo, canRedo }) => {
     return (
-        <div className="react-flow__controls" style={{ display: 'flex', flexDirection: 'row', gap: '0', padding: '0', position: 'static' }}>
+        <div className="react-flow__controls" style={{ display: 'flex', flexDirection: 'column', gap: '0', padding: '0', position: 'static' }}>
             <button
                 className="react-flow__controls-button"
                 onClick={onUndo}
                 disabled={!canUndo}
                 title="Undo (Ctrl+Z)"
-                style={{ borderBottom: 'none', borderRight: '1px solid #eee' }}
+                style={{ borderBottom: '1px solid #eee', borderRight: 'none' }}
             >
                 <Undo2 size={16} />
             </button>
@@ -18,7 +18,7 @@ const UndoRedoControls = ({ onUndo, onRedo, canUndo, canRedo }) => {
                 onClick={onRedo}
                 disabled={!canRedo}
                 title="Redo (Ctrl+Y)"
-                style={{ borderBottom: 'none' }}
+                style={{ borderRight: 'none' }}
             >
                 <Redo2 size={16} />
             </button>
