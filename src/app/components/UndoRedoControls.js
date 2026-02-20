@@ -1,27 +1,26 @@
 import React from 'react';
-import styles from './UndoRedoControls.module.css';
 import { Undo2, Redo2 } from 'lucide-react';
 
 const UndoRedoControls = ({ onUndo, onRedo, canUndo, canRedo }) => {
     return (
-        <div className={styles.container}>
+        <div className="react-flow__controls" style={{ display: 'flex', flexDirection: 'column', gap: '0', padding: '0', position: 'static' }}>
             <button
-                className={styles.button}
+                className="react-flow__controls-button"
                 onClick={onUndo}
                 disabled={!canUndo}
                 title="Undo (Ctrl+Z)"
-                style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+                style={{ borderBottom: '1px solid #eee', borderRight: 'none' }}
             >
-                <Undo2 size={20} />
+                <Undo2 size={16} />
             </button>
             <button
-                className={styles.button}
+                className="react-flow__controls-button"
                 onClick={onRedo}
                 disabled={!canRedo}
                 title="Redo (Ctrl+Y)"
-                style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+                style={{ borderRight: 'none' }}
             >
-                <Redo2 size={20} />
+                <Redo2 size={16} />
             </button>
         </div>
     );
