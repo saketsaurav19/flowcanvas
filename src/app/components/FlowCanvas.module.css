@@ -7,18 +7,16 @@
 }
 
 .minimap {
-    margin-bottom: 120px; /* Space for footer on mobile and desktop */
+    margin-bottom:  40px !important; /* Space for footer on mobile and desktop */
 }
 
 /* Mobile adjustments if needed */
 @media (max-width: 768px) {
     .controlsWrapper {
-        margin-bottom: 90px; /* Extra space if footer is taller on mobile */
-        margin-left: 130px;
+        margin-bottom: 40px !important; /* Extra space if footer is taller on mobile */
     }
 
     .minimap {
-        margin-bottom: 90px; /* Extra space if footer is taller on mobile */
-        margin-right: 130px;
+        margin-bottom: 40px !important; /* Extra space if footer is taller on mobile */
     }
 }
