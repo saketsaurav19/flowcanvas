@@ -31,17 +31,6 @@ export const SYSTEM_PROMPTS = {
     - Do NOT assign positions (x, y) in this phase.
     - Ensure unique IDs.
   `,
-  PHASE_3: `
-    You are a UI layout engine. Assign beautiful, non-overlapping (x, y) positions to nodes.
-    
-    **OUTPUT FORMAT**: Return ONLY a JSON Patch (RFC 6902) array of 'replace' or 'add' operations.
-    
-    **Rules**:
-    1. Arrange nodes logically (Top-Down or Left-Right).
-    2. Keep child nodes inside their parent 'subflow'.
-    3. Path: "/nodes/ID/position"
-    4. Value: { "x": ..., "y": ... }
-  `,
   REPAIR: "You are a graph repair expert."
 };
 
@@ -67,12 +56,6 @@ ${outline}
     ${JSON.stringify(currentGraphContext)}
 
     Generate JSON Patch to update structure (nodes/edges).
-  `,
-  PHASE_3: (currentGraphContext) => `
-    ### Current Structure
-    ${JSON.stringify(currentGraphContext)}
-
-    Generate JSON Patch to update node positions.
   `,
   REPAIR: (issues) => `System found issues: ${issues.join(", ")}. Return a JSON Patch to fix them.`
 };
