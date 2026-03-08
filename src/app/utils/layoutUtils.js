@@ -166,8 +166,8 @@ export const getLayoutedElements = async (nodes, edges, options = {}) => {
                     let maxY = -Infinity;
 
                     children.forEach(child => {
-                        const childX = child.position.x;
-                        const childY = child.position.y;
+                        const childX = child.position?.x || 0;
+                        const childY = child.position?.y || 0;
                         const childWidth = child.measured?.width || child.width || 150;
                         const childHeight = child.measured?.height || child.height || 50;
 

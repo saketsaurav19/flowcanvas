@@ -58,13 +58,13 @@ export const calculateGroupBounds = (selectedNodes, padding = 30) => {
         return 100;
     };
 
-    const minX = Math.min(...selectedNodes.map((n) => n.position.x));
+    const minX = Math.min(...selectedNodes.map((n) => (n.position?.x || 0)));
     console.log(minX);
-    const minY = Math.min(...selectedNodes.map((n) => n.position.y));
+    const minY = Math.min(...selectedNodes.map((n) => (n.position?.y || 0)));
     console.log(minY);
-    const maxX = Math.max(...selectedNodes.map((n) => n.position.x + getNodeWidth(n)));
+    const maxX = Math.max(...selectedNodes.map((n) => (n.position?.x || 0) + getNodeWidth(n)));
     console.log(maxX);
-    const maxY = Math.max(...selectedNodes.map((n) => n.position.y + getNodeHeight(n)));
+    const maxY = Math.max(...selectedNodes.map((n) => (n.position?.y || 0) + getNodeHeight(n)));
     console.log(maxY);
 
     const width = maxX - minX + padding * 2;

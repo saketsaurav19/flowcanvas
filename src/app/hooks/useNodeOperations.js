@@ -116,7 +116,7 @@ export const useNodeOperations = ({
             ...n,
             parentId: groupId,
             extent: 'parent',
-            position: { x: n.position.x - position.x, y: n.position.y - position.y },
+            position: { x: (n.position?.x || 0) - position.x, y: (n.position?.y || 0) - position.y },
         }));
 
         const nodesToReparentIds = new Set(nodesToReparent.map(n => n.id));

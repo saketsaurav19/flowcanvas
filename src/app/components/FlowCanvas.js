@@ -235,15 +235,15 @@ const FlowCanvas = () => {
         const node = currentNodes.find(n => n.id === nodeId);
         if (!node) return { x: 0, y: 0 };
 
-        let x = node.position.x;
-        let y = node.position.y;
+        let x = node.position?.x || 0;
+        let y = node.position?.y || 0;
         let parentId = node.parentId;
 
         while (parentId) {
             const parent = currentNodes.find(n => n.id === parentId);
             if (parent) {
-                x += parent.position.x;
-                y += parent.position.y;
+                x += parent.position?.x || 0;
+                y += parent.position?.y || 0;
                 parentId = parent.parentId;
             } else {
                 break;
