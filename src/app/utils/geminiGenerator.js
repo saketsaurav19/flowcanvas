@@ -5,18 +5,20 @@ import { SYSTEM_PROMPTS, USER_PROMPTS } from '../locales/promt';
 import { JSON_PATCH_SCHEMA } from '../locales/geminiSchema';
 
 /**
- * Optimized Flow Generation using 4 Phases and JSON Patch (RFC 6902)
+ * Optimized Flow Generation using 3 Phases and JSON Patch (RFC 6902)
  */
 export const generateFlow = async (topic, currentNodes, currentEdges, apiKey, model, abortSignal) => {
   if (!apiKey) {
     throw new Error("API Key is missing.");
   }
 
-  console.log("🚀 Starting 4-Phase Flow Generation (JSON Patch RFC 6902)...");
+  console.log("🚀 Starting 3-Phase Flow Generation (JSON Patch RFC 6902)...");
 
   // --- SCHEMAS ---
 
   // RFC 6902 JSON Patch Schema for Gemini
+  const { Type } = require("@google/genai");
+
   const JSON_PATCH_SCHEMA = {
     type: Type.ARRAY,
     description: "An array of JSON Patch operations as per RFC 6902.",
@@ -48,13 +50,7 @@ export const generateFlow = async (topic, currentNodes, currentEdges, apiKey, mo
                 color: { type: Type.STRING }
               }
             },
-            position: {
-              type: Type.OBJECT,
-              properties: {
-                x: { type: Type.NUMBER },
-                y: { type: Type.NUMBER }
-              }
-            },
+
             source: { type: Type.STRING },
             target: { type: Type.STRING },
             label: { type: Type.STRING }
@@ -119,24 +115,8 @@ export const generateFlow = async (topic, currentNodes, currentEdges, apiKey, mo
   currentGraphContext = phase2Result.newDocument;
   console.log("Phase 2 Result:", currentGraphContext);
 
-  // --- PHASE 3: Graph -> Layout + Styling (POSITIONS ONLY) ---
-  console.log("Phase 3: Generating Layout Patches...");
-  const phase3SystemPrompt = SYSTEM_PROMPTS.PHASE_3;
-  const phase3UserPrompt = USER_PROMPTS.PHASE_3(currentGraphContext);
-
-  const layoutPatchJson = await generateJson(
-    phase3UserPrompt, "application/json", 0.1, JSON_PATCH_SCHEMA, phase3SystemPrompt, [], [], apiKey, model, abortSignal
-  );
-
-  let layoutOps = parsePatch(layoutPatchJson);
-  console.log("Layout Ops:", layoutOps);
-  const docAfterPhase3 = JSON.parse(JSON.stringify(currentGraphContext));
-  const phase3Result = applyPatch(docAfterPhase3, layoutOps, false, true);
-  currentGraphContext = phase3Result.newDocument;
-  console.log("Phase 3 Result:", currentGraphContext);
-
-  // --- PHASE 4: Validation / Repair (OPTIONAL LOOP) ---
-  console.log("Phase 4: Validating Graph...");
+  // --- PHASE 3: Validation / Repair (OPTIONAL LOOP) ---
+  console.log("Phase 3: Validating Graph...");
 
   const validateGraph = (graph) => {
     const issues = [];
