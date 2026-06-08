@@ -86,6 +86,10 @@ export const getLayoutedElements = async (nodes, edges, options = {}) => {
         // Flatten the result back to React Flow format
         const layoutedNodes = [];
 
+        const direction = layoutOptions['elk.direction'] || 'DOWN';
+        const targetPos = (direction === 'LEFT' || direction === 'RIGHT') ? 'left' : 'top';
+        const sourcePos = (direction === 'LEFT' || direction === 'RIGHT') ? 'right' : 'bottom';
+
         const flatten = (element, parentX = 0, parentY = 0) => {
             if (element.children) {
                 element.children.forEach((child) => {
@@ -109,8 +113,15 @@ export const getLayoutedElements = async (nodes, edges, options = {}) => {
 
                     const newNode = {
                         ...originalNode,
+                        targetPosition: targetPos,
+                        sourcePosition: sourcePos,
                         position: { x: child.x || 0, y: child.y || 0 },
                     };
+
+                    // Remove layout-specific state from React Flow to ensure a fresh layout
+                    delete newNode.positionAbsolute;
+                    delete newNode.dragging;
+
 
                     // Only set width/height for group nodes, let others auto-size
                     if (isGroup) {
@@ -138,8 +149,15 @@ export const getLayoutedElements = async (nodes, edges, options = {}) => {
 
             const newNode = {
                 ...originalNode,
+                targetPosition: targetPos,
+                sourcePosition: sourcePos,
                 position: { x: child.x || 0, y: child.y || 0 },
             };
+
+            // Remove layout-specific state from React Flow to ensure a fresh layout
+            delete newNode.positionAbsolute;
+            delete newNode.dragging;
+
 
             // Only set width/height for group nodes
             if (isGroup) {
